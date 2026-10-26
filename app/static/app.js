@@ -552,6 +552,7 @@ function renderPhraseIndex(phrases = []) {
     return;
   }
   for (const [topic, cues] of groups) {
+    if (topic === "Statistical claim") continue;
     const button = document.createElement("button");
     button.type = "button";
     button.className = "phrase-option";
@@ -561,7 +562,7 @@ function renderPhraseIndex(phrases = []) {
     label.textContent = topic;
     const cueList = document.createElement("span");
     cueList.className = "phrase-option-text";
-    cueList.textContent = `Civic Lens highlighted these words: ${cues.slice(0, 4).map((cue) => `“${cue}”`).join(" · ")}.`;
+    cueList.textContent = `Highlighted phrases: ${cues.slice(0, 4).map((cue) => `“${cue}”`).join(" · ")}.`;
     button.append(label, cueList);
     button.addEventListener("click", () => {
       $("phrase-input").value = topic;

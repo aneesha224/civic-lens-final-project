@@ -8,8 +8,8 @@ Corpus reconstruction is complete for the currently downloaded Congressional
 Record issues. The analysis corpus contains 1,292 complete source-preserved
 remarks from 119 issues dated January 2011 through December 2023. The app also
 includes 281 public-source speech, remark, and interview records across all 16
-roster members; 279 are complete and two are partial. Elizabeth Warren (33),
-Marco Rubio (30), and Nancy Pelosi (30) meet or exceed the target of 30
+roster members; 279 are complete and two are partial. Elizabeth Warren (35),
+Bernie Sanders (30), Marco Rubio (30), and Nancy Pelosi (30) meet or exceed the target of 30
 complete records per person. Another 206 complete records are needed to fill
 every remaining per-person gap. These records are stored separately from the Congressional
 Record. Selecting a politician starts a live

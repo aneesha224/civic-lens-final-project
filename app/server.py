@@ -17,7 +17,7 @@ from .agents import ResearchDeps, chat_assistant
 from .config import MODEL_SETTINGS, ModelConfigurationError, configured_model, model_credentials_configured
 from .models import ChatRequest, ChatResponse, ResearchRequest
 from .public_sources import CACHE_HOURS, discover_public_speeches, import_public_speech as import_transcript
-from .topics import TOPIC_TERMS, normalize_topic
+from .topics import HIGHLIGHT_PHRASES, STAT_CLAIM_PATTERN, TOPIC_TERMS, normalize_topic
 from .workflow import CHAT_USAGE_LIMITS, run_research
 
 app = FastAPI(title="Civic Lens", version="0.1.0")
@@ -37,28 +37,45 @@ def topic_hits(text: str) -> list[dict[str, str]]:
     ]
 
 
-def topic_phrase_candidates(text: str, *, per_topic: int = 4, limit: int = 40) -> list[dict[str, str]]:
-    """Return short, source-backed wording cues grouped under canonical topics."""
+def topic_phrase_candidates(text: str, *, per_topic: int = 12, limit: int = 80) -> list[dict[str, str]]:
+    """Return recognisable political phrases in the text, grouped by topic.
+
+    Uses the curated HIGHLIGHT_PHRASES list (longest phrase wins, so
+    "dignity of all working Americans" beats "working Americans") plus
+    statistical claims such as "40 million Americans".
+    """
+    spans: list[tuple[int, int, str]] = []
     candidates: list[dict[str, str]] = []
-    seen: set[tuple[str, str]] = set()
-    for topic, terms in TOPIC_TERMS.items():
-        found_for_topic = 0
-        for term in sorted(terms, key=len, reverse=True):
-            if found_for_topic >= per_topic:
-                break
-            match = re.search(r"(?<!\w)" + re.escape(term) + r"(?!\w)", text, re.I)
-            if not match:
+    seen: set[str] = set()
+
+    def overlaps(start: int, end: int) -> bool:
+        return any(start < e and end > s for s, e, _ in spans)
+
+    phrases = sorted(
+        ((topic, phrase) for topic, items in HIGHLIGHT_PHRASES.items() for phrase in items),
+        key=lambda item: len(item[1]), reverse=True,
+    )
+    per_topic_count: dict[str, int] = {}
+    for topic, phrase in phrases:
+        if per_topic_count.get(topic, 0) >= per_topic:
+            continue
+        for match in re.finditer(r"(?<!\w)" + re.escape(phrase) + r"(?!\w)", text, re.I):
+            if overlaps(match.start(), match.end()):
                 continue
-            matched_term = match.group(0)
-            key = (topic, matched_term.casefold())
-            if key in seen:
-                continue
-            seen.add(key)
-            candidates.append({"topic": topic, "phrase": matched_term, "matched_term": matched_term})
-            found_for_topic += 1
-            if len(candidates) >= limit:
-                return candidates
-    return candidates
+            spans.append((match.start(), match.end(), topic))
+            key = match.group(0).casefold()
+            if key not in seen:
+                seen.add(key)
+                candidates.append({"topic": topic, "phrase": match.group(0), "matched_term": match.group(0)})
+                per_topic_count[topic] = per_topic_count.get(topic, 0) + 1
+    for match in STAT_CLAIM_PATTERN.finditer(text):
+        if not overlaps(match.start(), match.end()) and match.group(0).casefold() not in seen:
+            seen.add(match.group(0).casefold())
+            spans.append((match.start(), match.end(), "Statistical claim"))
+            candidates.append({"topic": "Statistical claim", "phrase": match.group(0), "matched_term": match.group(0)})
+    order = {key: index for index, (_, _, key) in enumerate(sorted(spans))}
+    candidates.sort(key=lambda item: min((s for s, _, _ in spans if text[s:s + len(item["phrase"])].casefold() == item["phrase"].casefold()), default=0))
+    return candidates[:limit]
 
 def record_json(record: object) -> dict[str, object]:
     return record.model_dump(mode="json")
