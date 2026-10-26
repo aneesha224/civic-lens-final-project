@@ -1,25 +1,313 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[Project Name] — Final Project Report</title>
-  <style>body{font-family:system-ui,sans-serif;max-width:900px;margin:40px auto;padding:0 24px;line-height:1.6} img{max-width:100%} .placeholder{background:#fff3f8;border-left:4px solid #ff2d95;padding:12px} @media print{.page-break{break-before:page}}</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Civic Lens — Final Project Report</title>
+<style>
+:root{--ink:#172536;--muted:#566472;--red:#963b40;--blue:#244f72;--paper:#f5f3ed;--line:#d7d8d3;--white:#fff}
+*{box-sizing:border-box}
+html{background:#e8e7e2;color:var(--ink);font:15px/1.58 Georgia,"Times New Roman",serif}
+body{max-width:8.5in;margin:28px auto;background:var(--paper);box-shadow:0 4px 28px #17253622}
+.page{min-height:10.2in;padding:.72in .76in .68in;position:relative;break-after:page;page-break-after:always}
+.page:last-child{break-after:auto;page-break-after:auto}
+h1,h2,h3,h4,p,ul,ol,table,figure{margin-top:0}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.12}
+h1{font-size:43pt;letter-spacing:-.04em;margin:32px 0 12px}
+h2{font-size:25pt;letter-spacing:-.025em;margin:4px 0 14px}
+h3{font-size:15pt;margin:23px 0 8px}
+h4{font:700 10pt/1.3 Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.09em;color:var(--red);margin:19px 0 7px}
+p{margin-bottom:11px}
+ul,ol{padding-left:22px;margin-bottom:12px}
+li{margin:0 0 5px}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:2px;overflow-wrap:anywhere}
+.kicker{font:700 9pt/1.3 Arial,Helvetica,sans-serif;color:var(--red);letter-spacing:.14em;text-transform:uppercase;margin-bottom:11px}
+.deck{font:16pt/1.4 Arial,Helvetica,sans-serif;color:var(--muted);max-width:6.4in}
+.meta{font:10pt/1.5 Arial,Helvetica,sans-serif;color:var(--muted)}
+.rule{height:2px;background:var(--ink);margin:20px 0}
+.callout{border-left:3px solid var(--red);padding:11px 14px;background:#fff;margin:13px 0}
+.note{font:9.5pt/1.5 Arial,Helvetica,sans-serif;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0}
+.stat{padding:12px 10px;border-top:2px solid var(--red);background:#fff;font:9pt/1.45 Arial,Helvetica,sans-serif;color:var(--muted)}
+.stat strong{display:block;font:700 21pt/1.1 Georgia,serif;color:var(--ink);margin-bottom:4px}
+table{width:100%;border-collapse:collapse;font:9.5pt/1.42 Arial,Helvetica,sans-serif;margin:12px 0 15px}
+th{text-align:left;color:var(--ink);font-size:8pt;letter-spacing:.07em;text-transform:uppercase}
+th,td{padding:8px 7px;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:700}
+.diagram{width:100%;height:auto;display:block;margin:16px 0}
+figcaption{font:9pt/1.45 Arial,Helvetica,sans-serif;color:var(--muted);margin-top:6px}
+.small{font-size:9.3pt;color:var(--muted)}
+.page-number{position:absolute;bottom:.3in;left:.76in;right:.76in;padding-top:7px;border-top:1px solid var(--line);font:8pt/1.2 Arial,Helvetica,sans-serif;color:var(--muted);display:flex;justify-content:space-between}
+.source-list li{margin-bottom:7px}
+.mono{font:9pt/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+.pill{display:inline-block;padding:3px 7px;border:1px solid var(--line);font:8pt Arial,Helvetica,sans-serif;color:var(--muted);margin:2px}
+@media screen{.page{margin:20px 0;background:var(--paper)}}
+@media print{
+ @page{size:Letter;margin:0}
+ html{background:white;font-size:10.25pt}
+ body{width:8.5in;max-width:none;margin:0;box-shadow:none}
+ .page{height:11in;min-height:11in;padding:.62in .68in .58in;overflow:hidden}
+ h1{font-size:39pt}
+ h2{font-size:22pt}
+ h3{font-size:14pt;margin-top:16px}
+ p{margin-bottom:8px}
+ li{margin-bottom:3px}
+ table{font-size:8.5pt}
+ th,td{padding:6px}
+ .page-number{left:.68in;right:.68in;bottom:.25in}
+ a{color:inherit;text-decoration:none}
+}
+</style>
 </head>
 <body>
-  <h1>[Project Name]</h1>
-  <p class="placeholder">Draft scaffold. Replace every bracketed placeholder with verified project-specific content and embedded screenshots.</p>
-  <p><strong>Author:</strong> [Your name]</p>
-  <p><strong>Repository:</strong> [GitHub URL]</p>
-  <p><strong>App:</strong> [Online app URL, if applicable]</p>
-  <p>[One sentence explaining what the app does.]</p>
-  <h2>1. Motivation</h2><p>[Who has the problem, how they handle it now, and the cost.]</p>
-  <h2>2. What is new here</h2><p>[Named alternatives and the meaningful difference.]</p>
-  <h2>3. The agents</h2><p>[Agents, tools, model choices, architecture diagram, and one real run with screenshots.]</p>
-  <h2>4. Tokenomics</h2><p>[Measured input, cached input, output, per-run and scale costs, and performance tradeoffs.]</p>
-  <h2>5. Safety</h2><p>[Threats, defenses, and evidence of a defense working.]</p>
-  <h2>6. Impact</h2><p>[Measured outcomes, sources, and real-user evidence.]</p>
-  <h2>7. Limits + next steps</h2><p>[Current limitations and next month’s priorities.]</p>
+<!-- PROVISIONAL CORPUS SNAPSHOT: 52 external source records across 10 roster members, recorded October 26, 2026 at 1:01 p.m. EDT. Collection continues; two records are marked partial. Update this snapshot if the manifest advances. -->
+<section class="page">
+<p class="kicker">MGT 409 · Fall 2026 · Final project report</p>
+<h1>Civic Lens</h1>
+<p class="deck">A source-grounded research workspace for reading political speeches and tracing policy language across public statements.</p>
+<div class="rule"></div>
+<p><strong>Author:</strong> Aneesha Chandra</p>
+<p><strong>Repository:</strong> <a href="https://github.com/aneesha224/civic-lens-final-project">github.com/aneesha224/civic-lens-final-project</a></p>
+<p><strong>Live application:</strong> <a href="https://civic-lens-pht.onrender.com">civic-lens-pht.onrender.com</a></p>
+<p><strong>One-sentence description:</strong> Civic Lens helps students, journalists, and civic researchers read a politician’s source-linked statement, identify topic language, and compare it with earlier public records.</p>
+<div class="statgrid">
+<div class="stat"><strong>1,061</strong>source-preserved Congressional Record remarks across 119 collected issues.</div>
+<div class="stat"><strong>52</strong>external source records across 10 roster members at this provisional snapshot; two are marked partial.</div>
+<div class="stat"><strong>2</strong>completed real model workflows with token usage recorded by agent.</div>
+</div>
+<h3>Executive summary</h3>
+<p>Public statements are scattered across legislative archives, campaign pages, publisher transcripts, and video platforms. Civic Lens brings two carefully separated collections into one reading and comparison workflow: reconstructed Congressional Record remarks and independently sourced speeches or interviews. A reader selects a politician and statement, reads the transcript alongside its citation, and asks the system to summarize the selected text or locate related wording in earlier records.</p>
+<p>The application uses a programmatic coordinator and three specialist AI agents. Local tools retrieve the selected transcript, search earlier matching excerpts, and check proposed quotations against source text. The legislative corpus contains 1,061 Congressional Record remarks from 119 issues. A provisional external-source snapshot contains 52 source records across ten politicians. Transcript statuses identify 50 complete source transcripts or complete speaker statements/interviews, while two records remain marked partial. Many records are interviews or public events, so this inventory must not be described as 52 complete speeches. Collection continues.</p>
+<p>Two measured runs on gpt-6-luna cost approximately $0.000379 for speech-only analysis and $0.003622 for topic comparison. Topic comparison took 34.5 seconds in its single sample, versus 3.2 seconds for speech-only analysis. These measurements support a transparent cost estimate, but they do not establish a representative service-level expectation.</p>
+<div class="page-number"><span>CIVIC LENS · FINAL REPORT</span><span>1</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">01 · Motivation</p>
+<h2>Researchers need context across source boundaries.</h2>
+<p>A student preparing a policy paper, a journalist checking a campaign claim, or a civic researcher tracking an elected official’s public language often begins with a simple question: what did this person say about a topic, where did they say it, and how does the wording compare with earlier statements?</p>
+<p>The current workflow is fragmented. Congressional remarks can be located through official archives, while campaign speeches, convention remarks, public addresses, interviews, and transcripts are held by campaigns, broadcasters, publishers, and transcript services. A researcher may need to search multiple sites, identify a complete transcript, copy passages into notes, retain publication details, and manually compare dates. Search snippets and clips can make this harder because they separate a phrase from the surrounding argument.</p>
+<h3>The cost of the current workflow</h3>
+<p>The project has not measured how many minutes a researcher spends on a defined task, so this report does not claim a time-saving figure. The cost is currently evidenced as workflow burden rather than a validated dollar amount. Researchers must repeatedly switch sources, check whether a page contains the speech itself or only an excerpt, and preserve enough context to cite a passage accurately. Manual selection also introduces a risk of overlooking earlier or contradictory evidence.</p>
+<p>A narrow legislative collection creates a second problem. The Congressional Record is valuable evidence of floor remarks, but it does not capture every campaign speech, media interview, public address, or other text. A longitudinal conclusion based only on floor speeches can mistake source availability for the full range of a politician’s public communication. Civic Lens therefore treats external public speeches and text as a necessary extension of the analysis corpus rather than as decorative examples.</p>
+<div class="callout"><strong>Research problem.</strong> Civic Lens reduces the work needed to locate, read, cite, and compare a finite set of public statements. It helps a reader investigate wording, but it cannot establish a complete career history or determine whether a political claim is true.</div>
+<h3>Primary user and job</h3>
+<p>The primary user is a person who must answer a specific question about public political language and show where the answer came from. The application supports the researcher’s reading and comparison work rather than replacing judgment, source review, or fact-checking. A useful result must name its source, preserve the quoted wording, and disclose gaps in the available record.</p>
+<div class="page-number"><span>01 · MOTIVATION</span><span>2</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">02 · What is new</p>
+<h2>Civic Lens links reading with source-grounded comparison.</h2>
+<p>Civic Lens combines transcript reading, phrase discovery, chronological retrieval, citation display, and AI-supported synthesis in one research flow. Its central distinction is the join between a selected speech and exact excerpts from earlier records. The user can narrow that comparison to public campaign and interview transcripts, to Congressional Record remarks, or to the combined collection.</p>
+<table>
+<thead><tr><th>Alternative</th><th>What it does well</th><th>How Civic Lens relates to it</th></tr></thead>
+<tbody>
+<tr><td>Google Search</td><td>Finds pages, reporting, archives, and references across the open web.</td><td>Civic Lens starts from a selected source record and keeps the transcript, date, and citation visible during analysis.</td></tr>
+<tr><td>GovInfo Congressional Record</td><td>Provides official legislative records and source documents.</td><td>Civic Lens reconstructs complete speaker remarks for a bounded issue set and connects them with separately collected public speech transcripts.</td></tr>
+<tr><td>C-SPAN and publisher archives</td><td>Preserve event recordings and, in some cases, transcripts or prepared remarks.</td><td>Civic Lens can organize selected source text around a politician and a topic, while linking back to the original publisher or archive.</td></tr>
+<tr><td>Rev transcript pages</td><td>Provide searchable transcripts for many public events.</td><td>Rev is one source among several; Civic Lens keeps source identity visible and can compare eligible text from other sources.</td></tr>
+</tbody>
+</table>
+<p>This comparison describes scope and workflow, not a controlled benchmark. Civic Lens does not claim that its search is broader than Google, that it has more complete records than GovInfo, or that its transcripts outperform publisher archives. Its meaningful twist is a bounded research layer that places a selected transcript beside traceable evidence from earlier statements and clearly distinguishes legislative records from other public text.</p>
+<h3>Why the external corpus matters</h3>
+<p>The corpus expansion deliberately targets text outside the Congressional Record. It includes campaign launches, convention speeches, election-night remarks, campaign rallies, a campaign suspension address, a public address, and a television interview. This mix gives researchers material from settings where political language may differ from formal floor remarks. The collection is still too sparse to support strong claims about how any politician communicates across an entire career.</p>
+<p>The application’s language cues are evidence-finding aids. A highlighted word is a phrase match or a candidate topic cue, not proof of the speaker’s position. The reader must inspect the surrounding transcript and cited excerpts before drawing an interpretation.</p>
+<div class="page-number"><span>02 · DIFFERENTIATION</span><span>3</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">03 · Product and data</p>
+<h2>The user begins with a politician and a source.</h2>
+<ol>
+<li>The user selects a politician from the project roster.</li>
+<li>Civic Lens loads collected Congressional Record remarks and curated external transcripts while it searches the person’s mapped election cycles for additional public sources.</li>
+<li>The user chooses a statement and reads its transcript with the date, venue, and original-source link.</li>
+<li>The application surfaces topic cues and exact source wording. The user can search a topic and request a comparison with earlier records in the selected source scope.</li>
+<li>The results show excerpts and metadata so that the reader can return to the source and judge the interpretation.</li>
+</ol>
+<h3>Collection design</h3>
+<p>The Congressional Record set contains 1,061 source-preserved remarks from 119 issues dated January 2011 through December 2023. The set represents the issues reconstructed for this project, not every issue or every statement by the politicians in the roster. At the provisional snapshot recorded at 1:01 p.m. EDT on October 26, 2026, the external manifest contains 52 source records across ten roster members. The distribution is Bernie Sanders (14), Nancy Pelosi (8), Ted Cruz (7), Marco Rubio (6), Elizabeth Warren (5), Cory Booker (5), Hakeem Jeffries (4), John Cornyn (1), Tammy Duckworth (1), and Kevin McCarthy (1). Transcript statuses identify 50 complete source transcripts or complete speaker statements/interviews, while two records are marked partial. Many records cover interviews or multi-speaker events, so this source count is not a count of complete speeches. Collection is ongoing, and no politician has yet reached the 20–30-record depth goal; Sanders has the largest group at 14.</p>
+<p>Each external source record has metadata for speaker, date, venue, source type, source URL, transcript path, transcript status, and transcript boundary status. Its original HTML capture is retained beside the extracted text. The review queue carries source fields, transcript statuses, and notes. Its rows do not establish that every transcript has passed human review. The project stores public-source items in a separate category from Congressional Record remarks, so provenance remains visible during retrieval and analysis.</p>
+<h3>Discovery and limits</h3>
+<p>Public-source discovery searches for source pages and attempts to retrieve complete text. A page may yield a lead without a usable transcript, and retrieved text may require a boundary review. The application keeps those states separate: a search result is not automatically a verified transcript. Static curated records replace matching local cache entries so that a reviewed transcript does not appear twice alongside an earlier extraction.</p>
+<figure>
+<svg class="diagram" viewBox="0 0 760 158" role="img" aria-labelledby="dataTitle dataDesc">
+<title id="dataTitle">Civic Lens data flow</title>
+<desc id="dataDesc">A researcher selects a politician and speech, local records provide the full text and citation, and topic comparison retrieves earlier excerpts from the chosen source collection.</desc>
+<rect x="4" y="18" width="170" height="112" fill="#fff" stroke="#d7d8d3"/><text x="20" y="48" fill="#963b40" font-size="12" font-family="Arial" font-weight="700">SELECT</text><text x="20" y="76" fill="#172536" font-size="16" font-family="Georgia">Politician</text><text x="20" y="99" fill="#172536" font-size="16" font-family="Georgia">and statement</text>
+<path d="M180 74H225" stroke="#244f72" stroke-width="2"/><path d="m218 67 8 7-8 7" fill="none" stroke="#244f72" stroke-width="2"/>
+<rect x="234" y="18" width="214" height="112" fill="#fff" stroke="#d7d8d3"/><text x="250" y="48" fill="#963b40" font-size="12" font-family="Arial" font-weight="700">READ</text><text x="250" y="76" fill="#172536" font-size="16" font-family="Georgia">Transcript +</text><text x="250" y="99" fill="#172536" font-size="16" font-family="Georgia">original citation</text>
+<path d="M454 74H499" stroke="#244f72" stroke-width="2"/><path d="m492 67 8 7-8 7" fill="none" stroke="#244f72" stroke-width="2"/>
+<rect x="508" y="18" width="246" height="112" fill="#fff" stroke="#d7d8d3"/><text x="524" y="48" fill="#963b40" font-size="12" font-family="Arial" font-weight="700">COMPARE</text><text x="524" y="76" fill="#172536" font-size="16" font-family="Georgia">Earlier exact excerpts</text><text x="524" y="99" fill="#172536" font-size="16" font-family="Georgia">from selected sources</text>
+</svg>
+<figcaption>Figure 1. The researcher moves from a selected source to its transcript and then to earlier, source-linked excerpts.</figcaption>
+</figure>
+<div class="page-number"><span>03 · PRODUCT AND DATA</span><span>4</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">04 · Agent system</p>
+<h2>A coordinator assigns three bounded roles.</h2>
+<p>The application is built with FastAPI and PydanticAI. A programmatic workflow coordinates specialist agents rather than allowing an unconstrained agent to control the full application. Each agent receives typed inputs and outputs, and corpus access happens through local tools.</p>
+<figure>
+<svg class="diagram" viewBox="0 0 760 280" role="img" aria-labelledby="agentsTitle agentsDesc">
+<title id="agentsTitle">Civic Lens agent architecture</title>
+<desc id="agentsDesc">The coordinator sends a selected transcript to a speech analyst, an optional topic and earlier excerpts to a longitudinal analyst, and a proposed answer to a safety auditor before returning cited results.</desc>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#244f72"/></marker></defs>
+<rect x="278" y="8" width="204" height="44" fill="#172536"/><text x="380" y="35" text-anchor="middle" fill="#fff" font-size="14" font-family="Arial" font-weight="700">Workflow coordinator</text>
+<rect x="15" y="97" width="215" height="108" fill="#fff" stroke="#d7d8d3"/><text x="29" y="124" fill="#963b40" font-size="11" font-family="Arial" font-weight="700">AGENT 1 · SPEECH ANALYST</text><text x="29" y="151" fill="#172536" font-size="14" font-family="Georgia">Summarizes selected text</text><text x="29" y="174" fill="#566472" font-size="12" font-family="Arial">Returns claims and evidence</text>
+<rect x="273" y="97" width="215" height="108" fill="#fff" stroke="#d7d8d3"/><text x="287" y="124" fill="#963b40" font-size="11" font-family="Arial" font-weight="700">AGENT 2 · LONGITUDINAL</text><text x="287" y="151" fill="#172536" font-size="14" font-family="Georgia">Compares earlier excerpts</text><text x="287" y="174" fill="#566472" font-size="12" font-family="Arial">Runs only when requested</text>
+<rect x="531" y="97" width="214" height="108" fill="#fff" stroke="#d7d8d3"/><text x="545" y="124" fill="#963b40" font-size="11" font-family="Arial" font-weight="700">AGENT 3 · SAFETY AUDITOR</text><text x="545" y="151" fill="#172536" font-size="14" font-family="Georgia">Reviews evidence and scope</text><text x="545" y="174" fill="#566472" font-size="12" font-family="Arial">Flags unsupported claims</text>
+<path d="M330 54 132 91" fill="none" stroke="#244f72" stroke-width="2" marker-end="url(#arr)"/><path d="M380 54V91" fill="none" stroke="#244f72" stroke-width="2" marker-end="url(#arr)"/><path d="M430 54 640 91" fill="none" stroke="#244f72" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="85" y="231" width="590" height="38" fill="#f1eee6" stroke="#d7d8d3"/><text x="380" y="255" text-anchor="middle" fill="#172536" font-size="13" font-family="Arial">Local corpus tools retrieve text, search earlier records, and check exact quotations.</text>
+<path d="M132 207v18m248-18v18m260-18v18" stroke="#244f72" stroke-width="1.6" marker-end="url(#arr)"/>
+</svg>
+<figcaption>Figure 2. The deterministic coordinator retrieves evidence and runs the optional comparison and review steps.</figcaption>
+</figure>
+<table>
+<thead><tr><th>Role</th><th>Responsibility and tool</th><th>When it runs</th></tr></thead>
+<tbody>
+<tr><td>Speech analyst</td><td>Reads the selected source through a corpus retrieval tool and returns a summary, claims, phrase candidates, exact quotations, and caveats.</td><td>For each analysis request.</td></tr>
+<tr><td>Longitudinal analyst</td><td>Uses a local search tool that returns matching citations dated strictly before the selected statement and within the user’s chosen source set.</td><td>When the user asks about a topic or phrase.</td></tr>
+<tr><td>Safety auditor</td><td>Reviews whether claims are supported, quotations are sourced, and limits or uncertainty are visible. A corpus tool checks whether proposed quotations occur in the selected text.</td><td>At the end of an analysis workflow.</td></tr>
+</tbody>
+</table>
+<p>All three agents use gpt-6-luna through the configured OpenAI-compatible provider. The model is selected in <span class="mono">app/config.py</span>; the measured logs record reasoning effort as none. This model was selected to keep the prototype’s measured cost small. One preliminary setup request could not be measured and is disclosed in the token log rather than silently included in run totals.</p>
+<div class="page-number"><span>04 · AGENT SYSTEM</span><span>5</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">05 · Measured run and tokenomics</p>
+<h2>Topic comparison costs more and takes longer.</h2>
+<p>The repository contains two completed real usage traces for the same public-source record: a speech-only analysis and a topic-comparison analysis. The record is Bernie Sanders’s TIME-hosted Super Tuesday transcript listed as March 2, 2016. Its metadata warns that the publisher’s date may differ from the speech date and that the extraction boundaries have not been independently reviewed. The measured run is evidence of application behavior, not a new verification of that transcript.</p>
+<table>
+<thead><tr><th>Workflow</th><th>Model calls</th><th>Input tokens</th><th>Cached input</th><th>Output tokens</th><th>Elapsed</th><th>Estimated cost</th></tr></thead>
+<tbody>
+<tr><td>Speech-only</td><td>3</td><td>1,900</td><td>0</td><td>377</td><td>3.242 s</td><td>$0.0003785</td></tr>
+<tr><td>Topic comparison</td><td>6</td><td>13,946</td><td>2,222</td><td>4,855</td><td>34.514 s</td><td>$0.00362212</td></tr>
+</tbody>
+</table>
+<p>The topic-comparison workflow made two speech-analyst requests, three longitudinal-analyst requests, and one safety-auditor request. It used 11,724 uncached input tokens and 2,222 cached input tokens. The speech-only workflow made two speech-analyst requests and one safety-auditor request. The total token counts were 2,277 and 18,801 respectively.</p>
+<div class="callout"><strong>Measurement limits.</strong> Each workflow has one sample. The elapsed times are observed durations, not percentile latency or a service-level guarantee. A preliminary setup request returned a model response, but its usage could not be recovered after a logger accessor mismatch. The run log excludes that request and records the limitation.</div>
+<p>The app uses OpenAI list prices recorded in the evidence file: $0.10 per million uncached input tokens, $0.01 per million cached input tokens, and $0.50 per million output tokens. At those rates, the logged cost calculations reproduce as follows:</p>
+<table>
+<thead><tr><th>Scenario</th><th>Formula</th><th>Estimated model cost</th></tr></thead>
+<tbody>
+<tr><td>One speech-only run</td><td>(1,900 × $0.10 + 377 × $0.50) ÷ 1,000,000</td><td>$0.0003785</td></tr>
+<tr><td>One topic-comparison run</td><td>(11,724 × $0.10 + 2,222 × $0.01 + 4,855 × $0.50) ÷ 1,000,000</td><td>$0.00362212</td></tr>
+<tr><td>Ten runs per user monthly</td><td>Five of each workflow</td><td>$0.0200031 per user</td></tr>
+<tr><td>One hundred users monthly</td><td>Linear scale from ten runs per user</td><td>$2.00 total</td></tr>
+<tr><td>Ten thousand users monthly</td><td>Linear scale from ten runs per user</td><td>$200.03 total</td></tr>
+</tbody>
+</table>
+<p class="small">These figures estimate model charges at OpenAI list rates. They exclude separate Portkey or Azure charges, taxes, hosting, search services, retries, and differences in actual usage.</p>
+<div class="page-number"><span>05 · MEASURED RUN</span><span>6</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">06 · Cost controls and tradeoffs</p>
+<h2>The research path makes an explicit cost tradeoff.</h2>
+<p>The speech-only path calls the speech analyst and safety auditor. It reads one selected transcript, extracts a concise analysis, filters unsupported quotations, and returns the result. The topic path adds a longitudinal comparison. That extra workflow costs about 9.6 times as much as the speech-only sample and took about 31.3 seconds longer in these two observations.</p>
+<h3>Current controls</h3>
+<ul>
+<li>The longitudinal step is optional. A user who only wants to understand one selected speech does not incur its additional model requests.</li>
+<li>The corpus search runs locally before excerpts are sent to the longitudinal agent. It restricts earlier records by date and source scope and returns at most six citations.</li>
+<li>The speech analyst receives the selected record through a retrieval tool instead of an entire corpus dump.</li>
+<li>The workflow removes proposed quotations that do not occur as exact substrings in the selected source text and adds a caveat when it removes any.</li>
+<li>The configured reasoning effort is none, and the measured cost uses cached-input pricing where the provider reports cached tokens.</li>
+</ul>
+<h3>Controls that do not yet exist</h3>
+<p>The application does not implement a hard per-request token ceiling, a monthly spend ceiling, a per-user quota, or an automatic circuit breaker for repeated model errors. The hosting configuration has no demonstrated budget alert or observed cost dashboard in the project evidence. The scale table is therefore a planning scenario, not an enforced budget.</p>
+<h3>Performance and product tradeoff</h3>
+<p>Users receive more context when the system searches earlier statements, but this benefit adds latency and cost. The interface should set expectations near the action, show a real progress state, and return a clear error when the provider is unavailable. The current project’s measured topic workflow took 34.5 seconds, so a spinner with no explanation would not be sufficient. The user should be able to understand which stage is running and whether they can continue with the selected transcript while comparison finishes.</p>
+<p>The project prioritizes exact evidence and source links over unbounded narrative generation. This design reduces avoidable context use, but it does not guarantee low latency because upstream provider response times can vary.</p>
+<div class="page-number"><span>06 · COST CONTROLS</span><span>7</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">07 · Safety and reliability</p>
+<h2>The system treats source text as evidence, not instruction.</h2>
+<p>Political transcripts can contain misleading or unsupported claims, quoted speech from other people, editorial framing, transcription errors, and instructions that should not control an AI model. A user can also request a conclusion that the finite corpus cannot support. The application therefore needs to protect source integrity, distinguish evidence from inference, and make uncertainty visible.</p>
+<table>
+<thead><tr><th>Risk</th><th>Defense in the current implementation</th><th>Remaining weakness</th></tr></thead>
+<tbody>
+<tr><td>Invented or altered quotations</td><td>The coordinator removes any proposed evidence excerpt that does not match the selected transcript exactly. The safety auditor receives the proposed answer and can flag unsupported quotations.</td><td>The project has no saved adversarial evaluation showing rejection of a fabricated quote in a live run.</td></tr>
+<tr><td>Prompt injection in a transcript</td><td>Agent instructions designate source text as untrusted evidence and direct the auditor to flag embedded instructions.</td><td>The repository has no completed prompt-injection test or screenshot of a blocked attack.</td></tr>
+<tr><td>False chronological conclusions</td><td>The local search tool only returns matching records dated before the selected record. It can filter to the public corpus, the Congressional Record, or both.</td><td>Some external records use a publisher date rather than a confirmed delivery date, which can make chronology uncertain.</td></tr>
+<tr><td>Overclaiming completeness or truth</td><td>Agent instructions reject private-motive claims and complete-career claims. The interface discloses source limits and says that the analysis does not establish whether a claim is true.</td><td>The safety review’s consistency and usefulness have not been measured with a user study.</td></tr>
+<tr><td>Runaway model spending</td><td>The expensive comparison is optional, and local retrieval caps the number of excerpts sent to the agent.</td><td>The service lacks a hard spend cap, request quota, or demonstrated alerting system.</td></tr>
+</tbody>
+</table>
+<p>The defense that can be inspected directly in the code is exact-substring quote filtering in the workflow. The safety auditor also has a corpus tool that checks whether a quote appears in a selected record. The existing credential-free tests cover corpus integrity, typed output, and rejection of an unsupported analysis mode; they do not exercise the safety auditor or a prompt-injection case.</p>
+<div class="callout"><strong>Validation status.</strong> This report does not claim that the test suite passes. The existing corpus test still expects ten curated external records, while the current source registry contains 52 records, including two partial transcripts. The test expectation is stale and must be reconciled with the distinction between source records and complete texts before a fresh test run can provide valid evidence.</div>
+<p>For a complete Tier 2 safety demonstration, the next evaluation should save one example where a deliberately incorrect quotation is rejected, one prompt-injection example where instructions inside source text are ignored, and one comparison request where the system declines to infer a trend from insufficient earlier evidence.</p>
+<div class="page-number"><span>07 · SAFETY</span><span>8</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">08 · Impact and evidence</p>
+<h2>The corpus creates a useful starting point, not a complete record.</h2>
+<div class="statgrid">
+<div class="stat"><strong>1,061</strong>reconstructed remarks from 119 Congressional Record issues.</div>
+<div class="stat"><strong>52</strong>external source records at this provisional snapshot.</div>
+<div class="stat"><strong>10</strong>roster members represented in those external records.</div>
+</div>
+<p>The project’s measurable deliverable is a unified research flow over a finite set of source-preserved records. The 1,061 remarks preserve speaker turns from the 119 collected Congressional Record issues. The provisional external registry contains 52 source records from ten roster members, including interviews and public events as well as speeches. Two records are partial, so the source count does not mean that the project has 52 complete speeches. The two collections can be compared without hiding whether a citation comes from legislative proceedings or another public source.</p>
+<p>The external collection now concentrates its largest groups around Bernie Sanders (14 source records), Nancy Pelosi (8), Ted Cruz (7), Marco Rubio (6), Elizabeth Warren (5), and Cory Booker (5). Smaller groups cover Hakeem Jeffries (4) and one record each for John Cornyn, Tammy Duckworth, and Kevin McCarthy. The records span rallies, convention addresses, campaign events, press events, interviews, and public statements. Two entries remain partial: Sanders’s 2025 Nampa rally transcript begins mid-sentence, and Jeffries’s 2020 impeachment-trial argument transcript ends before the argument concludes. The manifest preserves these partial statuses, so the source-record total is not presented as a complete-speech total. Collection continues.</p>
+<h3>Impact evidence that exists</h3>
+<p>The project includes two real model-run traces with per-agent input, cached-input, output, request, and elapsed-time data. It includes a local setup guide, a public deployment configuration, original-source links, a finite public transcript manifest, and a reconstructed legislative corpus. These artifacts demonstrate that the prototype performs useful source retrieval and analysis work.</p>
+<h3>Impact evidence that is missing</h3>
+<p>No structured user study has established whether Civic Lens saves time, improves citation accuracy, makes researchers more confident, or changes the quality of their conclusions. The two model runs are technical measurements, not user outcomes. The 52 external source records show that the corpus can extend beyond the Congressional Record, but they do not provide balanced year-by-year coverage for the represented politicians. Two records are marked partial, and the largest individual collection has 14 records. No politician has yet reached 20–30 source records.</p>
+<p>A pilot should recruit students, journalists, or civic researchers and ask them to answer a real question using both their current workflow and Civic Lens. The study should record task time, number of sources opened, citation correctness, missing evidence, and whether the interface explains why a phrase was highlighted. A short interview should also ask which claims the user considered well-supported and where the tool created uncertainty.</p>
+<div class="page-number"><span>08 · IMPACT</span><span>9</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">09 · Limits and next steps</p>
+<h2>Coverage and validation are the next priorities.</h2>
+<h3>Current limitations</h3>
+<ul>
+<li>The Congressional Record reconstruction covers a selected set of 119 issues from 2011 through 2023. It is not a complete legislative archive.</li>
+<li>The external public corpus is small and uneven. Its provisional snapshot has 52 source records across ten roster members, including two partial transcripts. The largest group has 14 records, and no politician has reached 20–30 records.</li>
+<li>Some publisher pages provide a publication date without a separately confirmed speech date. Transcript boundaries can also require human review.</li>
+<li>Live discovery depends on network access, source-page availability, and extraction rules. Search results do not guarantee that a complete transcript can be retrieved.</li>
+<li>Topic cues begin with a policy vocabulary and exact phrase matches. A cue can be broad or irrelevant in context, so readers should inspect the full source text.</li>
+<li>Model costs and latency are based on one sample per workflow. The project has no verified user outcome, hard spending ceiling, or completed safety evaluation.</li>
+</ul>
+<h3>Prioritized plan</h3>
+<ol>
+<li><strong>Expand the external corpus around high-value names.</strong> Add complete speeches, interviews, debates, campaign announcements, and public addresses from a smaller number of politicians before broadening the roster. Every imported item should have an original source capture, a transcript text file, source metadata, and a reviewed boundary.</li>
+<li><strong>Repair and extend the test suite.</strong> Update the stale corpus-count assertion and add tests for static/live-cache deduplication, exact-quote rejection, prompt injection, date uncertainty, and model-provider failure.</li>
+<li><strong>Improve visible progress and explanation.</strong> Keep status messages beside the action that starts the work, show elapsed time and stage progress, explain the source of each topic cue, and tell the user why analysis is unavailable or delayed.</li>
+<li><strong>Add budget protections.</strong> Enforce per-request output limits, set service-level spend alerts, and document a monthly usage ceiling before making the app available to a larger audience.</li>
+<li><strong>Run a small user evaluation.</strong> Ask several intended users to complete a citation task and compare the measured workflow time and source accuracy against their current process.</li>
+</ol>
+<p>These steps turn a promising research interface into a dependable tool. They also make clear which conclusions are supported by the collected text and which ones remain open because the evidence is incomplete.</p>
+<div class="page-number"><span>09 · LIMITS AND NEXT STEPS</span><span>10</span></div>
+</section>
+
+<section class="page">
+<p class="kicker">Appendix · Reproducibility and sources</p>
+<h2>The repository contains the materials needed to inspect the prototype.</h2>
+<h3>Setup and operation</h3>
+<p>The README documents a local run from the project root. A fresh clone should create a Python virtual environment, install <span class="mono">requirements.txt</span>, place a credential in a local <span class="mono">.env</span> file or the parent folder, and start the FastAPI service with Uvicorn. The application can browse local speeches without an AI credential. Analysis and chat require <span class="mono">PORTKEY_API_KEY</span> or <span class="mono">OPENAI_API_KEY</span>. The checked-in <span class="mono">.env.example</span> contains empty placeholders and lists <span class="mono">gpt-6-luna</span> as the default model. No credential value is reproduced in this report.</p>
+<p>The deployment blueprint describes a Render web service and requests the provider key as a secret. The repository also contains a credential-free unittest suite, but its corpus-count expectation is stale after the external source registry grew from ten to 52 records. This report does not claim a fresh-clone dry run, a ten-minute setup test, or a passing test suite.</p>
+<h3>Evidence and references</h3>
+<ol class="source-list">
+<li><a href="https://zlisto.github.io/mgt_409_fa26/project_requirements.html">MGT 409 final project requirements</a>. A local requirements checklist in <span class="mono">PROJECT_REQUIREMENTS.md</span> records the required deliverables, ordered sections, and evidence targets. The course page could not be fetched during report preparation because network DNS resolution was unavailable.</li>
+<li><a href="https://github.com/aneesha224/civic-lens-final-project">Civic Lens source repository</a>. The README, application modules, tests, and data files support the implementation descriptions in this report.</li>
+<li><span class="mono">evidence/tokenomics_runs.json</span>. The file stores two completed run traces, the pricing basis, and a note about one unmeasured preliminary request.</li>
+<li><span class="mono">data/campaign_speech_records.csv</span>, <span class="mono">data/campaign_speeches/manifest.csv</span>, and <span class="mono">data/campaign_speeches/review_queue.csv</span>. These files record external source metadata, transcript status, URLs, and boundary notes. The current snapshot contains two explicitly partial records.</li>
+<li><span class="mono">data/collection_status.md</span> and <span class="mono">data/campaign_speeches/README.md</span>. These files explain corpus scope, data provenance, and collection limitations.</li>
+<li><a href="https://developers.openai.com/api/docs/pricing">OpenAI API pricing</a>. The estimate uses the gpt-6-luna rates stored in the run log and excludes separate gateway charges and taxes.</li>
+<li><a href="https://www.govinfo.gov/app/collection/crec">GovInfo Congressional Record collection</a>. The project uses the official record as one bounded source collection.</li>
+<li><a href="https://www.rev.com/transcripts">Rev transcript archive</a>. Rev pages are among the public sources recorded in the manifest.</li>
+<li><a href="https://civic-lens-pht.onrender.com">Civic Lens public application</a>. Service availability depends on the hosting provider, network access, and configured model credentials.</li>
+</ol>
+<p class="note">The interface diagram in this report is an embedded SVG illustration of the implemented workflow. It is not presented as a live screenshot. The project folder contains token traces but no saved screenshot of a completed analysis run, so that rubric item remains open for the final submission package.</p>
+<div class="page-number"><span>APPENDIX · REPRODUCIBILITY</span><span>11</span></div>
+</section>
 </body>
 </html>
-
