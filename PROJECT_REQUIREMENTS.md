@@ -55,7 +55,6 @@ At each meaningful milestone, check this file, run the available tests, verify t
 ## Remaining gaps (Oct 26)
 
 - No real user test (Impact capped at half credit without it).
-- Topic-comparison run not screenshotted; safety-auditor verdict not shown in UI.
 - Fresh-clone dry run with `.env` one folder up not performed.
 - Token measurements predate the richer briefing and higher limits.
 

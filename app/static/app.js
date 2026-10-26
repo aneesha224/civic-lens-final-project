@@ -1041,6 +1041,24 @@ function renderAnalysis(result) {
     }
     pointsList.classList.toggle("hidden", comparisonPoints.length === 0);
   }
+  const review = result.safety_review;
+  $("safety-review").classList.toggle("hidden", !review);
+  if (review) {
+    const verdict = $("safety-verdict");
+    verdict.textContent = review.approved
+      ? "✓ Approved: the claims are supported by the quoted evidence and scope warnings are present."
+      : "⚠ Flagged: the auditor found issues to review before relying on this answer.";
+    verdict.classList.toggle("flagged", !review.approved);
+    const list = $("safety-concerns");
+    list.replaceChildren();
+    for (const text of [...(review.concerns || []), ...(review.required_revisions || [])]) {
+      const item = document.createElement("li");
+      item.textContent = text;
+      list.append(item);
+    }
+    list.classList.toggle("hidden", list.children.length === 0);
+    $("safety-scope").textContent = review.scope_warning || "";
+  }
   if (state.detail) {
     const quotes = evidence.map((item) => item.quote).filter(Boolean);
     const phrases = state.detail.phrase_candidates || [];
