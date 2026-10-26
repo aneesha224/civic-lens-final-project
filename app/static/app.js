@@ -1,13 +1,24 @@
-const state = { politicians: [], profiles: [], profileAsOf: "", records: [], selected: null, detail: null, discoveryComplete: true };
+const state = { politicians: [], profiles: [], profileAsOf: "", records: [], selected: null, detail: null, discoveryComplete: true, analysisReady: null };
 const $ = (id) => document.getElementById(id);
 const chatHistory = [];
 let selectionRequest = 0;
 
 async function getJSON(url, options) {
   const response = await fetch(url, options);
-  const body = await response.json();
+  let body;
+  try {
+    body = await response.json();
+  } catch (_) {
+    throw new Error(response.ok
+      ? "The service returned an unreadable response. Please try again."
+      : `The service could not complete that request (HTTP ${response.status}). Please try again.`);
+  }
   if (!response.ok) throw new Error(body.detail || "The request failed.");
   return body;
+}
+
+function analysisUnavailableMessage() {
+  return "AI analysis is not configured for this service. Add PORTKEY_API_KEY or OPENAI_API_KEY in its environment settings; speech browsing will still work.";
 }
 
 function toast(message) {
@@ -68,6 +79,15 @@ async function loadPeople() {
     const profile = state.profiles.find((item) => item.name === name);
     const label = profile ? profile.display_name : name;
     options.append(new Option(label, name));
+  }
+  try {
+    const health = await getJSON("/api/health");
+    state.analysisReady = health.analysis_ready === true;
+    const note = $("analysis-config-note");
+    note.classList.toggle("hidden", state.analysisReady);
+    if (!state.analysisReady) note.textContent = analysisUnavailableMessage();
+  } catch (_) {
+    state.analysisReady = null;
   }
 }
 
@@ -576,6 +596,10 @@ async function tracePhrase() {
     toast("Civic Lens is still collecting this politician’s statements. Topic analysis will be ready when it finishes.");
     return;
   }
+  if (state.analysisReady === false) {
+    toast(analysisUnavailableMessage());
+    return;
+  }
   if (topic.length < 2) {
     toast("Choose or enter a topic, such as taxes or crime.");
     return;
@@ -713,14 +737,11 @@ function setAnalysisExpanded(expanded) {
 function renderAnalysis(result) {
   const speech = result.speech_analysis;
   const longitudinal = result.longitudinal_analysis;
-  const safety = result.safety_review;
   $("analysis").classList.remove("hidden");
   $("analysis-empty").classList.add("hidden");
   $("analysis-title").textContent = result.request.topic || result.request.phrase || "What the record shows";
   if (result.request.topic || result.request.phrase) $("phrase-results").classList.add("hidden");
-  $("pill").textContent = safety.approved ? "Source text checked" : "Source text needs review";
-  $("pill").style.background = safety.approved ? "#e8f8f0" : "#fff0f3";
-  $("pill").style.color = safety.approved ? "#245b42" : "#9d2945";
+  $("analysis-config-note").classList.add("hidden");
   $("summary").textContent = speech.summary;
   const claims = speech.claims || [];
   const claimsList = $("claims");
@@ -784,6 +805,10 @@ function renderAnalysis(result) {
 
 async function analyze() {
   if (!state.selected) return;
+  if (state.analysisReady === false) {
+    toast(analysisUnavailableMessage());
+    return;
+  }
   const button = $("analyze");
   const topicButton = $("trace-phrase");
   const browseButton = $("browse-topic");
