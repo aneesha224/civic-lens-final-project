@@ -1,0 +1,257 @@
+CONGRESSIONAL RECORD — SENATE S7365 October 20, 2015 
+national effects on public health or safety, 
+economic security, or national security. 
+(3) S UBMITTAL.—The Secretary shall sub-
+mit to the appropriate congressional com-
+mittees the assessment and strategy re-
+quired by paragraph (1). 
+(4) F ORM.—The assessment and strategy 
+submitted under paragraph (3) may each in-
+clude a classified annex. 
+(e) S ENATE OF CONGRESS.—To the extent 
+that the Secretary proposes to require the 
+reporting of significant cyber intrusions of 
+any covered entity pursuant to a rec-
+ommendation identified in subsection (d) it 
+is the Sense of Congress that— 
+(1) the Secretary should ensure that the 
+policies and procedures established for such 
+reporting incorporate, to the greatest extent 
+practicable, processes, roles, and responsibil-
+ities of appropriate agencies and entities, in-
+cluding sector specific information sharing 
+and analysis centers, that were in effect on 
+the day before the date of the enactment of 
+this Act; 
+(2) no cause of action should lie or be main-
+tained in any court against a covered entity, 
+and such action should be promptly dis-
+missed for sharing information with the Sec-
+retary or the appropriate agency head for 
+sharing such information; 
+(3) the Secretary or appropriate agency 
+head, as the case may be, should, under sec-
+tion 103 and to the greatest extent prac-
+ticable, make available to any covered enti-
+ty submitting a report such cyber threat in-
+dicators as the Secretary or appropriate 
+agency head considers appropriate; and 
+(4) the Secretary or the appropriate agency 
+head (as the case may be) should take such 
+actions as the Secretary or the appropriate 
+agency head (as the case may be) considers 
+appropriate to protect from disclosure the 
+identity of the covered entity. 
+SA 2717. Mr. UDALL (for himself, 
+Mrs. S HAHEEN, Mr. T ESTER, and Mr. 
+MERKLEY) submitted an amendment in-
+tended to be proposed by him to the 
+bill S. 754, to improve cybersecurity in 
+the United States through enhanced 
+sharing of information about cyberse-
+curity threats, and for other purposes; 
+which was ordered to lie on the table; 
+as follows: 
+At the end, add the following: 
+SEC. 11. EXTENSION OF LAND AND WATER CON-
+SERVATION FUND. 
+Section 200302 of title 54, United States 
+Code, is amended— 
+(1) in subsection (b), in the matter pre-
+ceding paragraph (1), by striking ‘‘September 
+30, 2015’’ and inserting ‘‘December 11, 2015’’; 
+and 
+(2) in subsection (c)(1), by striking ‘‘Sep-
+tember 30, 2015’’ and inserting ‘‘December 11, 
+2015’’. 
+SA 2718. Mr. UDALL (for himself, 
+Mrs. S HAHEEN, Mr. T ESTER, and Mr. 
+MERKLEY) submitted an amendment in-
+tended to be proposed by him to the 
+bill S. 754, to improve cybersecurity in 
+the United States through enhanced 
+sharing of information about cyberse-
+curity threats, and for other purposes; 
+which was ordered to lie on the table; 
+as follows: 
+At the appropriate place, insert the fol-
+lowing: 
+SEC. ll. PERMANENT REAUTHORIZATION OF 
+LAND AND WATER CONSERVATION 
+FUND. 
+(a) IN GENERAL.—Section 200302 of title 54, 
+United States Code, is amended— 
+(1) in subsection (b), in the matter pre-
+ceding paragraph (1), by striking ‘‘During 
+the period ending September 30, 2015, there’’ 
+and inserting ‘‘There’’; and 
+(2) in subsection (c)(1), by striking 
+‘‘through September 30, 2015’’. 
+(b) PUBLIC ACCESS.—Section 200306 of title 
+54, United States Code, is amended by adding 
+at the end the following: 
+‘‘(c) PUBLIC ACCESS.—Not less than 1.5 per-
+cent of amounts made available for expendi-
+ture in any fiscal year under section 200303, 
+or $10,000,000, whichever is greater, shall be 
+used for projects that secure recreational 
+public access to existing Federal public land 
+for hunting, fishing, and other recreational 
+purposes.’’. 
+SA 2719. Mr. ALEXANDER submitted 
+an amendment intended to be proposed 
+by him to the bill S. 754, to improve cy-
+bersecurity in the United States 
+through enhanced sharing of informa-
+tion about cybersecurity threats, and 
+for other purposes; which was ordered 
+to lie on the table; as follows: 
+At the appropriate place, insert the fol-
+lowing: 
+SEC. ll. IMPROVING CYBERSECURITY IN THE 
+HEALTH CARE INDUSTRY. 
+(a) DEFINITIONS.—In this section: 
+(1) B USINESS ASSOCIATE .—The term ‘‘busi-
+ness associate’’ has the meaning given such 
+term in section 160.103 of title 45, Code of 
+Federal Regulations. 
+(2) C OVERED ENTITY .—The term ‘‘covered 
+entity’’ has the meaning given such term in 
+section 160.103 of title 45, Code of Federal 
+Regulations. 
+(3) H EALTH CARE CLEARINGHOUSE ; HEALTH 
+CARE PROVIDER ; HEALTH PLAN .—The terms 
+‘‘health care clearinghouse’’, ‘‘health care 
+provider’’, and ‘‘health plan’’ have the mean-
+ings given the terms in section 160.103 of 
+title 45, Code of Federal Regulations. 
+(4) HEALTH CARE INDUSTRY STAKEHOLDER .— 
+The term ‘‘health care industry stakeholder’’ 
+means any— 
+(A) health plan, health care clearinghouse, 
+or health care provider; 
+(B) patient advocate; 
+(C) pharmacist; 
+(D) developer of health information tech-
+nology; 
+(E) laboratory; 
+(F) pharmaceutical or medical device man-
+ufacturer; or 
+(G) additional stakeholder the Secretary 
+determines necessary for purposes of sub-
+section (d)(1), (d)(3), or (e). 
+(5) S ECRETARY.—The term ‘‘Secretary’’ 
+means the Secretary of Health and Human 
+Services. 
+(b) R EPORT.—Not later than 1 year after 
+the date of enactment of this Act, the Sec-
+retary shall submit, to the Committee on 
+Health, Education, Labor, and Pensions of 
+the Senate and the Committee on Energy 
+and Commerce of the House of Representa-
+tives, a report on the preparedness of the 
+health care industry in responding to cyber-
+security threats. 
+(c) CONTENTS OF REPORT.—With respect to 
+the internal response of the Department of 
+Health and Human Services to emerging cy-
+bersecurity threats, the report shall in-
+clude— 
+(1) a clear statement of the official within 
+the Department of Health and Human Serv-
+ices to be responsible for leading and coordi-
+nating efforts of the Department regarding 
+cybersecurity threats in the health care in-
+dustry; and 
+(2) a plan from each relevant operating di-
+vision and subdivision of the Department of 
+Health and Human Services on how such di-
+vision or subdivision will address cybersecu-
+rity threats in the health care industry, in-
+cluding a clear delineation of how each such 
+division or subdivision will divide responsi-
+bility among the personnel of such division 
+or subdivision and communicate with other 
+such divisions and subdivisions regarding ef-
+forts to address such threats. 
+(d) HEALTH CARE INDUSTRY CYBERSECURITY 
+TASK FORCE.— 
+(1) I N GENERAL .—Not later than 60 days 
+after the date of enactment of this Act, the 
+Secretary, in consultation with the Sec-
+retary of Homeland Security, shall convene 
+health care industry stakeholders, cyberse-
+curity experts, and any Federal agencies or 
+entities the Secretary determines appro-
+priate to establish a task force to— 
+(A) analyze how industries, other than the 
+health care industry, have implemented 
+strategies and safeguards for addressing cy-
+bersecurity threats within their respective 
+industries; 
+(B) analyze challenges and barriers private 
+entities (notwithstanding section 2(15)(B), 
+excluding any State, tribal, or local govern-
+ment) in the health care industry face secur-
+ing themselves against cyber attacks; 
+(C) review challenges that covered entities 
+and business associates face in securing 
+networked medical devices and other soft-
+ware or systems that connect to an elec-
+tronic health record; 
+(D) provide the Secretary with information 
+to disseminate to health care industry stake-
+holders for purposes of improving their pre-
+paredness for, and response to, cybersecurity 
+threats affecting the health care industry; 
+(E) establish a plan for creating a single 
+system for the Federal Government to share 
+information on actionable intelligence re-
+garding cybersecurity threats to the private 
+sector in near real time, at no cost to the re-
+cipients of such information, including 
+which Federal agency or other entity may be 
+best suited to be the central conduit to fa-
+cilitate the sharing of such information; and 
+(F) report to Congress on the findings and 
+recommendations of the task force regarding 
+carrying out subparagraphs (A) through (E). 
+(2) T ERMINATION.—The task force estab-
+lished under this subsection shall terminate 
+on the date that is 1 year after the date of 
+enactment of this Act. 
+(3) DISSEMINATION.—Not later than 60 days 
+after the termination of the task force estab-
+lished under this subsection, the Secretary 
+shall disseminate the information described 
+in paragraph (1)(D) to health care industry 
+stakeholders in accordance with such para-
+graph. 
+(e) C YBERSECURITY FRAMEWORK.—The Sec-
+retary shall establish, through a collabo-
+rative process with the Secretary of Home-
+land Security, health care industry stake-
+holders, the National Institute of Standards 
+and Technology, and any Federal agency or 
+entity the Secretary determines appropriate, 
+a single, voluntary, national health-specific 
+cybersecurity framework that— 
+(1) establishes a common set of security 
+practices and standards that specifically per-
+tain to a range of health care organizations; 
+(2) supports voluntary adoption and imple-
+mentation efforts to improve safeguards to 
+address cybersecurity threats; and 
+(3) is consistently updated and applicable 
+to the range of health care organizations de-
+scribed in paragraph (1). 
+f 
+AUTHORITY FOR COMMITTEES TO 
+MEET 
+COMMITTEE ON ENERGY AND NATURAL  
+RESOURCES 
+Mr. TOOMEY. Mr. President, I ask 
+unanimous consent that the Com-
+mittee on Energy and Natural Re-
+sources be authorized to meet during 
+VerDate Sep 11 2014 01:46 Oct 21, 2015 Jkt 059060 PO 00000 Frm 00057 Fmt 0624 Sfmt 0634 E:\CR\FM\A20OC6.017 S20OCPT1smartinez on DSK4TPTVN1PROD with SENATE

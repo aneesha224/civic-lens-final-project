@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-49f65527586c",
+  "politician": "Elizabeth Warren",
+  "state": "Massachusetts",
+  "date": "2018-11-07",
+  "venue": "Read the transcript of Elizabeth Warren's re-election victory speech",
+  "source_type": "On-demand public transcript from boston.com",
+  "source_category": "campaign",
+  "source_url": "https://www.boston.com/news/politics/2018/11/07/elizabeth-warren-re-election-victory-speech/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-49f65527586c.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

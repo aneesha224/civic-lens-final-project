@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-3e493af5ce5f",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2026-10-25",
+  "venue": "Ted Cruz Senate Speech Transcript 1/6 | Rev",
+  "source_type": "On-demand public transcript from rev.com",
+  "source_category": "campaign",
+  "source_url": "https://www.rev.com/transcripts/ted-cruz-senate-speech-on-election-certification-transcript-january-6",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-3e493af5ce5f.txt",
+  "transcript_status": "retrieved public text; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

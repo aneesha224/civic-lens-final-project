@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-e29133d1e44c",
+  "politician": "Nancy Pelosi",
+  "state": "California",
+  "date": "2012-09-06",
+  "venue": "Transcript: House Minority Leader Nancy Pelosi - WRAL",
+  "source_type": "On-demand public transcript from wral.com",
+  "source_category": "campaign",
+  "source_url": "https://www.wral.com/archive/11509335/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-e29133d1e44c.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher article body; boundaries not independently checked"
+}

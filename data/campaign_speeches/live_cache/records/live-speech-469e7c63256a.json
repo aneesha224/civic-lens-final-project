@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-469e7c63256a",
+  "politician": "Pat Toomey",
+  "state": "Pennsylvania",
+  "date": "2026-10-26",
+  "venue": "Transcript: Sen. Pat Toomey on \"Face the Nation,\" June 5, 2022",
+  "source_type": "On-demand public transcript from cbsnews.com",
+  "source_category": "campaign",
+  "source_url": "https://www.cbsnews.com/news/pat-toomey-face-the-nation-transcript-06-05-2022/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-469e7c63256a.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

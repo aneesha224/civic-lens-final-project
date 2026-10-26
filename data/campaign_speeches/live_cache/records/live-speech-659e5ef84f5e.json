@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-659e5ef84f5e",
+  "politician": "Cory Booker",
+  "state": "New Jersey",
+  "date": "2026-10-26",
+  "venue": "Cory Booker 2020 DNC Speech Transcript - Rev",
+  "source_type": "On-demand public transcript from rev.com",
+  "source_category": "campaign",
+  "source_url": "https://www.rev.com/transcripts/cory-booker-2020-dnc-speech-transcript",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-659e5ef84f5e.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from Rev transcript; boundaries not independently checked"
+}

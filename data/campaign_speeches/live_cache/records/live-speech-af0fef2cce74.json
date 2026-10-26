@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-af0fef2cce74",
+  "politician": "Tammy Duckworth",
+  "state": "Illinois",
+  "date": "2026-10-26",
+  "venue": "Tammy Duckworth’s full speech | DNC Night 4 - PBS",
+  "source_type": "On-demand public transcript from pbs.org",
+  "source_category": "campaign",
+  "source_url": "https://www.pbs.org/video/tammy-duckworths-full-speech-dnc-night-4-vuamng/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-af0fef2cce74.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

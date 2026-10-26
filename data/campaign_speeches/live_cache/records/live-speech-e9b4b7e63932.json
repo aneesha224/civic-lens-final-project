@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-e9b4b7e63932",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-07-26",
+  "venue": "Bernie Sanders' DNC 2016 speech: Read the transcript in full",
+  "source_type": "On-demand public transcript from independent.co.uk",
+  "source_category": "campaign",
+  "source_url": "https://www.independent.co.uk/news/world/americas/us-politics/bernie-sanders-dnc-2016-speech-read-the-transcript-in-full-a7156536.html",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-e9b4b7e63932.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

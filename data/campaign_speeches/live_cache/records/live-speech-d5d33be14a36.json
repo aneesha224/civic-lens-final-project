@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-d5d33be14a36",
+  "politician": "Nancy Pelosi",
+  "state": "California",
+  "date": "2012-09-05",
+  "venue": "Nancy Pelosi Speech Text: Read The House Minority Leader's",
+  "source_type": "On-demand public transcript from huffpost.com",
+  "source_category": "campaign",
+  "source_url": "https://www.huffpost.com/entry/nancy-pelosi-speech-text_n_1852782",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-d5d33be14a36.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

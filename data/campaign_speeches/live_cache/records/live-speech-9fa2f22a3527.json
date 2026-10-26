@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-9fa2f22a3527",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2026-10-26",
+  "venue": "The Full Text of Bernie Sanders’ Speech Ending His 2020 …",
+  "source_type": "On-demand public transcript from indypendent.org",
+  "source_category": "campaign",
+  "source_url": "https://indypendent.org/2020/04/the-full-text-of-bernie-sanders-speech-ending-his-2020-campaign/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-9fa2f22a3527.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

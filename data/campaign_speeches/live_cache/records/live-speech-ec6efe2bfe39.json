@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-ec6efe2bfe39",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-03-02",
+  "venue": "Super Tuesday: Full Transcript of Bernie Sanders Remarks - TIME",
+  "source_type": "On-demand public transcript from time.com",
+  "source_category": "campaign",
+  "source_url": "https://time.com/4244244/bernie-sanders-super-tuesday-speech-transcript-full-text/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-ec6efe2bfe39.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

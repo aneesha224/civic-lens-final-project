@@ -1,0 +1,101 @@
+[
+  {
+    "measured_at_utc": "2026-10-26T01:14:21+00:00",
+    "model": "gpt-6-luna",
+    "measurement_note": "A preliminary speech-analyst request during logger setup returned a model response, but its usage could not be read after an accessor mismatch. It is excluded from these completed-run totals.",
+    "pricing_basis": {
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "usd_per_million_tokens": {
+        "input": 0.1,
+        "cached_input": 0.01,
+        "output": 0.5
+      },
+      "cost_note": "OpenAI list-price estimate; excludes any separate gateway markup or tax."
+    },
+    "runs": [
+      {
+        "scenario": "speech-only",
+        "record_id": "live-speech-ec6efe2bfe39",
+        "date": "2016-03-02",
+        "topic_requested": false,
+        "elapsed_seconds": 3.242,
+        "agents": [
+          {
+            "agent": "speech-analyst",
+            "model_requests": 2,
+            "tool_calls": 1,
+            "input_tokens": 1311,
+            "cache_read_tokens": 0,
+            "output_tokens": 274,
+            "unmeasured_responses": 0
+          },
+          {
+            "agent": "safety-auditor",
+            "model_requests": 1,
+            "tool_calls": 0,
+            "input_tokens": 589,
+            "cache_read_tokens": 0,
+            "output_tokens": 103,
+            "unmeasured_responses": 0
+          }
+        ],
+        "totals": {
+          "model_requests": 3,
+          "input_tokens": 1900,
+          "uncached_input_tokens": 1900,
+          "cache_read_tokens": 0,
+          "output_tokens": 377,
+          "total_tokens": 2277,
+          "unmeasured_responses": 0,
+          "estimated_openai_list_cost_usd": 0.0003785
+        }
+      },
+      {
+        "scenario": "topic-comparison",
+        "record_id": "live-speech-ec6efe2bfe39",
+        "date": "2016-03-02",
+        "topic_requested": true,
+        "elapsed_seconds": 34.514,
+        "agents": [
+          {
+            "agent": "speech-analyst",
+            "model_requests": 2,
+            "tool_calls": 1,
+            "input_tokens": 1313,
+            "cache_read_tokens": 0,
+            "output_tokens": 308,
+            "unmeasured_responses": 0
+          },
+          {
+            "agent": "longitudinal-analyst",
+            "model_requests": 3,
+            "tool_calls": 1,
+            "input_tokens": 9436,
+            "cache_read_tokens": 2222,
+            "output_tokens": 4332,
+            "unmeasured_responses": 0
+          },
+          {
+            "agent": "safety-auditor",
+            "model_requests": 1,
+            "tool_calls": 0,
+            "input_tokens": 3197,
+            "cache_read_tokens": 0,
+            "output_tokens": 215,
+            "unmeasured_responses": 0
+          }
+        ],
+        "totals": {
+          "model_requests": 6,
+          "input_tokens": 13946,
+          "uncached_input_tokens": 11724,
+          "cache_read_tokens": 2222,
+          "output_tokens": 4855,
+          "total_tokens": 18801,
+          "unmeasured_responses": 0,
+          "estimated_openai_list_cost_usd": 0.00362212
+        }
+      }
+    ]
+  }
+]

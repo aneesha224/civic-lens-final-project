@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-7ce012f597d8",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2015-03-23",
+  "venue": "Transcript: Read Full Text of Sen. Ted Cruz's Campaign Launch",
+  "source_type": "On-demand public transcript from time.com",
+  "source_category": "campaign",
+  "source_url": "https://time.com/3754392/ted-cruz-liberty-university-speech-transcript/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-7ce012f597d8.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

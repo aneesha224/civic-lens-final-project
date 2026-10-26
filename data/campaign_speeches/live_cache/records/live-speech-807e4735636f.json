@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-807e4735636f",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2016-07-21",
+  "venue": "Transcript of Ted Cruz Speech When He Didn't Endorse Trump - TIME",
+  "source_type": "On-demand public transcript from time.com",
+  "source_category": "campaign",
+  "source_url": "https://time.com/4416741/ted-cruz-trump-rnc-full-transcript/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-807e4735636f.txt",
+  "transcript_status": "retrieved public text; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

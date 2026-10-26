@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-414b3a4f0837",
+  "politician": "Cory Booker",
+  "state": "New Jersey",
+  "date": "2012-09-04",
+  "venue": "Cory Booker Speech Text: Read The Democratic Convention Remarks",
+  "source_type": "On-demand public transcript from huffpost.com",
+  "source_category": "campaign",
+  "source_url": "https://www.huffpost.com/entry/cory-booker-speech-text_n_1852212",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-414b3a4f0837.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

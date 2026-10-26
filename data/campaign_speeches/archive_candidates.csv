@@ -1,0 +1,11 @@
+candidate_id,politician,state,source_url,discovered_from,review_status
+rev-d063fe579919,Kevin McCarthy,California,https://www.rev.com/transcripts/kevin-mccarthy-speech-transcript-as-house-debates-2nd-trump-impeachment,https://www.rev.com/sitemap.xml,rejected: impeachment-floor speech
+rev-6239b0158c8e,Kevin McCarthy,California,https://www.rev.com/transcripts/kevin-mccarthys-speech-after-losing-historic-vote-transcript,https://www.rev.com/sitemap.xml,rejected: House Speaker election
+rev-5df38bc2389d,John Cornyn,Texas,https://www.rev.com/transcripts/ken-paxton-and-john-cornyn-post-runoff-speeches,https://www.rev.com/sitemap.xml,verified and imported: selected Cornyn concession section
+rev-721dfbb18408,Ted Cruz,Texas,https://www.rev.com/transcripts/senator-ted-cruz-speaks-at-2022-nra-convention-in-houston-5-27-22-transcript,https://www.rev.com/sitemap.xml,rejected: policy convention
+rev-7d593c9c1bd3,Ted Cruz,Texas,https://www.rev.com/transcripts/ted-cruz-2021-cpac-speech-transcript-february-26,https://www.rev.com/sitemap.xml,rejected: CPAC address
+rev-176a28ed4e43,Ted Cruz,Texas,https://www.rev.com/transcripts/ted-cruz-senate-speech-on-election-certification-transcript-january-6,https://www.rev.com/sitemap.xml,rejected: Senate floor speech
+rev-a1b4a6c8085a,Ted Cruz,Texas,https://www.rev.com/transcripts/ted-cruz-speaks-at-rnc-2024-night-two,https://www.rev.com/sitemap.xml,verified and imported: full RNC transcript
+rev-3bfea620a62e,Ted Cruz,Texas,https://www.rev.com/transcripts/ted-cruz-speech-transcript-argues-some-children-should-have-access-to-guns,https://www.rev.com/sitemap.xml,rejected: policy address
+rev-c3f1ee77865a,Marco Rubio,Florida,https://www.rev.com/transcripts/marco-rubio-speaks-at-rnc-2024-night-two,https://www.rev.com/sitemap.xml,verified and imported: full RNC transcript
+rev-70eadbc0588f,Hakeem Jeffries,New York,https://www.rev.com/transcripts/hakeem-jeffries-speaks-at-democratic-national-convention,https://www.rev.com/sitemap.xml,verified and imported: full DNC transcript

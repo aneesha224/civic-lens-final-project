@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-eb392d16da32",
+  "politician": "Nancy Pelosi",
+  "state": "California",
+  "date": "2020-08-20",
+  "venue": "Transcript: Nancy Pelosi’s DNC remarks | CNN Politics",
+  "source_type": "On-demand public transcript from cnn.com",
+  "source_category": "campaign",
+  "source_url": "https://www.cnn.com/2020/08/19/politics/nancy-pelosi-speech-transcript",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-eb392d16da32.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

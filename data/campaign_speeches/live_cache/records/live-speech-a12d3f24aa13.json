@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-a12d3f24aa13",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2019-07-22",
+  "venue": "Bernie Sanders 2020 Campaign Kickoff in Brooklyn – #Transcripts2020",
+  "source_type": "On-demand public transcript from scribie.ai",
+  "source_category": "campaign",
+  "source_url": "https://scribie.ai/blog/3898",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-a12d3f24aa13.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

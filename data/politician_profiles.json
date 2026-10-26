@@ -1,0 +1,499 @@
+{
+  "as_of": "October 25, 2026",
+  "profiles": [
+    {
+      "name": "Kevin McCarthy",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Kevin_McCarthy%2C_official_portrait%2C_speaker.jpg/500px-Kevin_McCarthy%2C_official_portrait%2C_speaker.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Kevin_McCarthy,_official_portrait,_speaker.jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "California",
+      "display_name": "Kevin McCarthy (R)",
+      "office": "Former U.S. Representative for California’s 20th District; Speaker of the House in 2023.",
+      "office_status": "Former officeholder — resigned from Congress in December 2023.",
+      "active": false,
+      "last_ran": "2022 U.S. House election; won reelection, then resigned in 2023.",
+      "running_now": "No — no current campaign for elected office.",
+      "summary": "Republican former House Speaker who represented California’s 20th District and led House Republicans before resigning from Congress.",
+      "focus_areas": [
+        "House leadership and party strategy",
+        "Energy and natural resources",
+        "Taxes and economic policy",
+        "Border security"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.congress.gov/member/kevin-mccarthy/M001165"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Kevin+McCarthy+2026+running+for+elected+office&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "John Cornyn",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/John_Cornyn.jpg/500px-John_Cornyn.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:John_Cornyn.jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "Texas",
+      "display_name": "John Cornyn (R)",
+      "office": "U.S. Senator from Texas; current term ends in January 2027.",
+      "office_status": "Serving — term ends January 2027.",
+      "active": true,
+      "last_ran": "2026 Republican Senate primary/runoff; lost the nomination to Ken Paxton.",
+      "running_now": "No — lost the 2026 Republican runoff; still serving in the Senate through January 2027.",
+      "summary": "Republican U.S. senator from Texas and former Texas attorney general; his Senate career has centered on conservative judicial, border, and national-security policy.",
+      "focus_areas": [
+        "Border security and immigration",
+        "Courts and constitutional issues",
+        "National security",
+        "Veterans and public safety"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.cornyn.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=John+Cornyn+2026+Texas+Senate+Republican+runoff+Ken+Paxton&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Ted Cruz",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Ted_Cruz_official_116th_portrait_%283x4_cropped%29.jpg/500px-Ted_Cruz_official_116th_portrait_%283x4_cropped%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Ted_Cruz_official_116th_portrait_(3x4_cropped).jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "Texas",
+      "display_name": "Ted Cruz (R)",
+      "office": "U.S. Senator from Texas; reelected in 2024, with a term through January 2031.",
+      "office_status": "Serving.",
+      "active": true,
+      "last_ran": "2024 U.S. Senate election; won reelection.",
+      "running_now": "No — his next regular Senate election is in 2030.",
+      "summary": "Republican U.S. senator from Texas and former Texas solicitor general, known for conservative positions on federal power, energy, immigration, and national security.",
+      "focus_areas": [
+        "Immigration and border security",
+        "Energy policy",
+        "Taxes and federal regulation",
+        "National security"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.cruz.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Ted+Cruz+2024+Texas+Senate+reelection+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Marco Rubio",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Official_portrait_of_Secretary_Marco_Rubio_%28cropped%29%282%29.jpg/500px-Official_portrait_of_Secretary_Marco_Rubio_%28cropped%29%282%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Secretary_Marco_Rubio_(cropped)(2).jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "Florida",
+      "display_name": "Marco Rubio (R)",
+      "office": "U.S. Secretary of State; former U.S. Senator from Florida (2011–2025).",
+      "office_status": "Serving in the executive branch.",
+      "active": true,
+      "last_ran": "2022 U.S. Senate election in Florida; won reelection before leaving the Senate in January 2025.",
+      "running_now": "No — he is Secretary of State, not a candidate in Florida’s 2026 Senate special election.",
+      "summary": "Republican from Florida serving as U.S. Secretary of State. Before joining the Cabinet, he represented Florida in the Senate and focused heavily on foreign policy and national security.",
+      "focus_areas": [
+        "Foreign policy and national security",
+        "China, Cuba, and Latin America",
+        "Economic mobility and family policy",
+        "Immigration"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.state.gov/biographies/marco-rubio/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Marco+Rubio+2026+Florida+Senate+special+election+Secretary+of+State&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Rick Scott",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Official_Portrait_of_Senator_Rick_Scott_%28R-FL%29.jpg/500px-Official_Portrait_of_Senator_Rick_Scott_%28R-FL%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_Senator_Rick_Scott_(R-FL).jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "Florida",
+      "display_name": "Rick Scott (R)",
+      "office": "U.S. Senator from Florida; reelected in 2024, with a term through January 2031.",
+      "office_status": "Serving.",
+      "active": true,
+      "last_ran": "2024 U.S. Senate election; won reelection.",
+      "running_now": "No — his regular Senate seat is next up in 2030.",
+      "summary": "Republican U.S. senator from Florida and former Florida governor. His public agenda emphasizes limiting federal spending and regulation and supporting business growth.",
+      "focus_areas": [
+        "Federal spending and national debt",
+        "Taxes and regulation",
+        "Small business and jobs",
+        "Veterans and public safety"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.rickscott.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Rick+Scott+2024+Florida+Senate+reelection+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Kirsten Gillibrand",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Kirsten_Gillibrand%2C_official_photo%2C_116th_Congress.jpg/500px-Kirsten_Gillibrand%2C_official_photo%2C_116th_Congress.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Kirsten_Gillibrand,_official_photo,_116th_Congress.jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "New York",
+      "display_name": "Kirsten Gillibrand (D)",
+      "office": "U.S. Senator from New York; reelected in 2024, with a term through January 2031.",
+      "office_status": "Serving.",
+      "active": true,
+      "last_ran": "2024 U.S. Senate election; won reelection.",
+      "running_now": "No — her next regular Senate election is in 2030.",
+      "summary": "Democratic U.S. senator from New York and former House member. She has been especially visible on reproductive rights, military sexual-assault reform, and family policy.",
+      "focus_areas": [
+        "Reproductive rights and healthcare",
+        "Military and veterans’ issues",
+        "Families and childcare",
+        "Government ethics and accountability"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.gillibrand.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Kirsten+Gillibrand+2024+New+York+Senate+reelection+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Hakeem Jeffries",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Rep-Hakeem-Jeffries-Official-Portrait_%28cropped%29.jpg/500px-Rep-Hakeem-Jeffries-Official-Portrait_%28cropped%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Rep-Hakeem-Jeffries-Official-Portrait_(cropped).jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "New York",
+      "display_name": "Hakeem Jeffries (D)",
+      "office": "U.S. Representative for New York’s 8th District; House Democratic leader.",
+      "office_status": "Serving.",
+      "last_ran": "2024 U.S. House election; won reelection. Active in the 2026 House campaign.",
+      "running_now": "Yes — campaigning for reelection to New York’s 8th District in the November 3, 2026 general election.",
+      "summary": "Democratic representative from Brooklyn and Queens who leads House Democrats. His work combines party leadership with district and national debates on jobs, healthcare, voting rights, and public safety.",
+      "focus_areas": [
+        "Jobs and economic opportunity",
+        "Healthcare affordability",
+        "Voting rights and democracy",
+        "Public safety"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://jeffries.house.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Hakeem+Jeffries+2026+New+York+8th+District+House+election+campaign&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Pat Toomey",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Pat_Toomey_official_photo.jpg/500px-Pat_Toomey_official_photo.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Pat_Toomey_official_photo.jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "Pennsylvania",
+      "display_name": "Pat Toomey (R)",
+      "office": "Former U.S. Senator from Pennsylvania (2011–2023); former U.S. Representative.",
+      "office_status": "Former officeholder.",
+      "active": false,
+      "last_ran": "2016 U.S. Senate election; won reelection. Did not seek another term in 2022.",
+      "running_now": "No — left the Senate in January 2023 and has no current campaign for elected office.",
+      "summary": "Republican former Pennsylvania senator and House member. He was a prominent fiscal conservative and chaired the Senate Banking Committee.",
+      "focus_areas": [
+        "Federal budget and deficit",
+        "Taxes and regulation",
+        "Banking and financial policy",
+        "Trade and economic growth"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.congress.gov/member/pat-toomey/T000461"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Pat+Toomey+2026+running+for+elected+office&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Cory Booker",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Cory_Booker%2C_official_portrait_%28119th_Congress%29.jpg/500px-Cory_Booker%2C_official_portrait_%28119th_Congress%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Cory_Booker,_official_portrait_(119th_Congress).jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "New Jersey",
+      "display_name": "Cory Booker (D)",
+      "office": "U.S. Senator from New Jersey; seeking another term in 2026.",
+      "office_status": "Serving and campaigning.",
+      "active": true,
+      "last_ran": "2026 Democratic Senate primary; advanced to the November general election (last elected in 2020).",
+      "running_now": "Yes — running for reelection in the November 3, 2026 general election.",
+      "summary": "Democratic U.S. senator from New Jersey and former Newark mayor. His national profile has centered on criminal-justice reform, poverty, healthcare, and climate policy.",
+      "focus_areas": [
+        "Criminal-justice reform",
+        "Poverty and economic opportunity",
+        "Healthcare",
+        "Climate and environmental justice"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.booker.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Cory+Booker+2026+New+Jersey+Senate+general+election&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Tammy Duckworth",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Tammy_Duckworth%2C_official_portrait%2C_115th_Congress.jpg/500px-Tammy_Duckworth%2C_official_portrait%2C_115th_Congress.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Tammy_Duckworth,_official_portrait,_115th_Congress.jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "Illinois",
+      "display_name": "Tammy Duckworth (D)",
+      "office": "U.S. Senator from Illinois; current term runs through January 2029.",
+      "office_status": "Serving.",
+      "active": true,
+      "last_ran": "2022 U.S. Senate election; won reelection.",
+      "running_now": "No — her next regular Senate election is in 2028.",
+      "summary": "Democratic U.S. senator from Illinois, Iraq War veteran, and former U.S. Representative. Her work often focuses on veterans, military families, healthcare, and transportation.",
+      "focus_areas": [
+        "Veterans and military families",
+        "Healthcare and reproductive rights",
+        "Infrastructure and transportation",
+        "Disability access"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.duckworth.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Tammy+Duckworth+2022+Illinois+Senate+reelection+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Bernie Sanders",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bernie_Sanders_February_2026_%28cropped%29.jpg/500px-Bernie_Sanders_February_2026_%28cropped%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Bernie_Sanders_February_2026_(cropped).jpg",
+      "party_code": "I",
+      "party_name": "Independent",
+      "state": "Vermont",
+      "display_name": "Bernie Sanders (I)",
+      "office": "U.S. Senator from Vermont; serves as an Independent and caucuses with Democrats.",
+      "office_status": "Serving; reelected in 2024, with a term through January 2031.",
+      "active": true,
+      "last_ran": "2024 U.S. Senate election; won reelection.",
+      "running_now": "No — his next regular Senate election is in 2030.",
+      "summary": "Independent U.S. senator from Vermont who caucuses with Democrats. He has built a national profile around economic inequality, labor, and universal healthcare.",
+      "focus_areas": [
+        "Economic inequality and wages",
+        "Labor and unions",
+        "Universal healthcare",
+        "College affordability and student debt"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.sanders.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Bernie+Sanders+2024+Vermont+Senate+reelection+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Jim Clyburn",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Jim_Clyburn_official_portrait_116th_Congress.jpg/500px-Jim_Clyburn_official_portrait_116th_Congress.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Jim_Clyburn_official_portrait_116th_Congress.jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "South Carolina",
+      "display_name": "Jim Clyburn (D)",
+      "office": "U.S. Representative for South Carolina’s 6th District.",
+      "office_status": "Serving and campaigning.",
+      "last_ran": "2026 Democratic House primary; won on June 9 (last elected in 2024).",
+      "running_now": "Yes — won the Democratic primary and is running in the November 3, 2026 general election.",
+      "summary": "Democratic representative from South Carolina and former House Majority Whip. He has emphasized civil rights, rural development, healthcare, and education throughout a long congressional career.",
+      "focus_areas": [
+        "Civil and voting rights",
+        "Rural development",
+        "Healthcare",
+        "Education and infrastructure"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://clyburn.house.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Jim+Clyburn+2026+South+Carolina+6th+District+election+primary+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Thom Tillis",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Sen._Thom_Tillis_%28R-NC%29%2C_Official_Portrait%2C_117th_Congress_%28cropped%29.jpg/500px-Sen._Thom_Tillis_%28R-NC%29%2C_Official_Portrait%2C_117th_Congress_%28cropped%29.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Sen._Thom_Tillis_(R-NC),_Official_Portrait,_117th_Congress_(cropped).jpg",
+      "party_code": "R",
+      "party_name": "Republican",
+      "state": "North Carolina",
+      "display_name": "Thom Tillis (R)",
+      "office": "U.S. Senator from North Carolina; current term ends in January 2027.",
+      "office_status": "Serving — term ends January 2027.",
+      "active": true,
+      "last_ran": "2020 U.S. Senate election; won reelection.",
+      "running_now": "No — announced he will not seek reelection in 2026.",
+      "summary": "Republican U.S. senator from North Carolina and former state House Speaker. His Senate work has included military policy, immigration, economic issues, and federal regulation.",
+      "focus_areas": [
+        "Immigration and border policy",
+        "Economy and jobs",
+        "Military and veterans",
+        "Taxes and regulation"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.tillis.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Thom+Tillis+announced+not+seeking+reelection+2026+North+Carolina+Senate&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Nancy Pelosi",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Official_photo_of_Speaker_Nancy_Pelosi_in_2019.jpg/500px-Official_photo_of_Speaker_Nancy_Pelosi_in_2019.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Official_photo_of_Speaker_Nancy_Pelosi_in_2019.jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "California",
+      "display_name": "Nancy Pelosi (D)",
+      "office": "U.S. Representative for California’s 11th District; former Speaker of the House.",
+      "office_status": "Serving through the current term; not seeking another term.",
+      "active": true,
+      "last_ran": "2024 U.S. House election; won reelection.",
+      "running_now": "No — announced she will not run for reelection in 2026; her district’s seat is being contested by successors.",
+      "summary": "Democratic representative from San Francisco and the first woman to serve as Speaker of the House. Her leadership helped shape major legislation on healthcare, climate, and economic policy.",
+      "focus_areas": [
+        "Healthcare and the Affordable Care Act",
+        "Climate policy",
+        "Women’s and reproductive rights",
+        "House leadership and legislation"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://pelosi.house.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Nancy+Pelosi+not+seeking+reelection+2026+California+11th+District+successor&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Gary Peters",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Gary_Peters_official_photo_115th_congress.jpg/500px-Gary_Peters_official_photo_115th_congress.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Gary_Peters_official_photo_115th_congress.jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "Michigan",
+      "display_name": "Gary Peters (D)",
+      "office": "U.S. Senator from Michigan; current term ends in January 2027.",
+      "office_status": "Serving — term ends January 2027.",
+      "active": true,
+      "last_ran": "2020 U.S. Senate election; won reelection.",
+      "running_now": "No — announced he will not seek reelection in 2026.",
+      "summary": "Democratic U.S. senator from Michigan and former House member. He has focused on manufacturing, veterans, infrastructure, and cybersecurity.",
+      "focus_areas": [
+        "Manufacturing and auto industry",
+        "Veterans",
+        "Infrastructure and jobs",
+        "Cybersecurity"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.peters.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Gary+Peters+will+not+seek+reelection+2026+Michigan+Senate&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    },
+    {
+      "name": "Elizabeth Warren",
+      "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Elizabeth_Warren_by_Gage_Skidmore.jpg/500px-Elizabeth_Warren_by_Gage_Skidmore.jpg",
+      "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Elizabeth_Warren_by_Gage_Skidmore.jpg",
+      "party_code": "D",
+      "party_name": "Democrat",
+      "state": "Massachusetts",
+      "display_name": "Elizabeth Warren (D)",
+      "office": "U.S. Senator from Massachusetts; reelected in 2024, with a term through January 2031.",
+      "office_status": "Serving.",
+      "active": true,
+      "last_ran": "2024 U.S. Senate election; won reelection.",
+      "running_now": "No — her next regular Senate election is in 2030.",
+      "summary": "Democratic U.S. senator from Massachusetts, former consumer-protection scholar, and founder of the Consumer Financial Protection Bureau. Her work stresses accountability for powerful financial and corporate interests.",
+      "focus_areas": [
+        "Consumer protection",
+        "Healthcare and prescription-drug costs",
+        "Student debt and education",
+        "Financial regulation and economic inequality"
+      ],
+      "sources": [
+        {
+          "label": "Official profile / service record",
+          "url": "https://www.warren.senate.gov/"
+        },
+        {
+          "label": "Election status coverage",
+          "url": "https://news.google.com/search?q=Elizabeth+Warren+2024+Massachusetts+Senate+reelection+results&hl=en-US&gl=US&ceid=US%3Aen"
+        }
+      ]
+    }
+  ]
+}

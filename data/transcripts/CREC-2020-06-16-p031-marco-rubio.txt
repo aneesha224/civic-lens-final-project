@@ -1,0 +1,258 @@
+CONGRESSIONAL RECORD — SENATE S3011 June 16, 2020 
+9M and replaces the AIM–9X Block I Missile 
+configuration. The missile includes a high 
+off-boresight seeker, enhanced counter-
+measure rejection capability, low drag/high 
+angle of attack airframe and the ability to 
+integrate the Helmet Mounted Cueing Sys-
+tem. The software algorithms are the most 
+sensitive portion of the AIM–9X missile. The 
+software continues to be modified via a 
+preplanned product improvement (P3I) pro-
+gram in order to improve its counter-coun-
+termeasure capabilities. No software source 
+code or algorithms will be released. The mis-
+sile is classified as CONFIDENTIAL. The 
+AIM–9X will result in the transfer of sen-
+sitive technology and information. The 
+equipment, hardware, and documentation 
+are classified CONFIDENTIAL. The software 
+and operational performance are classified 
+SECRET. The seeker/guidance control sec-
+tion and the target detector are CONFIDEN-
+TIAL and contain sensitive state-of-the-art 
+technology. Manuals and technical docu-
+mentation that are necessary or support 
+operational use and organizational manage-
+ment are classified up to SECRET. Perform-
+ance and operating logic of the counter- 
+countermeasures circuits are classified SE-
+CRET. The hardware, software, and data 
+identified are classified to protect 
+vulnerabilities, design and performance pa-
+rameters and similar critical information. 
+b. The AN/APG–79 Active Electronically 
+Scanned Array (AESA) Radar System is clas-
+sified SECRET. The radar provides the F/A– 
+18A Hornet aircraft with all-weather, multi-
+mission capability for performing Air-to-Air 
+and Air-to-Ground targeting and attack. Air- 
+to-Air modes provide the capability for all- 
+aspect target detection, long-range search 
+and track, automatic target acquisition, and 
+tracking of multiple targets. Air-to-Surface 
+attack modes provide high-resolution ground 
+mapping navigation, weapon delivery, and 
+sensor cueing. The system component hard-
+ware (Antenna, Transmitter, Radar Data 
+Processor, and Power Supply) is UNCLASSI-
+FIED. The Receiver-Exciter hardware is 
+CONFIDENTIAL. The radar Operational 
+Flight Program (OFP) is classified SECRET. 
+Documentation provided with the AN/APG– 
+79 radar set is classified SECRET. 
+c. The AGM–154 Joint Standoff Weapon 
+(JSOW) is used by Navy, Marine Corps, and 
+Air Force, and allows aircraft to attack well- 
+defended targets in day, night, and adverse 
+weather conditions. AGM–154C carries a 
+BROACH warhead. The BROACH warhead in-
+corporates an advanced multi-stage warhead. 
+JSOW–C uses the GPS Precise Positioning 
+System (PPS), which provides for a more ac-
+curate capability than the commercial 
+version of GPS. The JSOW–C incorporates 
+components, software, and technical design 
+information that are considered sensitive. 
+The following JSOW–C components being 
+conveyed by the proposed sale that are con-
+sidered sensitive and are classified CON-
+FIDENTIAL include the GPS/INS, IIR seek-
+er, OFP software and missile operational 
+characteristics and performance data. These 
+elements are essential to the ability of the 
+JSOW–C missile to selectively engage hostile 
+targets under a wide range of operational, 
+tactical, and environmental conditions. 
+d. The Wide Band RADOME (WBR) is a 
+high performance nose radome designed for 
+use with the Active Electronically Scanned 
+Array (AESA) Radar. The WBR is required to 
+leverage the full capability of the AESA 
+Radar. The Radome will provide superior RF 
+performance over broader AESA Radar oper-
+ational bands which will give the user an ad-
+vantage in operational scenarios. Specifi-
+cally, the WBR will provide improved target 
+detection with less interference and reduce 
+jamming vulnerability. Purchasing the 
+AESA without the WBR would significantly 
+reduce the capability of the AESA and the 
+user would gain very little advantage with 
+the AESA. 
+e. The Upgrades to the Advanced Distrib-
+uted Combat Training System (ADCTS), pro-
+vides an aggressive program upgrade the 
+warfighting capability of the F/A–18. The 
+program will introduce new systems and 
+weapons to the aircraft. In order to have pi-
+lots ready to utilize the new technologies, it 
+is imperative that the user’s Pilot Trainer 
+(ADCTS) undergoes a parallel upgrade effort. 
+The ADCTS is an integral part of the user’s 
+Pilot Training Syllabus and this procure-
+ment will address this requirement. It will 
+provide pilots the ability to train with the 
+new systems that will be resident in the air-
+craft in a simulated environment. This pro-
+curement will provide pilots the ability to 
+maximize use of the new capabilities that 
+will eventually translate to the operational 
+environment and make the users Air Force a 
+significant contributor to international coa-
+lition initiatives. 
+f. Software Development. The challenge 
+facing the user nation is that in order to add 
+all the new capabilities and weapons to the 
+platform there is a parallel software effort 
+required to ensure all the new capabilities 
+have a software model that will support 
+their integration and use. The success of the 
+aggressive procurement of the systems and 
+capabilities for the program will be depend-
+ent on the ability to develop and test the 
+requisite software. This is a significant ef-
+fort that will rely on Naval Air Weapons Sta-
+tion China Lake to develop the required 
+products. This will entail development of the 
+product, lab testing and eventually flight 
+testing of the software loads. There will be 
+some mutual software development, but the 
+end result will depend on U.S. Government 
+engineers to provide final check and ap-
+proval of all software profiles. This FMS 
+case funds this effort. Additionally, the soft-
+ware effort will support Automatic Ground 
+Collision Avoidance System (A–GCAS). This 
+system is also referred to as Automatic Ter-
+rain Avoidance Warning System (A–TAWS). 
+This is flight control software that uses a 
+terrain elevation database to calculate the 
+aircraft’s relative position above the ground. 
+If it senses that the aircraft is on a collision 
+course with the ground that is outside of 
+normal parameters, it automatically com-
+mands the aircraft to roll wings level and re-
+cover away from a ground collision 
+g. The ADM–141C Improved Tactical Air- 
+Launched Decoy (ITALD) is unclassified. The 
+ITALD vehicle is intended to be delivered by 
+sea- and land-based tactical aircraft, to 
+cause an increase in the number of apparent 
+targets to enemy defenses prior to or during 
+air strikes. The ITALD system consists of 
+the flight vehicle, launch rack (Improved 
+Triple Ejector Rack (ITER)), Improved 
+Decoy Tester/Programmer (IDTP), Radio 
+Frequency Payload System Tester (PSST), 
+and shipping/storage container. The ITALD 
+is capable of functioning in the vehicle test 
+mode, mission programming mode (using 
+JMPS with ITALD UPC), GPS almanac 
+uploading mode, captive carriage mode, 
+launch mode, jettison mode, and free-flight 
+mode. 
+h. The Joint Mission Planning System 
+(JMPS) is classified SECRET. JMPS will 
+provide mission planning capability for sup-
+port of military aviation operations. It will 
+also provide support for unit-level mission 
+planning for all phases of military flight op-
+erations and have the capability to provide 
+necessary mission data for the aircrew. 
+JMPS will support the downloading of data 
+to electronics data transfer devices for trans-
+fer to aircraft and weapon systems. A JMPS 
+for a specific aircraft type will consist of 
+basic planning tools called the Joint Mission 
+Planning Environment (JMPE) mated with a 
+Unique Planning Component (UPC) provided 
+by the aircraft program. In addition, UPCs 
+will be required for specific weapons, com-
+munication devices, and moving map dis-
+plays. The JMPS will be tailored to the spe-
+cific releasable configuration for the F/A– 
+18A, with maximum commonality with the 
+most advanced United States Marine Corps 
+configuration of these aircraft. 
+i. The AN/ARC–210 RT–2036 (Gen 6) Radio’s 
+Line-of-sight data transfer rates up to 80 
+kb/s in a 25 kHz channel creating high-speed 
+communication of critical situational aware-
+ness information for increased mission effec-
+tiveness. Software that is reprogrammable in 
+the field via Memory Loader/Verifier Soft-
+ware making flexible use for multiple mis-
+sions. The AN/ARC–210 has embedded soft-
+ware with programmable cryptography for 
+secure communications. Relative to the 5th 
+Generation AN/ARC–210 radios, the 6th gen-
+eration AN/ARC–210 RT–2036 adds, in addi-
+tion to newer hardware, the Mobile User Ob-
+jective System (MUOS) capability. Access to 
+the MUOS satellite constellation can be ef-
+fectively controlled by withholding the rel-
+evant order wire keys from RT–2036 users. 
+2. If a technologically advanced adversary 
+were to obtain knowledge of the specific 
+hardware or software in this proposed sale, 
+the information could be used to develop 
+countermeasures which might reduce weapon 
+system effectiveness or be used in the devel-
+opment of a system with similar or advance 
+capabilities. 
+3. A determination has been made that the 
+recipient country, the Government of Can-
+ada can provide substantially the same de-
+gree of protection for the classified and sen-
+sitive technology being released as the 
+United States Government. This sale is nec-
+essary in furtherance if the United States 
+Foreign Policy and National Security objec-
+tives outlined in the Policy Justification. 
+4. All defense articles and services listed in 
+this transmittal have been authorized for re-
+lease and export to the Government of Can-
+ada. 
+f 
+ADDITIONAL STATEMENTS 
+RECOGNIZING BEST MEMORIES 
+ACADEMY 
+∑ Mr. RUBIO. Madam President, as 
+chairman of the Senate Committee on 
+Small Business and Entrepreneurship, 
+each week I recognize a small business 
+that exemplifies the American entre-
+preneurial spirit at the heart of our 
+country. It is my privilege to recognize 
+a woman-owned small business that 
+provides an enriching environment for 
+children and serves a diverse commu-
+nity. This week, it is my pleasure to 
+honor Best Memories Academy of Or-
+lando, FL, as the Senate Small Busi-
+ness of the Week. 
+For 20 years, Best Memories Acad-
+emy has provided quality childcare for 
+families in Orlando, FL. When her son 
+was 2 years old, Lyana Vazquez, origi-
+nally from Puerto Rico, began search-
+ing for a daycare program that would 
+provide instruction in English and 
+Spanish, but options were limited in 
+the Orlando area. Undeterred, Lyana 
+founded Best Memories Academy, to 
+provide daycare and preschool pro-
+grams with an emphasis on bilingual 
+education. 
+VerDate Sep 11 2014 05:34 Jun 17, 2020 Jkt 099060 PO 00000 Frm 00031 Fmt 4637 Sfmt 0634 E:\CR\FM\A16JN6.016 S16JNPT1dlhill on DSK120RN23PROD with SENATE

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <title>Civic Lens — MGT 409 Final Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #13233f;
+      --blue: #1d4f91;
+      --red: #c6283d;
+      --paper: #f8fafc;
+      --muted: #697386;
+      --line: #dfe5ed;
+      --pale-blue: #e8eef8;
+      --white: #fff;
+      --green: #2e7654;
+    }
+    * { box-sizing: border-box; }
+    body { background: var(--paper); }
+    .reveal {
+      color: var(--navy);
+      font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 24px;
+      font-weight: 450;
+      letter-spacing: .005em;
+    }
+    .reveal .slides { text-align: left; }
+    .reveal .slides section {
+      height: 100%;
+      padding: 50px 72px 46px;
+      overflow: hidden;
+    }
+    .reveal h1, .reveal h2, .reveal h3, .reveal p { color: inherit; text-transform: none; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: inherit; font-weight: 800; letter-spacing: -.015em; }
+    .reveal h1 { max-width: 950px; margin: 0; font-size: 2.2em; line-height: .98; }
+    .reveal h2 { margin: 0; font-size: 1.42em; line-height: 1.05; }
+    .reveal p { margin: 0; line-height: 1.45; }
+    .reveal strong { font-weight: 800; }
+    .reveal a { color: var(--blue); }
+    .reveal .slides section:not(.cover) { background: var(--paper); }
+    .reveal .progress { height: 4px; color: var(--red); }
+    .reveal .controls { color: var(--blue); }
+    .reveal .slide-number { right: 30px; bottom: 18px; color: var(--muted); background: transparent; font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .kicker { margin: 0 0 18px !important; color: var(--red) !important; font: 700 13px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace !important; letter-spacing: .12em !important; text-transform: uppercase !important; }
+    .deck-footer { position: absolute; right: 72px; bottom: 30px; left: 72px; display: flex; justify-content: space-between; color: #8993a4; font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .04em; }
+    .lede { max-width: 1030px; margin: 17px 0 0 !important; color: #526077 !important; font-size: 1.02em !important; line-height: 1.4 !important; }
+    .accent { color: var(--red); }
+    .blue { color: var(--blue); }
+    .muted { color: var(--muted); }
+    .cover { color: white !important; background: var(--navy) !important; }
+    .cover::before { position: absolute; inset: 0; content: ""; opacity: .25; background-image: radial-gradient(#90a2be .7px, transparent .7px); background-size: 19px 19px; }
+    .cover .cover-grid { position: relative; z-index: 1; display: grid; height: 100%; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 44px; }
+    .cover .kicker { color: #f08b9a !important; }
+    .cover h1 { max-width: 800px; font-size: 3.18em; letter-spacing: -.02em; }
+    .cover h1 span { color: #f08b9a; }
+    .cover .subtitle { max-width: 710px; margin-top: 25px; color: #d4ddec; font-size: 1.12em; line-height: 1.45; }
+    .cover .byline { margin-top: 34px; color: #aebbd0; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .04em; }
+    .cover-art { width: 100%; max-width: 440px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 36px; }
+    .stat { padding: 14px 15px; border: 1px solid rgba(255,255,255,.16); border-radius: 12px; background: rgba(255,255,255,.06); }
+    .stat b { display: block; color: #fff; font-size: 1.05em; letter-spacing: -.02em; }
+    .stat small { display: block; margin-top: 5px; color: #aebbd0; font: 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; margin-top: 34px; }
+    .panel { padding: 24px 27px; border: 1px solid var(--line); border-radius: 17px; background: rgba(255,255,255,.86); }
+    .panel.dark { color: white; border-color: var(--navy); background: var(--navy); }
+    .panel h3 { margin: 0 0 12px; font-size: .9em; letter-spacing: -.015em; }
+    .panel p, .panel li { color: #536178; font-size: .67em; line-height: 1.45; }
+    .panel.dark p, .panel.dark li { color: #d6deea; }
+    .list-clean { display: grid; gap: 12px; padding: 0; margin: 17px 0 0; list-style: none; }
+    .list-clean li { display: grid; grid-template-columns: 18px 1fr; gap: 9px; align-items: start; }
+    .list-clean li::before { content: "↗"; color: var(--red); font-weight: 800; }
+    .quote-line { padding: 15px 0; border-top: 1px solid var(--line); color: #44526a; font-size: .72em; line-height: 1.42; }
+    .quote-line:last-child { border-bottom: 1px solid var(--line); }
+    .quote-line small { display: block; margin-top: 7px; color: var(--muted); font: 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .source-row { display: grid; grid-template-columns: 1fr 50px 1.15fr; gap: 12px; align-items: center; margin-top: 20px; }
+    .source-chip { min-height: 90px; padding: 15px 17px; border: 1px solid var(--line); border-radius: 13px; background: white; }
+    .source-chip b { display: block; font-size: .72em; }
+    .source-chip small { display: block; margin-top: 8px; color: var(--muted); font-size: .51em; line-height: 1.35; }
+    .source-chip.core { color: white; border-color: var(--blue); background: var(--blue); }
+    .source-chip.core small { color: #d7e5f6; }
+    .arrow { color: var(--red); font-size: 1.5em; text-align: center; }
+    .comparison-note { margin-top: 20px !important; color: var(--muted) !important; font-size: .6em !important; line-height: 1.45 !important; }
+    .diagram-wrap { margin-top: 23px; padding: 16px; border: 1px solid var(--line); border-radius: 19px; background: white; }
+    .diagram { display: block; width: 100%; height: auto; }
+    .mini-note { margin-top: 12px !important; color: var(--muted) !important; font-size: .53em !important; line-height: 1.4 !important; }
+    .screen-frame { margin-top: 22px; overflow: hidden; border: 1px solid #cfd7e2; border-radius: 16px; background: white; box-shadow: 0 20px 55px rgba(19,35,63,.10); }
+    .screen-bar { display: flex; height: 30px; align-items: center; gap: 6px; padding: 0 12px; border-bottom: 1px solid #e7ebf1; background: #f4f6f9; }
+    .screen-bar i { width: 7px; height: 7px; border-radius: 50%; background: #c5ccd6; }
+    .screen-bar span { margin-left: 8px; color: #818b9b; font: 9px ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .ui-shot { display: block; width: 100%; height: auto; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+    .pill { padding: 10px 13px; border: 1px solid var(--line); border-radius: 999px; color: var(--blue); background: white; font-size: .59em; }
+    .pill.pending { color: #825d18; border-color: #ead7a2; background: #fff9e8; }
+    .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 30px; }
+    .metric { min-height: 138px; padding: 20px; border: 1px solid var(--line); border-radius: 15px; background: white; }
+    .metric .label { color: var(--muted); font: 700 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .metric strong { display: block; margin-top: 13px; color: var(--navy); font-size: 1.16em; letter-spacing: -.02em; }
+    .metric p { margin-top: 8px; color: #67748a; font-size: .55em; line-height: 1.4; }
+    .callout { display: flex; gap: 15px; align-items: flex-start; padding: 17px 20px; margin-top: 18px; border-left: 4px solid var(--red); border-radius: 0 12px 12px 0; color: #4d5a70; background: #fff; font-size: .6em; line-height: 1.45; }
+    .callout b { color: var(--navy); }
+    .check-flow { display: grid; grid-template-columns: 1fr 36px 1fr 36px 1fr; align-items: center; gap: 8px; margin-top: 31px; }
+    .check-card { min-height: 145px; padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: white; }
+    .check-card .number { color: var(--red); font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .check-card b { display: block; margin-top: 11px; font-size: .73em; line-height: 1.2; }
+    .check-card p { margin-top: 9px; color: var(--muted); font-size: .54em; line-height: 1.4; }
+    .check-arrow { color: var(--red); text-align: center; }
+    .impact-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 31px; }
+    .impact-box { padding: 19px 16px; border-radius: 13px; color: white; background: var(--navy); }
+    .impact-box b { display: block; font-size: 1.13em; letter-spacing: -.02em; }
+    .impact-box small { display: block; margin-top: 6px; color: #bcc8da; font: 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .closing { display: grid; height: 100%; grid-template-columns: 1.05fr .95fr; gap: 38px; align-items: center; }
+    .next-list { display: grid; gap: 11px; padding: 0; margin: 22px 0 0; list-style: none; }
+    .next-list li { display: grid; grid-template-columns: 28px 1fr; gap: 11px; padding: 12px 0; border-bottom: 1px solid var(--line); color: #4f5c72; font-size: .63em; line-height: 1.4; }
+    .next-list b { color: var(--red); font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .closing-card { padding: 30px; border-radius: 18px; color: white; background: var(--navy); }
+    .closing-card .quote-mark { color: #f08b9a; font: 4em/.7 Georgia, serif; }
+    .closing-card blockquote { margin: 15px 0 0; font-size: 1.28em; font-weight: 750; letter-spacing: -.02em; line-height: 1.15; }
+    .closing-card p { margin-top: 20px; color: #bdc9da; font-size: .58em; line-height: 1.5; }
+    @media (max-width: 900px) {
+      .reveal .slides section { padding: 34px 42px; }
+      .deck-footer { right: 42px; left: 42px; }
+      .cover .cover-grid { grid-template-columns: 1fr .56fr; gap: 20px; }
+      .cover h1 { font-size: 2.6em; }
+      .panel { padding: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section class="cover" data-transition="fade">
+        <div class="cover-grid">
+          <div>
+            <p class="kicker">MGT 409 · Final project</p>
+            <h1>Civic<br><span>Lens</span></h1>
+            <p class="subtitle">Follow a public idea through the speeches where it appears.</p>
+            <div class="stats" aria-label="Current corpus size">
+              <div class="stat"><b>1,061</b><small>Congressional Record remarks</small></div>
+              <div class="stat"><b>119</b><small>collected issues</small></div>
+              <div class="stat"><b>10</b><small>curated campaign transcripts</small></div>
+            </div>
+            <p class="byline">ANEESHA CHANDRA &nbsp;·&nbsp; CIVIC LENS</p>
+          </div>
+          <svg class="cover-art" viewBox="0 0 440 480" role="img" aria-label="A speech timeline with connected source points">
+            <defs><linearGradient id="coverLine" x1="0" x2="1"><stop stop-color="#1d4f91"/><stop offset="1" stop-color="#e55267"/></linearGradient></defs>
+            <circle cx="222" cy="240" r="167" fill="none" stroke="#71829e" stroke-opacity=".2" stroke-width="1"/>
+            <circle cx="222" cy="240" r="125" fill="none" stroke="#71829e" stroke-opacity=".17" stroke-width="1"/>
+            <path d="M83 321 C146 275 164 282 216 218 S313 162 358 105" fill="none" stroke="url(#coverLine)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="83" cy="321" r="12" fill="#1d4f91" stroke="#13233f" stroke-width="5"/><circle cx="216" cy="218" r="15" fill="#c6283d" stroke="#13233f" stroke-width="6"/><circle cx="358" cy="105" r="12" fill="#f08b9a" stroke="#13233f" stroke-width="5"/>
+            <g fill="#d4ddec" font-family="ui-monospace,monospace" font-size="12" letter-spacing="1"><text x="37" y="357">SOURCE</text><text x="175" y="257">TOPIC</text><text x="319" y="81">TIME</text></g>
+            <g stroke="#98a8c0" stroke-opacity=".45"><path d="M67 382h115"/><path d="M211 292h112"/><path d="M268 409h106"/></g>
+            <g fill="#7385a1"><circle cx="90" cy="382" r="2"/><circle cx="104" cy="382" r="2"/><circle cx="118" cy="382" r="2"/><circle cx="234" cy="292" r="2"/><circle cx="248" cy="292" r="2"/><circle cx="262" cy="292" r="2"/><circle cx="293" cy="409" r="2"/><circle cx="307" cy="409" r="2"/><circle cx="321" cy="409" r="2"/></g>
+          </svg>
+        </div>
+      </section>
+
+      <section>
+        <p class="kicker">01 · Motivation</p>
+        <h2>Public language is easy to find one speech at a time.<br><span class="accent">Harder to follow across years.</span></h2>
+        <p class="lede">Students, journalists, and civic researchers often have to collect statements, read them in isolation, and manually trace a policy idea back to its source.</p>
+        <div class="two-col">
+          <div class="panel">
+            <h3>The research friction</h3>
+            <ul class="list-clean">
+              <li>Campaign transcripts and legislative remarks live in different places.</li>
+              <li>A keyword hit needs surrounding text and a source link to mean anything.</li>
+              <li>Comparing years by hand makes context easy to lose.</li>
+            </ul>
+          </div>
+          <div class="panel dark">
+            <h3>The question Civic Lens helps investigate</h3>
+            <div class="quote-line" style="color:#fff;border-color:#40516f">Where does this politician discuss a topic, and what language appears in each source?</div>
+            <p style="margin-top:17px">The app organizes a finite public record for exploration. It does not establish motive, truth, or a complete career history.</p>
+          </div>
+        </div>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>THE PROBLEM</span></div>
+      </section>
+
+      <section>
+        <p class="kicker">02 · What is new here</p>
+        <h2>Move from a search result<br>to a <span class="accent">source-grounded topic trail.</span></h2>
+        <p class="lede">Civic Lens combines reading, phrase discovery, and cross-speech comparison in one research flow.</p>
+        <div class="source-row" aria-label="Comparison of public source tools and Civic Lens">
+          <div class="source-chip"><b>Google Search</b><small>Find pages and references across the open web.</small></div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="source-chip core"><b>Civic Lens</b><small>Read a transcript, trace related topic wording across the loaded corpus, and inspect linked excerpts.</small></div>
+        </div>
+        <div class="source-row" style="grid-template-columns:1fr 50px 1fr;margin-top:12px">
+          <div class="source-chip"><b>GovInfo · Congressional Record</b><small>Official legislative record and source documents.</small></div>
+          <div class="arrow" aria-hidden="true">+</div>
+          <div class="source-chip"><b>C-SPAN and publisher transcripts</b><small>Public speech recordings or transcript pages that may cover campaign events.</small></div>
+        </div>
+        <p class="comparison-note">Positioning: Civic Lens is a research layer over public sources. Coverage depends on the collected issue set, transcript availability, and successful source discovery.</p>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>THE DIFFERENCE</span></div>
+      </section>
+
+      <section>
+        <p class="kicker">03 · The agents</p>
+        <h2>Three specialist steps keep the analysis<br>anchored to the selected record.</h2>
+        <div class="diagram-wrap">
+          <svg class="diagram" viewBox="0 0 1280 385" role="img" aria-labelledby="flowTitle flowDesc">
+            <title id="flowTitle">Civic Lens research workflow</title>
+            <desc id="flowDesc">A user selects a public statement. Local corpus tools supply the exact text to a speech analyst. An optional longitudinal analyst searches related records. A safety auditor checks evidence and scope before results return to the reader.</desc>
+            <defs><marker id="arrowHead" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#8b98aa"/></marker></defs>
+            <g font-family="Inter,system-ui,sans-serif">
+              <rect x="20" y="111" width="190" height="142" rx="18" fill="#13233f"/>
+              <text x="45" y="150" fill="#f08b9a" font-size="14" font-weight="700" letter-spacing="1.4">YOU</text>
+              <text x="45" y="185" fill="#fff" font-size="21" font-weight="750">Choose a</text><text x="45" y="212" fill="#fff" font-size="21" font-weight="750">speaker + speech</text>
+              <rect x="263" y="73" width="210" height="216" rx="18" fill="#e8eef8" stroke="#cfd9e8" stroke-width="2"/>
+              <text x="286" y="111" fill="#1d4f91" font-size="13" font-weight="700" letter-spacing="1.2">LOCAL TOOLS</text>
+              <text x="286" y="148" fill="#13233f" font-size="20" font-weight="750">Corpus + source</text><text x="286" y="175" fill="#13233f" font-size="20" font-weight="750">reader</text>
+              <text x="286" y="216" fill="#697386" font-size="14">Exact transcript text</text><text x="286" y="240" fill="#697386" font-size="14">and original citation</text>
+              <rect x="526" y="73" width="205" height="216" rx="18" fill="#fff" stroke="#dfe5ed" stroke-width="2"/>
+              <text x="550" y="111" fill="#c6283d" font-size="13" font-weight="700" letter-spacing="1.2">AGENT 01</text>
+              <text x="550" y="153" fill="#13233f" font-size="21" font-weight="750">Speech analyst</text>
+              <text x="550" y="193" fill="#697386" font-size="14">Summary · claims</text><text x="550" y="218" fill="#697386" font-size="14">Exact excerpts · caveats</text>
+              <rect x="781" y="29" width="222" height="153" rx="18" fill="#fff" stroke="#dfe5ed" stroke-width="2"/>
+              <text x="805" y="66" fill="#1d4f91" font-size="13" font-weight="700" letter-spacing="1.2">OPTIONAL · TOPIC SEARCH</text>
+              <text x="805" y="104" fill="#13233f" font-size="19" font-weight="750">Longitudinal analyst</text>
+              <text x="805" y="138" fill="#697386" font-size="14">Related speech excerpts</text><text x="805" y="159" fill="#697386" font-size="14">with dates + source types</text>
+              <rect x="781" y="207" width="222" height="153" rx="18" fill="#fff" stroke="#dfe5ed" stroke-width="2"/>
+              <text x="805" y="244" fill="#c6283d" font-size="13" font-weight="700" letter-spacing="1.2">AGENT 03</text>
+              <text x="805" y="282" fill="#13233f" font-size="20" font-weight="750">Safety auditor</text>
+              <text x="805" y="316" fill="#697386" font-size="14">Evidence · scope · source</text><text x="805" y="339" fill="#697386" font-size="14">and injection concerns</text>
+              <rect x="1052" y="111" width="205" height="142" rx="18" fill="#1d4f91"/>
+              <text x="1077" y="150" fill="#d8e6f8" font-size="13" font-weight="700" letter-spacing="1.2">RESULTS</text>
+              <text x="1077" y="186" fill="#fff" font-size="20" font-weight="750">Read + compare</text><text x="1077" y="215" fill="#fff" font-size="16">with sources in view</text>
+              <path d="M210 182H252" fill="none" stroke="#8b98aa" stroke-width="3" marker-end="url(#arrowHead)"/>
+              <path d="M473 182H515" fill="none" stroke="#8b98aa" stroke-width="3" marker-end="url(#arrowHead)"/>
+              <path d="M731 146C755 146 752 105 770 105" fill="none" stroke="#8b98aa" stroke-width="3" marker-end="url(#arrowHead)"/>
+              <path d="M731 224C755 224 752 282 770 282" fill="none" stroke="#8b98aa" stroke-width="3" marker-end="url(#arrowHead)"/>
+              <path d="M1003 105C1029 105 1024 158 1041 158" fill="none" stroke="#8b98aa" stroke-width="3" marker-end="url(#arrowHead)"/>
+              <path d="M1003 282C1029 282 1024 211 1041 211" fill="none" stroke="#8b98aa" stroke-width="3" marker-end="url(#arrowHead)"/>
+            </g>
+          </svg>
+        </div>
+        <p class="mini-note">The longitudinal step runs when a topic or phrase is requested. Analysis uses the configured model; browsing source text does not require a model key.</p>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>THE WORKFLOW</span></div>
+      </section>
+
+      <section>
+        <p class="kicker">04 · Product walkthrough</p>
+        <h2>One workspace: <span class="blue">read the source</span>, then follow the topic.</h2>
+        <p class="lede">Choose a politician and statement. The transcript stays beside topic exploration and source-grounded analysis.</p>
+        <div class="screen-frame" role="img" aria-label="Embedded Civic Lens interface preview, based on the current app layout">
+          <div class="screen-bar"><i></i><i></i><i></i><span>civic-lens · speech reader</span></div>
+          <svg class="ui-shot" viewBox="0 0 1280 580" xmlns="http://www.w3.org/2000/svg" aria-labelledby="screenTitle screenDesc">
+            <title id="screenTitle">Civic Lens app interface preview</title>
+            <desc id="screenDesc">A browser-window style view of the current app, including politician and statement controls, a transcript reader, and a topic explorer. This is an embedded SVG preview, not a live browser capture.</desc>
+            <rect width="1280" height="580" fill="#f8fafc"/>
+            <g font-family="Inter, system-ui, sans-serif">
+              <rect x="35" y="24" width="34" height="34" rx="9" fill="#1d4f91"/><text x="43" y="46" fill="#fff" font-size="12" font-weight="800">CL</text>
+              <text x="82" y="40" fill="#13233f" font-size="15" font-weight="800">Civic Lens</text><text x="82" y="55" fill="#697386" font-size="9">Explore public statements over time</text>
+              <text x="930" y="45" fill="#697386" font-size="10">● Campaign, public, and legislative statements</text>
+              <line x1="35" y1="76" x2="1245" y2="76" stroke="#dfe5ed"/>
+              <text x="42" y="112" fill="#c6283d" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1.2">A SPEECH READER AND CLAIM RESEARCH TOOL</text>
+              <text x="40" y="157" fill="#13233f" font-size="37" font-weight="800" letter-spacing="-2">Follow an idea <tspan fill="#c6283d">through time.</tspan></text>
+              <text x="42" y="183" fill="#697386" font-size="13">Read public remarks, then follow a policy topic across what the same politician said in other years.</text>
+              <rect x="38" y="207" width="1204" height="112" rx="16" fill="#fff" stroke="#dfe5ed"/>
+              <text x="62" y="238" fill="#c6283d" font-family="ui-monospace,monospace" font-size="11" font-weight="700">01</text><text x="91" y="238" fill="#13233f" font-size="14" font-weight="800">Choose a politician</text><text x="91" y="257" fill="#697386" font-size="10">Search campaign, public, and Congressional Record statements.</text>
+              <rect x="91" y="269" width="478" height="34" rx="8" fill="#fff" stroke="#dfe5ed"/><text x="107" y="291" fill="#8993a4" font-size="11">Type a name...</text>
+              <text x="658" y="238" fill="#c6283d" font-family="ui-monospace,monospace" font-size="11" font-weight="700">02</text><text x="687" y="238" fill="#13233f" font-size="14" font-weight="800">Choose a statement</text><text x="687" y="257" fill="#697386" font-size="10">Select a speech to read its full text and find topic matches.</text>
+              <rect x="687" y="269" width="520" height="34" rx="8" fill="#f8fafc" stroke="#dfe5ed"/><text x="703" y="291" fill="#8993a4" font-size="11">Choose a politician first...</text>
+              <rect x="39" y="342" width="593" height="205" rx="18" fill="#fff" stroke="#dfe5ed"/>
+              <circle cx="335" cy="392" r="26" fill="#e8eef8"/><text x="326" y="400" fill="#c6283d" font-size="22">✦</text>
+              <text x="270" y="436" fill="#c6283d" font-family="ui-monospace,monospace" font-size="10" font-weight="700" letter-spacing="1">SPEECH READER</text>
+              <text x="207" y="468" fill="#13233f" font-size="20" font-weight="800">Choose a statement to read it here.</text>
+              <text x="244" y="491" fill="#697386" font-size="11">The transcript will appear in this column.</text>
+              <rect x="651" y="342" width="591" height="205" rx="18" fill="#fff" stroke="#dfe5ed"/>
+              <circle cx="947" cy="392" r="26" fill="#e8eef8"/><text x="938" y="400" fill="#1d4f91" font-size="21">↗</text>
+              <text x="897" y="436" fill="#c6283d" font-family="ui-monospace,monospace" font-size="10" font-weight="700" letter-spacing="1">TOPIC EXPLORER</text>
+              <text x="822" y="468" fill="#13233f" font-size="20" font-weight="800">Follow a topic across speeches.</text>
+              <text x="838" y="491" fill="#697386" font-size="11">Pick a highlighted cue or policy area after selecting a speech.</text>
+              <text x="41" y="566" fill="#8993a4" font-family="ui-monospace,monospace" font-size="9">CIVIC LENS · YOU CAN CHECK EVERY SOURCE YOURSELF</text>
+              <text x="981" y="566" fill="#8993a4" font-family="ui-monospace,monospace" font-size="9">A GUIDE TO THE PUBLIC RECORD, NOT A VERDICT</text>
+            </g>
+          </svg>
+        </div>
+        <p class="mini-note">Embedded interface preview reconstructed from the current app HTML and CSS; replace with a live app capture after the next UI pass.</p>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>IN THE APP</span></div>
+      </section>
+
+      <section>
+        <p class="kicker">05 · Tokenomics</p>
+        <h2>Measured cost stays low; <span class="accent">topic search is the expensive path.</span></h2>
+        <p class="lede">Real gpt-6-luna usage from two app workflows · measured Oct 25, 2026 (EDT). Cached input is included in the input total.</p>
+        <div class="metric-grid">
+          <div class="metric"><span class="label">Speech-only · 3 model requests · 3.2s</span><strong>$0.000379 / run</strong><p>2,277 total tokens · 1,900 input (0 cached) + 377 output.</p></div>
+          <div class="metric"><span class="label">Topic comparison · 6 requests · 34.5s</span><strong>$0.003622 / run</strong><p>18,801 total · 13,946 input (2,222 cached) + 4,855 output.</p></div>
+          <div class="metric"><span class="label">Monthly scenario</span><strong>$0.020 / user</strong><p>10 runs/user (5 of each). 100 users ≈ $2.00/mo; 10,000 ≈ $200.03/mo.</p></div>
+        </div>
+        <div class="callout"><span class="accent">●</span><span><b>Assumptions + controls:</b> priced at <a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener">OpenAI list rates</a> ($0.10/M input, $0.50/M output, $0.01/M cached input); separate Portkey/Azure charges are excluded. Topic comparison costs 9.6× more and took 31s longer in this sample. The optional topic step, local corpus prefilter, and excerpt clipping limit work; skipping topic search saves 89.5% but loses cross-speech context. Reasoning effort is set to none. No hard agent token cap or quality/latency benchmark is in place yet.</span></div>
+        <p class="mini-note">Scale assumes 10 runs per user per month (5 speech-only + 5 topic comparisons), linear usage, and the two observed runs as representative. One sample each; real workloads and gateway billing can differ. Full per-agent token log: evidence/tokenomics_runs.json.</p>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>THE COST</span></div>
+      </section>
+
+      <section>
+        <p class="kicker">06 · Safety</p>
+        <h2>Generated evidence must match<br>the <span class="accent">source text exactly.</span></h2>
+        <p class="lede">A source check and a separate scope review sit between model output and the answer shown to the user.</p>
+        <div class="check-flow" aria-label="Exact quote validation steps">
+          <div class="check-card"><span class="number">01 · PROPOSE</span><b>Speech analyst returns excerpts</b><p>Quotes are expected to be contiguous text from the selected speech.</p></div>
+          <div class="check-arrow">→</div>
+          <div class="check-card"><span class="number">02 · VERIFY</span><b>Code checks exact inclusion</b><p>Non-matching quotes are removed and a caveat is added.</p></div>
+          <div class="check-arrow">→</div>
+          <div class="check-card"><span class="number">03 · REVIEW</span><b>Auditor checks evidence + scope</b><p>It flags unsupported claims, injection concerns, and corpus limits.</p></div>
+        </div>
+        <div class="two-col" style="margin-top:18px">
+          <div class="panel"><h3>In the current code</h3><p>Exact quote filtering is implemented in the research workflow. The safety auditor produces approval, concerns, and a scope warning.</p></div>
+          <div class="panel" style="border-color:#ead7a2;background:#fff9e8"><h3 style="color:#825d18">Evidence still needed</h3><p>Capture a rejection example and run a prompt-injection evaluation before claiming the defense has been validated.</p></div>
+        </div>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>SAFETY BY DESIGN · EVALUATION PENDING</span></div>
+      </section>
+
+      <section>
+        <p class="kicker">07 · Impact</p>
+        <h2>A useful research path now exists.<br><span class="accent">Its time saved still needs a user test.</span></h2>
+        <p class="lede">The current build gives a reader one place to inspect public statements and trace topic wording through the records already loaded.</p>
+        <div class="impact-band">
+          <div class="impact-box"><b>1,061</b><small>source-preserved Congressional Record remarks</small></div>
+          <div class="impact-box"><b>119</b><small>issues included in the current record set</small></div>
+          <div class="impact-box"><b>10</b><small>curated campaign transcripts</small></div>
+          <div class="impact-box"><b>Live</b><small>public-source discovery across mapped election cycles</small></div>
+        </div>
+        <div class="two-col" style="margin-top:24px">
+          <div class="panel"><h3>What is established</h3><p>The app brings these source types into a reader with original links, topic excerpts, and visible corpus limits.</p></div>
+          <div class="panel"><h3>What the next evaluation should measure</h3><p>Time to answer a real research question, citation accuracy, usefulness of excerpts, and where a user still has to leave the app.</p></div>
+        </div>
+        <div class="deck-footer"><span>CIVIC LENS</span><span>THE IMPACT</span></div>
+      </section>
+
+      <section>
+        <div class="closing">
+          <div>
+            <p class="kicker">08 · Limits + next steps</p>
+            <h2>Build confidence by<br>making each limit visible.</h2>
+            <ul class="next-list">
+              <li><b>01</b><span><strong>Coverage:</strong> the Congressional Record set is finite; campaign transcripts are incomplete and may have date or boundary uncertainty.</span></li>
+              <li><b>02</b><span><strong>Interpretation:</strong> topic matches help find wording; they do not prove a change in belief or whether a claim is true.</span></li>
+              <li><b>03</b><span><strong>Next month:</strong> measure cost, test with real users, evaluate safety cases, and replace the interface preview with live captures.</span></li>
+            </ul>
+          </div>
+          <div class="closing-card">
+            <div class="quote-mark">“</div>
+            <blockquote>A guide to the public record,<br>not a verdict.</blockquote>
+            <p>Civic Lens makes source material easier to follow. The evidence and the limits stay visible so readers can make their own judgment.</p>
+          </div>
+        </div>
+        <div class="deck-footer"><span>CIVIC LENS · ANEESHA CHANDRA</span><span>THANK YOU</span></div>
+      </section>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      slideNumber: "c/t",
+      transition: "slide",
+      backgroundTransition: "fade",
+      center: false,
+      width: 1440,
+      height: 810,
+      margin: 0,
+      minScale: 0.35,
+      maxScale: 1.15,
+      keyboard: true
+    });
+  </script>
+</body>
+</html>

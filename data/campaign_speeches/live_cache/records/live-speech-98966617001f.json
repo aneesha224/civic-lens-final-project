@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-98966617001f",
+  "politician": "Cory Booker",
+  "state": "New Jersey",
+  "date": "2019-04-13",
+  "venue": "Full text of Cory Booker’s campaign kickoff speech",
+  "source_type": "On-demand public transcript from newjerseyglobe.com",
+  "source_category": "campaign",
+  "source_url": "https://newjerseyglobe.com/fr/full-text-of-cory-bookers-campaign-kickoff-speech/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-98966617001f.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher article body; boundaries not independently checked"
+}

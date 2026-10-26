@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-108d34f992e8",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2026-10-25",
+  "venue": "March 23, 2015 Sen. Ted Cruz - Transcript of Announcement Speech",
+  "source_type": "On-demand public transcript from p2016.org",
+  "source_category": "campaign",
+  "source_url": "https://www.p2016.org/cruz/cruz032315spt.html",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-108d34f992e8.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

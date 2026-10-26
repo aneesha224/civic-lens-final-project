@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-f92287b53e02",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2015-03-23",
+  "venue": "Ted Cruz: 'Imagine a President...' (Full Video and Transcript of Speech)",
+  "source_type": "On-demand public transcript from breitbart.com",
+  "source_category": "campaign",
+  "source_url": "https://www.breitbart.com/politics/2015/03/23/ted-cruz-i-want-to-talk-to-you-about-the-promise-of-america/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-f92287b53e02.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher article body; boundaries not independently checked"
+}

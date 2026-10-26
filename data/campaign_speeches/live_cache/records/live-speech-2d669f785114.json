@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-2d669f785114",
+  "politician": "Elizabeth Warren",
+  "state": "Massachusetts",
+  "date": "2026-10-25",
+  "venue": "Transcript of Elizabeth Warren New York City Rally Transcript …",
+  "source_type": "On-demand public transcript from podcasts.happyscribe.com",
+  "source_category": "campaign",
+  "source_url": "https://podcasts.happyscribe.com/happy-scribe-s-favorites/elizabeth-warren-new-york-city-rally-transcript-september-16-2019-full-speech-transcript",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-2d669f785114.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-dd42b296e025",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2026-10-25",
+  "venue": "Senator Ted Cruz Victory Speech - C-SPAN.org",
+  "source_type": "On-demand public transcript from c-span.org",
+  "source_category": "campaign",
+  "source_url": "https://www.c-span.org/program/campaign-2018/senator-ted-cruz-victory-speech/514524",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-dd42b296e025.txt",
+  "transcript_status": "retrieved public text; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

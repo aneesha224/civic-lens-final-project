@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-0e4a954d9d67",
+  "politician": "Hakeem Jeffries",
+  "state": "New York",
+  "date": "2026-10-26",
+  "venue": "TRANSCRIPT: LEADER JEFFRIES REMARKS ON PRESIDENT TRUMP’S …",
+  "source_type": "On-demand public transcript from jeffries.house.gov",
+  "source_category": "campaign",
+  "source_url": "https://jeffries.house.gov/2025/04/30/transcript-leader-jeffries-remarks-on-president-trumps-first-100-days/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-0e4a954d9d67.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-c270c75898db",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-07-26",
+  "venue": "Bernie Sanders Full Speech Transcript at 2016 Democratic National ...",
+  "source_type": "On-demand public transcript from scribie.com",
+  "source_category": "campaign",
+  "source_url": "https://scribie.com/blog/bernie-sanders-full-speech-transcript-2016-democratic-national-convention",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-c270c75898db.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

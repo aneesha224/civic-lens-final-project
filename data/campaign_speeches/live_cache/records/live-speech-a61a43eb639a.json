@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-a61a43eb639a",
+  "politician": "Kirsten Gillibrand",
+  "state": "New York",
+  "date": "2026-10-25",
+  "venue": "CNN.com - Transcripts",
+  "source_type": "On-demand public transcript from transcripts.cnn.com",
+  "source_category": "campaign",
+  "source_url": "https://transcripts.cnn.com/show/cnr/date/2024-12-17/segment/28",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-a61a43eb639a.txt",
+  "transcript_status": "retrieved public text; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

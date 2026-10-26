@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-f36446b1f934",
+  "politician": "Cory Booker",
+  "state": "New Jersey",
+  "date": "2016-07-26",
+  "venue": "Democratic Convention: Read Cory Booker's Speech - TIME",
+  "source_type": "On-demand public transcript from time.com",
+  "source_category": "campaign",
+  "source_url": "https://time.com/4421756/democratic-convention-cory-booker-transcript-speech/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-f36446b1f934.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

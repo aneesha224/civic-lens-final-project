@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-8af2f7de2641",
+  "politician": "Kirsten Gillibrand",
+  "state": "New York",
+  "date": "2016-07-26",
+  "venue": "Transcript Of Kirsten Gillibrand's DNC Speech Highlights …",
+  "source_type": "On-demand public transcript from bustle.com",
+  "source_category": "campaign",
+  "source_url": "https://www.bustle.com/articles/174781-transcript-of-kirsten-gillibrands-dnc-speech-highlights-the-goals-she-shares-with-hillary-clinton",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-8af2f7de2641.txt",
+  "transcript_status": "retrieved public text; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

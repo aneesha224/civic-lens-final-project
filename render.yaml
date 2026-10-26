@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: civic-lens
+    runtime: python
+    plan: free
+    region: ohio
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: AI_MODEL
+        value: gpt-6-luna
+      - key: PORTKEY_API_KEY
+        sync: false
