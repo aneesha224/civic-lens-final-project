@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-529cae0b30d2",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2015-03-23",
+  "venue": "Transcript: Sen. Ted Cruz Announces Presidential Campaign",
+  "source_type": "On-demand public transcript from nbcdfw.com",
+  "source_category": "campaign",
+  "source_url": "https://www.nbcdfw.com/news/local/transcript-sen-ted-cruz-announces-presidential-campaign/94402/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-529cae0b30d2.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher article body; boundaries not independently checked"
+}

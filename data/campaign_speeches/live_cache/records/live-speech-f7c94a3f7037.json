@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-f7c94a3f7037",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2026-10-26",
+  "venue": "FULL SPEECH: Sen. Bernie Sanders’ 2020 presidential campaign kickoff ...",
+  "source_type": "On-demand public transcript from javiersoriano.com",
+  "source_category": "campaign",
+  "source_url": "https://www.javiersoriano.com/2019/03/06/bernie-sanders-at-brooklyn-college-nyc/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-f7c94a3f7037.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher article body; boundaries not independently checked"
+}

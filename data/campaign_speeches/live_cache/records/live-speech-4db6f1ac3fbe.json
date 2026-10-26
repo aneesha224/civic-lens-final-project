@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-4db6f1ac3fbe",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-07-26",
+  "venue": "Read Bernie Sanders’ full Democratic National Convention speech",
+  "source_type": "On-demand public transcript from latimes.com",
+  "source_category": "campaign",
+  "source_url": "https://www.latimes.com/politics/la-na-pol-bernie-sanders-convention-speech-transcript-20160725-snap-htmlstory.html",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-4db6f1ac3fbe.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-beb572ff4c86",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-07-26",
+  "venue": "Democratic Convention: Read Bernie Sanders' Speech - TIME",
+  "source_type": "On-demand public transcript from time.com",
+  "source_category": "campaign",
+  "source_url": "https://time.com/4421574/democratic-convention-bernie-sanders-speech-transcript/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-beb572ff4c86.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

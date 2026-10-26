@@ -53,10 +53,17 @@ class CorpusStore:
                         if row.get(field) == "":
                             row[field] = None
                     records.append(SpeechRecord.model_validate(row))
+        curated_campaign_ids = {
+            record.record_id for record in records
+            if record.source_category == "campaign"
+        }
         if live_records_path.is_dir():
             for path in sorted(live_records_path.glob("*.json")):
                 try:
                     row = json.loads(path.read_text(encoding="utf-8"))
+                    # Reviewed local transcripts replace their cached extractions.
+                    if row.get("record_id") in curated_campaign_ids:
+                        continue
                     # Earlier experimental cache versions could capture a search
                     # result page or article excerpt. Only surface records that
                     # passed the current transcript-title and length checks.
@@ -72,11 +79,11 @@ class CorpusStore:
         return sorted({record.politician for record in self.visible_records()})
 
     def is_substantive(self, record: SpeechRecord) -> bool:
-        """Hide short procedural exchanges while retaining them on disk."""
+        """Hide short snippets and procedural exchanges while retaining them on disk."""
         text = self.read_text(record)
         words = len(text.split())
         lowered = " ".join(text.casefold().split())
-        if words < 35:
+        if words < 75:
             return False
         if record.source_category == "congressional_record" and words < 180 and any(marker in lowered for marker in PROCEDURAL_MARKERS):
             return False

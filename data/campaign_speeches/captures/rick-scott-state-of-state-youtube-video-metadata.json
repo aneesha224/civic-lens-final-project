@@ -1,0 +1,62 @@
+[
+  {
+    "record_id": "rick-scott-2013-state-of-the-state",
+    "video_id": "qDO6qGORlpg",
+    "video_url": "https://www.youtube.com/watch?v=qDO6qGORlpg",
+    "video_title": "2013 Rick Scott: State of the State Address",
+    "uploader": "Sessiontube",
+    "upload_date": "20130306",
+    "event_date": "2013-03-06",
+    "duration_seconds": 2219,
+    "caption_track": "English automatic captions from YouTube; downloaded with yt-dlp --write-auto-subs",
+    "original_srt": "rick-scott-2013-state-of-state.en.auto.srt",
+    "transcript_text": "rick-scott-2013-state-of-state.txt",
+    "speech_start_srt": "00:00:11.360",
+    "speech_end_srt": "00:36:58.440"
+  },
+  {
+    "record_id": "rick-scott-2016-state-of-the-state",
+    "video_id": "-m4HSUh7rcg",
+    "video_url": "https://www.youtube.com/watch?v=-m4HSUh7rcg",
+    "video_title": "Session 2016 Opening Day - Governor Rick Scott 2016 State of the State",
+    "uploader": "Sessiontube",
+    "upload_date": "20160112",
+    "event_date": "2016-01-12",
+    "duration_seconds": 1641,
+    "caption_track": "English automatic captions from YouTube; downloaded with yt-dlp --write-auto-subs",
+    "original_srt": "rick-scott-2016-state-of-state.en.auto.srt",
+    "transcript_text": "rick-scott-2016-state-of-state.txt",
+    "speech_start_srt": "00:00:06.000",
+    "speech_end_srt": "00:27:11.720"
+  },
+  {
+    "record_id": "rick-scott-2017-state-of-the-state",
+    "video_id": "8ZM3YZDCQ7I",
+    "video_url": "https://www.youtube.com/watch?v=8ZM3YZDCQ7I",
+    "video_title": "UNCUT: Gov. Scott's 2017 State of the State address",
+    "uploader": "News4JAX The Local Station",
+    "upload_date": "20180406",
+    "event_date": "2017-03-07",
+    "duration_seconds": 1853,
+    "caption_track": "English automatic captions from YouTube; downloaded with yt-dlp --write-auto-subs",
+    "original_srt": "rick-scott-2017-state-of-state.en.auto.srt",
+    "transcript_text": "rick-scott-2017-state-of-state.txt",
+    "speech_start_srt": "00:00:15.160",
+    "speech_end_srt": "00:30:48.950"
+  },
+  {
+    "record_id": "rick-scott-2018-state-of-the-state",
+    "video_id": "A2T4xjafHlM",
+    "video_url": "https://www.youtube.com/watch?v=A2T4xjafHlM",
+    "video_title": "FULL: 1.9.2018 Governor Scott's State of the State Address",
+    "uploader": "Florida House of Representatives",
+    "upload_date": "20180109",
+    "event_date": "2018-01-09",
+    "duration_seconds": 2141,
+    "caption_track": "English automatic captions from YouTube; downloaded with yt-dlp --write-auto-subs",
+    "original_srt": "rick-scott-2018-state-of-state.en.auto.srt",
+    "transcript_text": "rick-scott-2018-state-of-state.txt",
+    "speech_start_srt": "00:00:00.469",
+    "speech_end_srt": "00:35:40.840"
+  }
+]

@@ -1,4 +1,5 @@
-const state = { politicians: [], profiles: [], profileAsOf: "", records: [], selected: null, detail: null, discoveryComplete: true, analysisReady: null };
+const state = { politicians: [], profiles: [], profileAsOf: "", records: [], selected: null, detail: null, discoveryComplete: true, discoveryIssue: null, analysisReady: null, analysisInFlight: false, analysisError: null };
+const elapsedTimers = new Map();
 const $ = (id) => document.getElementById(id);
 const chatHistory = [];
 let selectionRequest = 0;
@@ -17,8 +18,18 @@ async function getJSON(url, options) {
   return body;
 }
 
+async function getJSONWithTimeout(url, timeoutMs) {
+  const controller = new AbortController();
+  const timer = window.setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await getJSON(url, { signal: controller.signal });
+  } finally {
+    window.clearTimeout(timer);
+  }
+}
+
 function analysisUnavailableMessage() {
-  return "AI analysis is not configured for this service. Add PORTKEY_API_KEY or OPENAI_API_KEY in its environment settings; speech browsing will still work.";
+  return "AI analysis is not configured for this service. Add OPENAI_API_KEY (or PORTKEY_API_KEY) to its environment settings; speech browsing will still work.";
 }
 
 function toast(message) {
@@ -45,6 +56,61 @@ function setCorpusProgress(status, label = "", detail = "") {
   track.setAttribute("aria-valuetext", `${label}. ${detail}`.trim());
   if (status === "complete") track.setAttribute("aria-valuenow", "100");
   else track.removeAttribute("aria-valuenow");
+}
+
+function formatElapsed(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainder = String(seconds % 60).padStart(2, "0");
+  return `${String(minutes).padStart(2, "0")}:${remainder} elapsed`;
+}
+
+function startElapsedTimer(id) {
+  stopElapsedTimer(id);
+  const element = $(id);
+  if (!element) return;
+  const startedAt = Date.now();
+  const update = () => {
+    element.textContent = formatElapsed(Math.floor((Date.now() - startedAt) / 1000));
+  };
+  update();
+  elapsedTimers.set(id, window.setInterval(update, 1000));
+}
+
+function stopElapsedTimer(id) {
+  const timer = elapsedTimers.get(id);
+  if (timer) window.clearInterval(timer);
+  elapsedTimers.delete(id);
+}
+
+function syncAnalysisControls() {
+  const speechButton = $("analyze");
+  const topicButton = $("trace-phrase");
+  if (!speechButton || !topicButton) return;
+  const hasSpeech = Boolean(state.selected);
+  const modelUnavailable = state.analysisReady === false;
+  const topic = $("phrase-input").value.trim();
+  speechButton.disabled = !hasSpeech || modelUnavailable || state.analysisInFlight;
+  topicButton.disabled = !hasSpeech || modelUnavailable || !state.discoveryComplete || topic.length < 2 || state.analysisInFlight;
+
+  const speechNote = $("analysis-availability");
+  speechNote.classList.toggle("hidden", !state.analysisError && !modelUnavailable && !state.analysisInFlight);
+  speechNote.textContent = state.analysisError
+    || (modelUnavailable ? analysisUnavailableMessage()
+      : state.analysisInFlight ? "An analysis is in progress. The timer below shows how long it has taken."
+        : "");
+
+  const topicNote = $("topic-action-status");
+  if (!topicNote) return;
+  topicNote.textContent = state.analysisError
+    || (modelUnavailable ? analysisUnavailableMessage()
+      : !hasSpeech ? "Choose a speech before searching for related wording."
+        : state.analysisInFlight ? "Civic Lens is working on this request. The timer below shows how long it has taken."
+          : !state.discoveryComplete ? "Civic Lens is still searching public sources. You can analyze this speech now; topic comparisons will be available when the search finishes."
+            : topic.length < 2 ? "Enter a topic or choose a highlighted term to compare related wording."
+              : state.discoveryIssue === "timeout" ? "Public-source search exceeded one minute. Comparisons use the statements already loaded."
+                : state.discoveryIssue === "error" ? "Civic Lens could not refresh public sources. Comparisons use the statements already loaded."
+                  : state.discoveryIssue === "unavailable" ? "Public-source search is unavailable. Comparisons use transcripts already collected."
+                    : "Civic Lens compares your topic with related terms in the selected source set.");
 }
 
 function formatDate(iso) {
@@ -74,7 +140,7 @@ async function loadPeople() {
   state.profiles = data.profiles || [];
   state.profileAsOf = data.as_of || "";
   const options = $("politician");
-  options.replaceChildren(new Option("Select a politician...", ""));
+  options.replaceChildren(new Option("Select a politician.", ""));
   for (const name of state.politicians) {
     const profile = state.profiles.find((item) => item.name === name);
     const label = profile ? profile.display_name : name;
@@ -83,11 +149,10 @@ async function loadPeople() {
   try {
     const health = await getJSON("/api/health");
     state.analysisReady = health.analysis_ready === true;
-    const note = $("analysis-config-note");
-    note.classList.toggle("hidden", state.analysisReady);
-    if (!state.analysisReady) note.textContent = analysisUnavailableMessage();
+    syncAnalysisControls();
   } catch (_) {
     state.analysisReady = null;
+    syncAnalysisControls();
   }
 }
 
@@ -162,15 +227,15 @@ function renderPoliticianProfile(profile) {
 function renderSpeechOptions(records) {
   const select = $("speech");
   const selectedId = select.value;
-  select.replaceChildren(new Option("Select a date and statement...", ""));
+  select.replaceChildren(new Option("Select a date and statement.", ""));
   for (const record of records) {
     const dateLabel = /retrieval date used/i.test(record.transcript_status || "")
       ? "Speech date unavailable"
       : /publication date may differ/i.test(record.transcript_status || "")
         ? `Publisher date ${formatDate(record.date)}`
         : formatDate(record.date);
-    const source = record.source_label || (record.source_category === "campaign" ? "Campaign / public speech" : "Congressional Record");
-    const pages = record.source_page_start ? `pages ${record.source_page_start}–${record.source_page_end}` : "full text";
+    const source = record.source_label || (record.source_category === "campaign" ? "Public speech or interview" : "Congressional Record");
+    const pages = record.source_page_start ? `pages ${record.source_page_start}–${record.source_page_end}` : "source text";
     select.add(new Option(`${dateLabel} · ${source} · ${pages}`, record.record_id));
   }
   if (records.some((record) => record.record_id === selectedId)) select.value = selectedId;
@@ -181,12 +246,18 @@ async function loadRecords() {
   const requestNumber = ++selectionRequest;
   setAnalysisExpanded(false);
   const name = selectedPoliticianName();
+  state.records = [];
+  $("speech").replaceChildren(new Option("Choose a politician first.", ""));
   const selectedProfile = getPoliticianProfile(name);
   if (selectedProfile) $("politician").value = selectedProfile.name;
   renderPoliticianProfile(selectedProfile);
   state.selected = null;
   state.detail = null;
+  state.records = [];
   state.discoveryComplete = false;
+  state.discoveryIssue = null;
+  state.analysisError = null;
+  stopElapsedTimer("corpus-progress-timer");
   $("remark").classList.add("hidden");
   $("topic-explorer").classList.add("hidden");
   $("analysis-controls").classList.add("hidden");
@@ -196,21 +267,31 @@ async function loadRecords() {
   $("empty").classList.remove("hidden");
   $("phrase-input").value = "";
   delete $("analyze").dataset.topic;
+  $("speech").replaceChildren(new Option(name ? "Civic Lens is loading statements." : "Choose a politician first.", ""));
   $("speech").disabled = true;
   $("analyze").disabled = true;
   $("source-leads").classList.add("hidden");
   $("source-leads").open = false;
   $("source-leads-content").replaceChildren();
-  $("source-leads-summary").textContent = "More public speech sources";
+  $("source-leads-summary").textContent = "Civic Lens is checking additional public speech sources.";
   if (!name) {
-    $("coverage").textContent = "Select a politician to see their collected statements.";
+    state.discoveryComplete = true;
+    $("coverage").textContent = "Select a politician to see the statements currently available for that person.";
     setCorpusProgress("hidden");
+    stopElapsedTimer("corpus-progress-timer");
+    syncAnalysisControls();
     return;
   }
-  $("coverage").textContent = "Searching public speech sources and loading Congressional Record statements…";
-  setCorpusProgress("loading", "Loading speech corpus…", "Gathering this politician’s available campaign, public, and Congressional Record speeches.");
+  const discoveryStartedAt = Date.now();
+  startElapsedTimer("corpus-progress-timer");
+  $("coverage").textContent = "Civic Lens is searching public speech sources and loading Congressional Record statements.";
+  setCorpusProgress("loading", "Civic Lens is loading the speech corpus.", "This search can take up to one minute. The timer shows how long it has been running.");
+  const fetchCorpusData = () => getJSONWithTimeout(
+    "/api/records?politician=" + encodeURIComponent(name),
+    Math.max(1, 60000 - (Date.now() - discoveryStartedAt))
+  );
   try {
-    let data = await getJSON("/api/records?politician=" + encodeURIComponent(name));
+    let data = await fetchCorpusData();
     while (requestNumber === selectionRequest) {
       state.records = data.records;
       renderSpeechOptions(data.records);
@@ -219,35 +300,63 @@ async function loadRecords() {
       const congressionalCount = counts.congressional_record || 0;
       if (data.search_status === "loading") {
         state.discoveryComplete = false;
-        $("coverage").textContent = `Searching all mapped election cycles · ${publicCount} public transcripts and ${congressionalCount} Congressional Record statements loaded so far`;
-        setCorpusProgress("loading", "Searching mapped election cycles…", `${publicCount} public transcripts and ${congressionalCount} Congressional Record statements loaded so far.`);
-        $("analyze").querySelector("span").textContent = "Loading the politician’s speech corpus…";
+        $("coverage").textContent = `Civic Lens is checking the listed election cycles. It has loaded ${publicCount} public transcripts and ${congressionalCount} Congressional Record statements so far.`;
+        setCorpusProgress("loading", "Civic Lens is searching public sources.", `It has loaded ${publicCount} public transcripts and ${congressionalCount} Congressional Record statements so far. The search stops waiting after one minute.`);
         renderLeads({ cache_status: "loading" });
+        syncAnalysisControls();
+        if (Date.now() - discoveryStartedAt >= 60000) {
+          state.discoveryComplete = true;
+          state.discoveryIssue = "timeout";
+          stopElapsedTimer("corpus-progress-timer");
+          $("coverage").textContent = "Public-source search took longer than one minute. You can use the statements already loaded and choose the politician again to retry.";
+          setCorpusProgress("unavailable", "Civic Lens could not finish the public-source search.", `It loaded ${publicCount} public transcripts and ${congressionalCount} Congressional Record statements. Topic comparisons use the statements already available.`);
+          renderLeads({ cache_status: "search unavailable" });
+          syncAnalysisControls();
+          break;
+        }
         await new Promise((resolve) => setTimeout(resolve, 1500));
         if (requestNumber !== selectionRequest) return;
-        data = await getJSON("/api/records?politician=" + encodeURIComponent(name));
+        data = await fetchCorpusData();
         continue;
       }
       state.discoveryComplete = true;
+      state.discoveryIssue = data.search_status === "unavailable" ? "unavailable" : null;
+      stopElapsedTimer("corpus-progress-timer");
       $("coverage").textContent = data.search_status === "unavailable"
-        ? `Public-source search is unavailable · showing ${publicCount} public transcripts and ${congressionalCount} Congressional Record statements already collected`
-        : `${publicCount} public/campaign transcripts · ${congressionalCount} Congressional Record statements · public search complete`;
+        ? `Public-source search is unavailable, so Civic Lens is showing ${publicCount} public transcripts and ${congressionalCount} Congressional Record statements already collected.`
+        : `Civic Lens found ${publicCount} public, campaign, or interview transcripts and ${congressionalCount} Congressional Record statements. Public-source search is complete.`;
       setCorpusProgress(
         data.search_status === "unavailable" ? "unavailable" : "complete",
-        data.search_status === "unavailable" ? "Using transcripts already collected" : "Speech corpus ready",
-        `${publicCount} public/campaign transcripts and ${congressionalCount} Congressional Record statements are available.`
+        data.search_status === "unavailable" ? "Civic Lens is using the transcripts already collected." : "Civic Lens has finished loading the speech corpus.",
+        `Civic Lens has ${publicCount} public, campaign, or interview transcripts and ${congressionalCount} Congressional Record statements available.`
       );
       renderLeads(data.discovery || {});
-      $("analyze").querySelector("span").textContent = "Analyze selected speech";
-      if (state.selected) $("analyze").disabled = false;
+      syncAnalysisControls();
       if (!data.records.length) toast("No statements were found in the local collection or public source search.");
       break;
     }
   } catch (error) {
     if (requestNumber !== selectionRequest) return;
-    toast(error.message || "We couldn’t load that list. Please try again.");
-    $("coverage").textContent = "Could not load statements. Check the connection and try again.";
-    setCorpusProgress("error", "Could not load speech corpus", "Check the connection, then choose the politician again.");
+    state.discoveryComplete = true;
+    const searchTimedOut = Date.now() - discoveryStartedAt >= 60000;
+    state.discoveryIssue = searchTimedOut ? "timeout" : "error";
+    stopElapsedTimer("corpus-progress-timer");
+    const loadedCount = state.records.length;
+    $("coverage").textContent = searchTimedOut
+      ? "Public-source search took longer than one minute. Statements already loaded remain available below."
+      : loadedCount
+        ? `Civic Lens could not refresh public sources. It has kept ${loadedCount} statements already loaded, which remain available below.`
+        : "Civic Lens could not load statements. Check the connection and choose this politician again.";
+    setCorpusProgress(searchTimedOut ? "unavailable" : "error",
+      searchTimedOut ? "Public-source search reached its one-minute limit." : "Civic Lens could not refresh the speech corpus.",
+      loadedCount
+        ? "You can still read and analyze statements already loaded on this page."
+        : "Check the connection, then choose this politician again.");
+    if (loadedCount) renderLeads({ cache_status: "search unavailable" });
+    else $("source-leads").classList.add("hidden");
+    if (!loadedCount) $("speech").replaceChildren(new Option("Statements could not load.", ""));
+    syncAnalysisControls();
+    toast(error.message || "Civic Lens could not load the statements. Please try again.");
   }
 }
 
@@ -259,14 +368,14 @@ function renderLeads(discovery) {
   const leads = discovery.leads || [];
   const count = discovery.new_transcripts || 0;
   if (discovery.cache_status === "search unavailable") {
-    summary.textContent = "Could not reach public speech sources";
+    summary.textContent = "Civic Lens could not reach public speech sources.";
     content.textContent = "The transcripts already collected are still available in the speech list.";
     container.classList.remove("hidden");
     return;
   }
   if (String(discovery.cache_status || "").startsWith("loading")) {
-    summary.textContent = "Searching this politician’s listed election cycles…";
-    content.textContent = "Full transcripts found in public sources will appear in the speech list.";
+    summary.textContent = "Civic Lens is searching this politician’s listed election cycles.";
+    content.textContent = "Civic Lens will add complete transcripts from public sources to the speech list.";
     container.classList.remove("hidden");
     return;
   }
@@ -275,10 +384,10 @@ function renderLeads(discovery) {
     container.classList.add("hidden");
     return;
   }
-  summary.textContent = `${count} transcripts added · ${additionalLeads.length} more source pages`;
+  summary.textContent = `Civic Lens added ${count} transcripts and found ${additionalLeads.length} additional source pages.`;
   const heading = document.createElement("p");
   heading.className = "source-leads-help";
-  heading.textContent = "Load a result to add its transcript to the speech list. Pages without a complete speech are skipped.";
+  heading.textContent = "Load a result to add its transcript to the speech list. Civic Lens skips pages without a complete speech.";
   content.append(heading);
   for (const lead of additionalLeads.slice(0, 8)) {
     const row = document.createElement("div");
@@ -288,7 +397,7 @@ function renderLeads(discovery) {
     row.append(title);
     const status = document.createElement("small");
     status.className = "source-lead-status";
-    const sourceStatus = lead.status || "Source page available to retrieve";
+    const sourceStatus = lead.status || "Civic Lens can retrieve this source page.";
     status.textContent = /does not identify a transcript|no full transcript text was extractable|short excerpt or article text/i.test(sourceStatus)
       ? "Full speech text was not found on this page."
       : /google news lead/i.test(sourceStatus)
@@ -303,7 +412,7 @@ function renderLeads(discovery) {
     const load = document.createElement("button");
     load.type = "button";
     load.className = "source-lead-load";
-    load.textContent = lead.record_id ? "Read transcript in Civic Lens" : "Load transcript into Civic Lens";
+    load.textContent = lead.record_id ? "Read the transcript in Civic Lens." : "Load the transcript into Civic Lens.";
     load.addEventListener("click", () => openPublicLead(lead, load, status));
     actions.append(load);
     const candidate = lead.source_url || lead.news_url;
@@ -327,8 +436,8 @@ function renderLeads(discovery) {
 async function openPublicLead(lead, button, status) {
   const politician = selectedPoliticianName();
   button.disabled = true;
-  button.textContent = "Loading transcript into Civic Lens…";
-  status.textContent = "Fetching the source page and extracting speech text…";
+  button.textContent = "Civic Lens is loading the transcript.";
+  status.textContent = "Civic Lens is fetching the source page and extracting the speech text.";
   try {
     let record = state.records.find((item) => item.record_id === lead.record_id);
     if (!record) {
@@ -344,17 +453,17 @@ async function openPublicLead(lead, button, status) {
     if (!option) {
       option = document.createElement("option");
       option.value = record.record_id;
-      option.textContent = `${formatDate(record.date)} · Campaign / public speech · full transcript`;
+      option.textContent = `${formatDate(record.date)} · Public speech or interview · transcript`;
       $("speech").append(option);
     }
     $("speech").value = record.record_id;
-    status.textContent = "Full speech text loaded below in the Civic Lens reader.";
-    button.textContent = "Transcript open in Civic Lens";
+    status.textContent = "The transcript text is shown below in the Civic Lens reader.";
+    button.textContent = "The transcript is open in Civic Lens.";
     await loadDetail(record.record_id);
     $("remark").scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (error) {
-    status.textContent = error.message || "Civic Lens could not retrieve a complete transcript from this page.";
-    button.textContent = "Try loading transcript again";
+    status.textContent = error.message || "Civic Lens could not retrieve a complete transcript from this page. Please try the original source link.";
+    button.textContent = "Try loading the transcript again.";
     button.disabled = false;
   }
 }
@@ -452,7 +561,7 @@ function renderPhraseIndex(phrases = []) {
     label.textContent = topic;
     const cueList = document.createElement("span");
     cueList.className = "phrase-option-text";
-    cueList.textContent = `${cues.slice(0, 4).map((cue) => `“${cue}”`).join(" · ")} highlighted`;
+    cueList.textContent = `Civic Lens highlighted these words: ${cues.slice(0, 4).map((cue) => `“${cue}”`).join(" · ")}.`;
     button.append(label, cueList);
     button.addEventListener("click", () => {
       $("phrase-input").value = topic;
@@ -483,6 +592,7 @@ async function loadDetail(recordId) {
     const data = await getJSON("/api/records/" + encodeURIComponent(recordId));
     state.detail = data;
     state.selected = data.record;
+    state.analysisError = null;
     $("empty").classList.add("hidden");
     $("analysis-empty").classList.add("hidden");
     $("analysis").classList.add("hidden");
@@ -492,8 +602,8 @@ async function loadDetail(recordId) {
     $("analysis-controls").classList.remove("hidden");
     const select = $("speech");
     if (![...select.options].some((option) => option.value === recordId)) {
-      const source = data.record.source_category === "campaign" ? "Campaign / public speech" : "Congressional Record";
-      select.add(new Option(`${formatDate(data.record.date)} · ${source} · full text`, recordId));
+      const source = data.record.source_category === "campaign" ? "Public speech or interview" : "Congressional Record";
+      select.add(new Option(`${formatDate(data.record.date)} · ${source} · source text`, recordId));
     }
     select.value = recordId;
     const dateLabel = /retrieval date used/i.test(data.record.transcript_status || "")
@@ -507,21 +617,24 @@ async function loadDetail(recordId) {
     $("title").textContent = venue.event || (data.record.politician + " · statement");
     $("venue-location").textContent = venue.place;
     $("source").href = data.record.source_url;
-    $("source-kind").textContent = data.record.source_category === "campaign"
-      ? "Campaign / public transcript · full text loaded from source"
-      : "Congressional Record transcript · full text shown here";
+    const sourceStatus = (data.record.transcript_status || "").toLowerCase();
+    $("source-kind").textContent = /partial|excerpt/.test(sourceStatus)
+      ? "This record contains partial text from the linked source."
+      : data.record.source_category === "campaign"
+        ? "This text comes from a public speech or interview transcript."
+        : "This text comes from the Congressional Record.";
     const publicationDate = data.record.source_category === "campaign" && /publication date may differ/i.test(data.record.transcript_status || "");
     $("pages").textContent = publicationDate
-      ? "Publisher publication date; the speech may have been delivered on a different date."
+      ? "The source page’s publication date may differ from the speech date."
       : data.record.source_page_start
         ? `Official Congressional Record · pages ${data.record.source_page_start}–${data.record.source_page_end}`
-        : "Full transcript from the listed source. Check the source for date and transcript context.";
+        : "The text shown here comes from the linked source. Check it for the publication date and context.";
     state.detail.phrase_candidates = data.phrase_candidates || [];
     renderPhraseIndex(state.detail.phrase_candidates);
     renderTranscript(data.text, [], state.detail.phrase_candidates);
-    $("phrase-status").textContent = "Finding short topic cues in the speech…";
-    $("analyze").disabled = !state.discoveryComplete;
+    $("phrase-status").textContent = "Civic Lens is finding short topic cues in the speech.";
     $("analyze").querySelector("span").textContent = "Analyze selected speech";
+    syncAnalysisControls();
     delete $("analyze").dataset.topic;
     loadRefinedPhraseCandidates(data.record.record_id);
   } catch (error) {
@@ -543,7 +656,7 @@ async function loadRefinedPhraseCandidates(recordId) {
     renderTranscript(state.detail.text, [], phrases);
     $("phrase-status").textContent = phrases.length
       ? "Click a highlighted word or a topic chip to read the analysis and compare earlier statements."
-      : "No topic cues found in this transcript. Enter a topic such as taxes or crime to analyze it.";
+      : "Civic Lens did not identify topic cues in this transcript. Enter a topic such as taxes or crime to analyze it.";
   } catch (error) {
     if (state.detail && state.selected && state.selected.record_id === recordId) {
       renderPhraseIndex(state.detail.phrase_candidates || []);
@@ -559,7 +672,7 @@ async function browseTopicMatches() {
     return;
   }
   if (!state.discoveryComplete) {
-    toast("Civic Lens is still loading this politician’s speech corpus. Topic search will be ready when it finishes.");
+    syncAnalysisControls();
     return;
   }
   if (topic.length < 2) {
@@ -568,7 +681,7 @@ async function browseTopicMatches() {
   }
   const button = $("browse-topic");
   button.disabled = true;
-  button.textContent = "Finding passages…";
+  button.textContent = "Civic Lens is finding matching passages.";
   try {
     const params = new URLSearchParams({
       politician: state.selected.politician,
@@ -578,8 +691,9 @@ async function browseTopicMatches() {
     const result = await getJSON("/api/topic-trace?" + params.toString());
     renderPhraseTrace(result);
   } catch (error) {
-    $("phrase-status").textContent = error.message || "Topic search failed.";
-    toast(error.message || "Topic search failed.");
+    state.analysisError = error.message || "Civic Lens could not finish the topic search. Please try again.";
+    $("phrase-status").textContent = state.analysisError;
+    syncAnalysisControls();
   } finally {
     button.disabled = false;
     button.textContent = "Browse all matching passages";
@@ -593,7 +707,7 @@ async function tracePhrase() {
     return;
   }
   if (!state.discoveryComplete) {
-    toast("Civic Lens is still collecting this politician’s statements. Topic analysis will be ready when it finishes.");
+    syncAnalysisControls();
     return;
   }
   if (state.analysisReady === false) {
@@ -612,15 +726,15 @@ function renderPhraseTrace(result) {
   const section = $("phrase-results");
   const records = result.records || [];
   section.classList.remove("hidden");
-  $("phrase-heading").textContent = `${result.topic} across speeches`;
+  $("phrase-heading").textContent = `Civic Lens searched these speeches for “${result.topic}”.`;
   $("phrase-count").textContent = `${result.record_count} speeches · ${result.total_occurrences} related mentions`;
   $("phrase-scope-label").textContent = {
-    campaign: "Campaign & public speeches",
+    campaign: "Campaign, public, and interview transcripts",
     congressional_record: "Congressional Record",
     all: "All collected statements"
   }[result.source_category] || result.source_category;
   $("phrase-summary").textContent = result.record_count
-    ? `Found wording related to ${result.topic.toLowerCase()} in ${result.record_count} ${result.record_count === 1 ? "speech" : "speeches"}. Excerpts highlight the words that matched; surrounding text keeps each mention in context.`
+    ? `Civic Lens found wording related to ${result.topic.toLowerCase()} in ${result.record_count} ${result.record_count === 1 ? "speech" : "speeches"}. Excerpts highlight the matching words, and the surrounding text keeps each mention in context.`
     : `No related wording about ${result.topic.toLowerCase()} was found in these sources. Change “Compare with” to search a wider collection.`;
 
   const timeline = $("phrase-timeline");
@@ -659,7 +773,7 @@ function renderPhraseTrace(result) {
       ? "Speech date unavailable"
       : formatDate(item.record.date);
     const title = document.createElement("span");
-    title.textContent = `${item.record.venue} · ${item.record.source_category === "campaign" ? "Campaign/public" : "Congressional Record"}`;
+    title.textContent = `${item.record.venue} · ${item.record.source_category === "campaign" ? "Public speech/interview" : "Congressional Record"}`;
     details.append(date, title);
     const count = document.createElement("small");
     const sourceCount = (item.sources || []).length;
@@ -695,14 +809,14 @@ async function openTracedSpeech(recordId) {
   $("remark").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function appendCitationCard(container, citation, earlier = false) {
+function createCitationCard(citation, earlier = false) {
   const card = document.createElement("article");
   card.className = "source-excerpt";
   const quote = document.createElement("blockquote");
-  quote.textContent = "“" + citation.quote + "”";
+  quote.textContent = citation.quote ? "“" + citation.quote + "”" : "No exact topic passage was returned for this statement.";
   const meta = document.createElement("p");
   meta.className = "evidence-meta";
-  const sourceLabel = citation.source_category === "campaign" ? "Public / campaign speech" : "Congressional Record";
+  const sourceLabel = citation.source_category === "campaign" ? "Public speech or interview" : "Congressional Record";
   const pages = citation.page_start != null ? " · pages " + citation.page_start + "–" + citation.page_end : "";
   meta.textContent = formatDate(citation.date) + " · " + (citation.venue || sourceLabel) + pages;
   const actions = document.createElement("div");
@@ -721,7 +835,117 @@ function appendCitationCard(container, citation, earlier = false) {
     actions.append(open);
   }
   card.append(quote, meta, actions);
-  container.append(card);
+  return card;
+}
+
+function appendCitationCard(container, citation, earlier = false) {
+  container.append(createCitationCard(citation, earlier));
+}
+
+function normalizeTopicLabel(value) {
+  return String(value || "").toLocaleLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+function exactExcerptAround(text, phrase) {
+  if (!text || !phrase) return "";
+  const mapped = normalizeWithMap(text);
+  const needle = String(phrase).replace(/\s+/g, " ").trim().toLocaleLowerCase();
+  const index = mapped.normalized.toLocaleLowerCase().indexOf(needle);
+  if (index < 0 || !needle.length) return "";
+  const hitStart = mapped.positions[index];
+  const hitEnd = mapped.positions[index + needle.length - 1] + 1;
+  const paragraphStart = Math.max(text.lastIndexOf("\n\n", hitStart), text.lastIndexOf("\r\n\r\n", hitStart)) + 2;
+  let paragraphEnd = text.indexOf("\n\n", hitEnd);
+  if (paragraphEnd < 0) paragraphEnd = text.indexOf("\r\n\r\n", hitEnd);
+  if (paragraphEnd < 0) paragraphEnd = text.length;
+  let start = Math.max(paragraphStart, hitStart - 210);
+  let end = Math.min(paragraphEnd, hitEnd + 260);
+  if (start > paragraphStart) {
+    const boundary = text.indexOf(" ", start);
+    if (boundary >= 0 && boundary < hitStart) start = boundary + 1;
+  }
+  if (end < paragraphEnd) {
+    const boundary = text.lastIndexOf(" ", end);
+    if (boundary > hitEnd) end = boundary;
+  }
+  return text.slice(start, end).trim();
+}
+
+function selectedTopicCitation(result) {
+  const selected = state.selected;
+  if (!selected) return null;
+  const speechEvidence = result.speech_analysis && result.speech_analysis.evidence || [];
+  const verifiedEvidence = speechEvidence.find((item) => item.record_id === selected.record_id && item.quote)
+    || speechEvidence.find((item) => item.quote);
+  const topic = result.request.topic || result.request.phrase || "";
+  const candidates = state.detail && state.detail.phrase_candidates || [];
+  const topicCandidates = candidates.filter((item) =>
+    normalizeTopicLabel(item.topic) === normalizeTopicLabel(topic)
+  );
+  const possiblePhrases = [...topicCandidates.map((item) => item.phrase), topic];
+  let quote = "";
+  for (const phrase of possiblePhrases) {
+    quote = exactExcerptAround(state.detail && state.detail.text, phrase);
+    if (quote) break;
+  }
+  quote = quote || (verifiedEvidence && verifiedEvidence.quote) || "";
+  return {
+    ...(verifiedEvidence || {}),
+    record_id: selected.record_id,
+    politician: selected.politician,
+    date: selected.date,
+    source_url: selected.source_url,
+    venue: selected.venue,
+    page_start: selected.source_page_start,
+    page_end: selected.source_page_end,
+    source_category: selected.source_category,
+    quote
+  };
+}
+
+function renderEvidenceConnections(container, current, earlier, topic) {
+  container.replaceChildren();
+  if (!earlier.length) {
+    const empty = document.createElement("p");
+    empty.className = "evidence-empty";
+    empty.textContent = "The collected sources contain no earlier statement matching this topic before the selected speech.";
+    container.append(empty);
+    return;
+  }
+
+  const currentCard = createCitationCard(current);
+  currentCard.classList.add("connection-origin");
+  const currentLabel = document.createElement("p");
+  currentLabel.className = "connection-label";
+  currentLabel.textContent = current.quote
+    ? "Selected statement · exact source passage"
+    : "Selected statement · source record";
+  currentCard.prepend(currentLabel);
+  container.append(currentCard);
+
+  const note = document.createElement("p");
+  note.className = "connection-note";
+  note.textContent = "Each link marks an earlier passage retrieved by the same topic search. It shows a source and date connection, not agreement or disagreement.";
+  container.append(note);
+
+  const branches = document.createElement("div");
+  branches.className = "connection-branches";
+  for (const citation of earlier) {
+    const row = document.createElement("div");
+    row.className = "evidence-connection";
+    const relation = document.createElement("div");
+    relation.className = "connection-relation";
+    const label = document.createElement("span");
+    label.textContent = "Earlier match for “" + topic + "”";
+    const arrow = document.createElement("span");
+    arrow.className = "connection-arrow";
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.textContent = "↘";
+    relation.append(label, arrow);
+    row.append(relation, createCitationCard(citation, true));
+    branches.append(row);
+  }
+  container.append(branches);
 }
 
 function setAnalysisExpanded(expanded) {
@@ -739,10 +963,33 @@ function renderAnalysis(result) {
   const longitudinal = result.longitudinal_analysis;
   $("analysis").classList.remove("hidden");
   $("analysis-empty").classList.add("hidden");
-  $("analysis-title").textContent = result.request.topic || result.request.phrase || "What the record shows";
+  $("analysis-title").textContent = result.request.topic || result.request.phrase || "This is what the record shows.";
   if (result.request.topic || result.request.phrase) $("phrase-results").classList.add("hidden");
-  $("analysis-config-note").classList.add("hidden");
   $("summary").textContent = speech.summary;
+  $("headline").textContent = speech.headline || "";
+  $("headline").classList.toggle("hidden", !speech.headline);
+  const insights = speech.key_insights || [];
+  const insightGrid = $("insights");
+  insightGrid.replaceChildren();
+  insights.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.className = "insight-card";
+    const num = document.createElement("span");
+    num.className = "insight-num";
+    num.textContent = String(index + 1).padStart(2, "0");
+    const label = document.createElement("strong");
+    label.textContent = item.label;
+    const body = document.createElement("p");
+    body.textContent = item.insight;
+    card.append(num, label, body);
+    insightGrid.append(card);
+  });
+  insightGrid.classList.toggle("hidden", insights.length === 0);
+  $("framing").textContent = speech.framing || "";
+  $("watch").textContent = speech.what_to_watch || "";
+  $("framing").parentElement.classList.toggle("hidden", !speech.framing);
+  $("watch").parentElement.classList.toggle("hidden", !speech.what_to_watch);
+  $("framing-wrap").classList.toggle("hidden", !(speech.framing || speech.what_to_watch));
   const claims = speech.claims || [];
   const claimsList = $("claims");
   claimsList.replaceChildren();
@@ -770,17 +1017,16 @@ function renderAnalysis(result) {
   if (hasTopicComparison) {
     const earlier = longitudinal && longitudinal.earlier_statements || [];
     $("scope").textContent = earlier.length
-      ? earlier.length + " earlier " + (earlier.length === 1 ? "statement" : "statements") + " · " + (result.request.source_category === "all" ? "all collected sources" : result.request.source_category === "campaign" ? "campaign and public speeches" : "Congressional Record")
+      ? `Civic Lens found ${earlier.length} earlier ${earlier.length === 1 ? "statement" : "statements"} in ${result.request.source_category === "all" ? "all collected sources" : result.request.source_category === "campaign" ? "campaign speeches, public remarks, and interviews" : "the Congressional Record"}.`
       : "No earlier matching statement was found in this source set.";
     const earlierList = $("earlier-evidence");
     earlierList.replaceChildren();
-    if (earlier.length) earlier.forEach((item) => appendCitationCard(earlierList, item, true));
-    else {
-      const empty = document.createElement("p");
-      empty.className = "evidence-empty";
-      empty.textContent = "The collected sources contain no earlier statement matching this topic before the selected speech.";
-      earlierList.append(empty);
-    }
+    renderEvidenceConnections(
+      earlierList,
+      selectedTopicCitation(result),
+      earlier,
+      result.request.topic || result.request.phrase || "this topic"
+    );
     $("comparison").textContent = longitudinal
       ? longitudinal.synthesis
       : "There is not enough earlier source material in this collection to compare the speaker’s wording.";
@@ -805,29 +1051,39 @@ function renderAnalysis(result) {
 
 async function analyze() {
   if (!state.selected) return;
-  if (state.analysisReady === false) {
-    toast(analysisUnavailableMessage());
+  if (state.analysisReady === false || (state.analysisError && state.analysisError === analysisUnavailableMessage())) {
+    syncAnalysisControls();
     return;
   }
-  const button = $("analyze");
+  const speechButton = $("analyze");
   const topicButton = $("trace-phrase");
   const browseButton = $("browse-topic");
-  const topic = button.dataset.topic || null;
+  const topic = speechButton.dataset.topic || null;
+  if (topic && !state.discoveryComplete) {
+    syncAnalysisControls();
+    return;
+  }
   const loading = $(topic ? "topic-analysis-loading" : "analysis-loading");
   const loadingLabel = $(topic ? "topic-analysis-loading-label" : "analysis-loading-label");
   const loadingDetail = $(topic ? "topic-analysis-loading-detail" : "analysis-loading-detail");
+  const timerId = topic ? "topic-analysis-loading-timer" : "analysis-loading-timer";
   const busyPanel = $(topic ? "topic-explorer" : "analysis-controls");
-  button.disabled = true;
-  topicButton.disabled = Boolean(topic);
-  browseButton.disabled = Boolean(topic);
+  state.analysisInFlight = true;
+  state.analysisError = null;
+  speechButton.disabled = true;
+  topicButton.disabled = true;
+  browseButton.disabled = true;
   if (topic) $("phrase-scope").disabled = true;
-  button.querySelector("span").textContent = "Analyzing source text…";
+  if (topic) topicButton.textContent = "Analyzing topic…";
+  else speechButton.querySelector("span").textContent = "Analyzing speech…";
   busyPanel.setAttribute("aria-busy", "true");
-  loadingLabel.textContent = topic ? "Analyzing “" + topic + "”…" : "Analyzing the selected speech…";
+  loadingLabel.textContent = topic ? `Civic Lens is comparing “${topic}” across statements.` : "Civic Lens is analyzing the selected speech.";
   loadingDetail.textContent = topic
-    ? "Reading this speech, finding earlier statements, and preparing a comparison."
-    : "Reading the selected transcript and checking its source excerpts.";
+    ? "One measured topic comparison took 34.5 seconds. This request may take longer."
+    : "One measured speech analysis took 3.2 seconds. This request may take longer.";
   loading.classList.remove("hidden");
+  startElapsedTimer(timerId);
+  syncAnalysisControls();
   try {
     const result = await getJSON("/api/analyze", {
       method: "POST",
@@ -843,15 +1099,18 @@ async function analyze() {
     });
     renderAnalysis(result);
   } catch (error) {
-    toast(error.message || "Analysis failed. Please try again.");
+    state.analysisError = error.message || "Civic Lens could not finish the analysis. Please try again.";
+    if (topic) $("phrase-status").textContent = state.analysisError;
   } finally {
-    button.disabled = false;
-    topicButton.disabled = false;
-    browseButton.disabled = false;
-    $("phrase-scope").disabled = false;
+    stopElapsedTimer(timerId);
+    state.analysisInFlight = false;
     loading.classList.add("hidden");
     busyPanel.removeAttribute("aria-busy");
-    button.querySelector("span").textContent = "Analyze selected speech";
+    speechButton.querySelector("span").textContent = "Analyze selected speech";
+    topicButton.textContent = "Analyze topic";
+    browseButton.textContent = "Show all matching passages";
+    $("phrase-scope").disabled = false;
+    syncAnalysisControls();
   }
 }
 
@@ -879,7 +1138,7 @@ async function sendChat(message) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         message: clean,
-        history: chatHistory.slice(-20),
+        history: chatHistory.slice(-8),
         selected_record_id: state.selected && state.selected.record_id || null
       })
     });
@@ -912,19 +1171,23 @@ $("text").addEventListener("keydown", (event) => {
   tracePhrase();
 });
 $("phrase-input").addEventListener("input", () => {
+  state.analysisError = null;
   $("analyze").dataset.topic = $("phrase-input").value.trim();
+  syncAnalysisControls();
 });
 $("phrase-scope").addEventListener("change", () => {
+  state.analysisError = null;
   const topic = $("phrase-input").value.replace(/\s+/g, " ").trim();
+  syncAnalysisControls();
   if (state.selected && topic.length >= 2) {
     tracePhrase();
   } else {
-    $("phrase-status").textContent = "Comparison filter updated. Choose a topic to see matching earlier statements.";
+    $("phrase-status").textContent = "The comparison filter has been updated. Choose a topic to see matching earlier statements.";
   }
 });
 $("trace-phrase").addEventListener("click", tracePhrase);
 $("browse-topic").addEventListener("click", browseTopicMatches);
-$("analyze").addEventListener("click", analyze);
+$("analyze").addEventListener("click", () => { delete $("analyze").dataset.topic; analyze(); });
 $("analysis-width-toggle").addEventListener("click", () => {
   setAnalysisExpanded(!$("workspace").classList.contains("analysis-expanded"));
 });

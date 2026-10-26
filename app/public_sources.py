@@ -28,7 +28,7 @@ CYCLES_PATH = PROJECT_ROOT / "data" / "campaign_speeches" / "office_campaign_cyc
 ROSTER_PATH = PROJECT_ROOT / "data" / "politicians.csv"
 RSS_URL = "https://news.google.com/rss/search"
 CACHE_HOURS = 24
-SEARCH_VERSION = 8
+SEARCH_VERSION = 9
 TRANSCRIPT_ARCHIVES = {"presidentialrhetoric.com", "americanrhetoric.com", "awpc.cattcenter.iastate.edu", "rev.com"}
 IGNORED_TRANSCRIPT_ELEMENTS = {"script", "style", "noscript", "iframe", "svg"}
 PROMO_PREFIXES = (
@@ -199,6 +199,14 @@ def _queries(politician: str) -> list[str]:
         f'"{politician}" campaign rally speech transcript',
         f'"{politician}" election night remarks transcript',
         f'"{politician}" public address remarks transcript',
+        f'"{politician}" interview transcript full text',
+        f'"{politician}" Face the Nation transcript',
+        f'"{politician}" Meet the Press transcript',
+        f'"{politician}" This Week transcript',
+        f'"{politician}" 60 Minutes transcript',
+        f'"{politician}" town hall transcript',
+        f'"{politician}" press conference transcript',
+        f'"{politician}" public remarks transcript',
     ]
     years: list[int] = []
     try:
@@ -231,7 +239,7 @@ def _search_one(query: str) -> list[dict[str, str]]:
             continue
         if politician_surname(query) not in title.casefold():
             continue
-        if re.search(r"interview|podcast|floor speech|senate speech|filibuster|hearing|opinion|highlights", title, re.I):
+        if re.search(r"podcast|floor speech|senate speech|filibuster|hearing|opinion|highlights", title, re.I):
             continue
         source = item.find("source")
         try:
@@ -339,7 +347,7 @@ def _search_bing(query: str) -> list[dict[str, str]]:
             continue
         if not re.search(r"speech|transcript|full text|remarks|address|victory|concession|campaign|convention|rally", title, re.I):
             continue
-        if re.search(r"interview|podcast|floor speech|senate speech|filibuster|hearing|opinion|highlights", title, re.I):
+        if re.search(r"podcast|floor speech|senate speech|filibuster|hearing|opinion|highlights", title, re.I):
             continue
         host = urllib.parse.urlparse(item["url"]).netloc
         results.append({
@@ -356,7 +364,7 @@ def _search_bing(query: str) -> list[dict[str, str]]:
 
 def _is_full_text_lead(lead: dict[str, str]) -> bool:
     title = lead.get("title", "")
-    if re.search(r"interview|podcast|floor speech|senate speech|filibuster|hearing|opinion|highlights|roundup", title, re.I):
+    if re.search(r"podcast|floor speech|senate speech|filibuster|hearing|opinion|highlights|roundup", title, re.I):
         return False
     explicit_text = re.search(
         r"transcript|full\s+(?:speech|text|remarks|address)|read.{0,100}\b(?:full\s+)?(?:speech|remarks|address|text)\b|speech text|remarks as prepared|prepared remarks|speech\s*\([^)]*text",

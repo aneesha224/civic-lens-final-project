@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-b1cecfe5a1ce",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2016-07-21",
+  "venue": "Jeers and Boos: Transcript of Ted Cruz’s Speech - Roll Call",
+  "source_type": "On-demand public transcript from rollcall.com",
+  "source_category": "campaign",
+  "source_url": "https://rollcall.com/2016/07/20/jeers-and-boos-transcript-of-ted-cruzs-speech/",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-b1cecfe5a1ce.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

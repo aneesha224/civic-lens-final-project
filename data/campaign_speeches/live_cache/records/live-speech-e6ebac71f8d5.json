@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-e6ebac71f8d5",
+  "politician": "Elizabeth Warren",
+  "state": "Massachusetts",
+  "date": "2020-03-05",
+  "venue": "Read Elizabeth Warren’s full speech after dropping out of presidential ...",
+  "source_type": "On-demand public transcript from chicago.suntimes.com",
+  "source_category": "campaign",
+  "source_url": "https://chicago.suntimes.com/elections/2020/3/5/21166356/warren-drops-out-speech-full-text",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-e6ebac71f8d5.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

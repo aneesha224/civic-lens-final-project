@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-d0812e579d98",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-02-10",
+  "venue": "Read: Bernie Sanders’s victory speech in New Hampshire - Vox",
+  "source_type": "On-demand public transcript from vox.com",
+  "source_category": "campaign",
+  "source_url": "https://www.vox.com/2016/2/9/10956632/bernie-sanders-new-hampshire-speech-transcript",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-d0812e579d98.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

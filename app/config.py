@@ -10,7 +10,14 @@ from pydantic_ai.providers.openai import OpenAIProvider
 
 
 DEFAULT_MODEL = "gpt-6-luna"
-MODEL_SETTINGS = {"openai_reasoning_effort": "none"}
+# Keep each provider response bounded; workflow-level UsageLimits add a second
+# guard on cumulative requests and tokens within each specialist run.
+MODEL_SETTINGS = {
+    "openai_reasoning_effort": "none",
+    # Portkey cache item IDs are not valid Azure Responses item IDs.
+    "openai_send_reasoning_ids": False,
+    "max_tokens": 3500,
+}
 
 
 class ModelConfigurationError(RuntimeError):
@@ -23,15 +30,17 @@ def model_credentials_configured() -> bool:
 
 def configured_model() -> Model | str:
     """Return a lazy PydanticAI model configuration."""
-    model_name = os.getenv("AI_MODEL", DEFAULT_MODEL)
-    portkey_key = os.getenv("PORTKEY_API_KEY", "").strip()
+    model_name = os.getenv("AI_MODEL", "").strip() or DEFAULT_MODEL
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
-    if portkey_key and not openai_key:
+    portkey_key = os.getenv("PORTKEY_API_KEY", "").strip()
+    # Prefer a direct OpenAI key when one is configured; fall back to Portkey.
+    if openai_key:
+        provider = OpenAIProvider(api_key=openai_key)
+        return OpenAIChatModel(model_name=model_name, provider=provider)
+    if portkey_key:
         provider = OpenAIProvider(
             api_key=portkey_key,
             base_url=os.getenv("PORTKEY_BASE_URL", "https://api.portkey.ai/v1"),
         )
         return OpenAIChatModel(model_name=model_name, provider=provider)
-    if not (portkey_key or openai_key):
-        raise ModelConfigurationError("No AI API credential is configured.")
-    return model_name
+    raise ModelConfigurationError("No AI API credential is configured.")

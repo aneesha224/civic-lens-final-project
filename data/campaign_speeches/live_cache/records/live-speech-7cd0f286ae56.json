@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-7cd0f286ae56",
+  "politician": "Cory Booker",
+  "state": "New Jersey",
+  "date": "2026-10-26",
+  "venue": "Transcript of Newark, N.J., Mayor Cory Booker’s remarks for …",
+  "source_type": "On-demand public transcript from news.stanford.edu",
+  "source_category": "campaign",
+  "source_url": "https://news.stanford.edu/stories/2012/06/transcript-newark-n-j-mayor-cory-bookers-remarks-stanfords-commencement-2012",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-7cd0f286ae56.txt",
+  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

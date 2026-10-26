@@ -5,14 +5,52 @@ from __future__ import annotations
 import json
 
 from dotenv import load_dotenv
+from pydantic_ai import UsageLimits
 
 from .agents import ResearchDeps, longitudinal_analyst, safety_auditor, speech_analyst
 from .config import MODEL_SETTINGS, configured_model
 from .corpus import CorpusStore
-from .models import CivicLensResult, LongitudinalAnalysis, ResearchRequest, SafetyReview
+from .models import Citation, CivicLensResult, LongitudinalAnalysis, ResearchRequest, SafetyReview
 from .topics import TOPIC_TERMS, normalize_topic
 
 load_dotenv()
+
+SPEECH_USAGE_LIMITS = UsageLimits(
+    request_limit=4,
+    tool_calls_limit=2,
+    total_tokens_limit=80_000,
+    output_tokens_limit=6_000,
+    per_request_input_tokens_limit=30_000,
+)
+LONGITUDINAL_USAGE_LIMITS = UsageLimits(
+    request_limit=4,
+    tool_calls_limit=2,
+    total_tokens_limit=60_000,
+    output_tokens_limit=8_000,
+    per_request_input_tokens_limit=30_000,
+)
+SAFETY_USAGE_LIMITS = UsageLimits(
+    request_limit=6,
+    tool_calls_limit=6,
+    total_tokens_limit=40_000,
+    output_tokens_limit=3_000,
+    per_request_input_tokens_limit=20_000,
+)
+CHAT_USAGE_LIMITS = UsageLimits(
+    request_limit=2,
+    tool_calls_limit=0,
+    total_tokens_limit=8_000,
+    output_tokens_limit=1_000,
+    per_request_input_tokens_limit=8_000,
+)
+
+
+def retain_exact_source_quotes(
+    evidence: list[Citation], source_text: str
+) -> tuple[list[Citation], int]:
+    """Keep only evidence quotations that are verbatim substrings of the selected source."""
+    retained = [item for item in evidence if item.quote and item.quote in source_text]
+    return retained, len(evidence) - len(retained)
 
 
 async def run_research(request: ResearchRequest) -> CivicLensResult:
@@ -34,10 +72,18 @@ async def run_research(request: ResearchRequest) -> CivicLensResult:
         }
     )
     speech_result = await speech_analyst.run(
-        speech_prompt, deps=deps, model=model, model_settings=MODEL_SETTINGS
+        speech_prompt,
+        deps=deps,
+        model=model,
+        model_settings=MODEL_SETTINGS,
+        usage_limits=SPEECH_USAGE_LIMITS,
+        timeout=25,
     )
     speech_analysis = speech_result.output
     source_text = corpus.read_day_text(selected)
+    source_verified_evidence, removed_quotes = retain_exact_source_quotes(
+        speech_analysis.evidence, source_text
+    )
     verified_evidence = [
         item.model_copy(update={
             "record_id": selected.record_id,
@@ -55,10 +101,8 @@ async def run_research(request: ResearchRequest) -> CivicLensResult:
             "venue": selected.venue,
             "source_category": selected.source_category,
         })
-        for item in speech_analysis.evidence
-        if item.quote in source_text
+        for item in source_verified_evidence
     ]
-    removed_quotes = len(speech_analysis.evidence) - len(verified_evidence)
     caveats = list(speech_analysis.caveats)
     if removed_quotes:
         caveats.append(
@@ -112,6 +156,8 @@ async def run_research(request: ResearchRequest) -> CivicLensResult:
             deps=deps,
             model=model,
             model_settings=MODEL_SETTINGS,
+            usage_limits=LONGITUDINAL_USAGE_LIMITS,
+            timeout=40,
         )
         longitudinal_output = longitudinal_result.output
         longitudinal = longitudinal_output.model_copy(update={
@@ -142,7 +188,12 @@ async def run_research(request: ResearchRequest) -> CivicLensResult:
         }
     )
     safety_result = await safety_auditor.run(
-        safety_prompt, deps=deps, model=model, model_settings=MODEL_SETTINGS
+        safety_prompt,
+        deps=deps,
+        model=model,
+        model_settings=MODEL_SETTINGS,
+        usage_limits=SAFETY_USAGE_LIMITS,
+        timeout=25,
     )
     safety: SafetyReview = safety_result.output
     return CivicLensResult(

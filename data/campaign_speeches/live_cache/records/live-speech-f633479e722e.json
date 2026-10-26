@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-f633479e722e",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2016-07-21",
+  "venue": "Here's The Full Text Of The Ted Cruz Speech At The RNC - HuffPost",
+  "source_type": "On-demand public transcript from huffpost.com",
+  "source_category": "campaign",
+  "source_url": "https://www.huffpost.com/entry/ted-cruz-speech-full-text_n_579020dfe4b0bdddc4d320b0",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-f633479e722e.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

@@ -45,9 +45,18 @@ class PhraseCandidate(BaseModel):
     confidence: float = Field(ge=0, le=1)
 
 
+class KeyInsight(BaseModel):
+    label: str = Field(description="2-5 word heading, e.g. 'Frames cost as fairness'")
+    insight: str = Field(description="One or two plain-English sentences a busy reader can act on.")
+
+
 class SpeechAnalysis(BaseModel):
     record_id: str
+    headline: str = Field(default="", description="One punchy sentence (max 25 words) stating the speech's core message.")
     summary: str
+    key_insights: list[KeyInsight] = Field(default_factory=list)
+    framing: str = Field(default="", description="How the speaker persuades: audience, tone, villains/heroes, emotional appeals.")
+    what_to_watch: str = Field(default="", description="What a journalist or researcher should check or follow up on.")
     claims: list[str] = Field(default_factory=list)
     phrases: list[PhraseCandidate] = Field(default_factory=list)
     evidence: list[Citation] = Field(default_factory=list)
@@ -85,10 +94,10 @@ class SafetyReview(BaseModel):
 
 
 class ResearchRequest(BaseModel):
-    politician: str
-    record_id: str
-    topic: str | None = None
-    phrase: str | None = None
+    politician: str = Field(min_length=2, max_length=100)
+    record_id: str = Field(min_length=3, max_length=120)
+    topic: str | None = Field(default=None, max_length=80)
+    phrase: str | None = Field(default=None, max_length=80)
     source_category: Literal["campaign", "congressional_record", "all"] = "all"
     analysis_mode: Literal[
         "speech",
@@ -108,13 +117,13 @@ class CivicLensResult(BaseModel):
 
 class ChatMessage(BaseModel):
     role: Literal["user", "assistant"]
-    content: str = Field(min_length=1, max_length=6000)
+    content: str = Field(min_length=1, max_length=2000)
 
 
 class ChatRequest(BaseModel):
-    message: str = Field(min_length=1, max_length=4000)
-    history: list[ChatMessage] = Field(default_factory=list, max_length=20)
-    selected_record_id: str | None = None
+    message: str = Field(min_length=1, max_length=1500)
+    history: list[ChatMessage] = Field(default_factory=list, max_length=8)
+    selected_record_id: str | None = Field(default=None, max_length=120)
 
 
 class ChatResponse(BaseModel):

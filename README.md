@@ -5,10 +5,14 @@ An AI agent app that does something useful for real people.
 ## Status
 
 Corpus reconstruction is complete for the currently downloaded Congressional
-Record issues. The analysis corpus contains 1,061 source-preserved remarks from
-119 issues dated January 2011 through December 2023. The app also includes 10
-curated campaign transcripts dated August 2012 through May 2026, stored
-separately from the Congressional Record. Selecting a politician starts a live
+Record issues. The analysis corpus contains 1,292 complete source-preserved
+remarks from 119 issues dated January 2011 through December 2023. The app also
+includes 281 public-source speech, remark, and interview records across all 16
+roster members; 279 are complete and two are partial. Elizabeth Warren (33),
+Marco Rubio (30), and Nancy Pelosi (30) meet or exceed the target of 30
+complete records per person. Another 206 complete records are needed to fill
+every remaining per-person gap. These records are stored separately from the Congressional
+Record. Selecting a politician starts a live
 public-source search across that person's listed election cycles; coverage is
 not continuous or exhaustive and does not form a uniform 2000–2026 archive.
 Complete transcripts load into the speech menu as they are retrieved. The
@@ -22,29 +26,13 @@ database.
 
 1. Create and activate a virtual environment: `python3 -m venv .venv` and `source .venv/bin/activate`.
 2. Install dependencies: `pip install -r requirements.txt`.
-3. Copy `.env.example` to `.env` in this folder, or configure a `.env` one level above. Add `PORTKEY_API_KEY` or `OPENAI_API_KEY` for AI analysis and chat.
+3. Copy `.env.example` to `.env` in this folder, or configure a `.env` one level above. Add `OPENAI_API_KEY` (preferred) or `PORTKEY_API_KEY` for AI analysis and chat. When both are set, Civic Lens uses `OPENAI_API_KEY`.
 4. Start Civic Lens: `python -m uvicorn app.server:app --reload`.
 5. Open `http://127.0.0.1:8000`.
 
-## Publish on Render
+## Live version
 
-The `render.yaml` Blueprint runs Civic Lens as a public web service. Start with
-[Deploy to Render](https://render.com/deploy?repo=https://github.com/aneesha224/civic-lens-final-project),
-or open Render and choose **New → Blueprint**. To deploy:
-
-1. Use the [Civic Lens GitHub repository](https://github.com/aneesha224/civic-lens-final-project).
-   The project files are already at its root. Keep `.env` out of Git;
-   `.gitignore` already excludes it.
-2. Connect the repository to Render and apply the `render.yaml` settings.
-   Render creates the service and provides its public URL.
-3. Enter `PORTKEY_API_KEY` as a secret in the Render setup prompt or the
-   service's Environment settings. Do not put the key in `render.yaml` or Git.
-   Without it, visitors can browse speeches, but AI analysis and chat are
-   unavailable.
-
-The free service may sleep when idle, so its first request after a quiet period
-can take longer. Its filesystem is temporary: transcripts discovered while the
-service runs may need to be fetched again after a restart or redeploy.
+Civic Lens is deployed on Render at https://civic-lens-pht.onrender.com using `render.yaml`. The free service sleeps when idle, so the first load can take about a minute. Set `OPENAI_API_KEY` as a secret in the Render service's Environment settings; never commit it.
 
 Browsing the corpus and opening source transcripts work without a model key.
 Public-source discovery needs an internet connection. Retrieved transcripts
@@ -82,5 +70,5 @@ outside the Congressional Record.
 
 ## Configuration
 
-The app should load `PORTKEY_API_KEY` or `OPENAI_API_KEY` from `.env` in this folder, then from the parent folder when run from a fresh submission clone. Never commit real credentials.
+The app loads `OPENAI_API_KEY` or `PORTKEY_API_KEY` from `.env` in this folder, then from the parent folder when run from a fresh submission clone. Never commit real credentials.
 

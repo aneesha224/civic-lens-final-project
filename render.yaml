@@ -13,5 +13,5 @@ services:
         value: 3.12.8
       - key: AI_MODEL
         value: gpt-6-luna
-      - key: PORTKEY_API_KEY
+      - key: OPENAI_API_KEY
         sync: false

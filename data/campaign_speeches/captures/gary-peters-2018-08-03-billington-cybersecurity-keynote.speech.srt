@@ -1,0 +1,3260 @@
+1
+00:00:00,030 --> 00:00:06,089
+so our final keynote I'm delighted to
+
+2
+00:00:03,049 --> 00:00:08,940
+mention and announce to you is Senator
+
+3
+00:00:06,089 --> 00:00:12,480
+Gary Peters senator Peters was elected
+
+4
+00:00:08,940 --> 00:00:14,780
+to the US Senate in 2014 after three
+
+5
+00:00:12,480 --> 00:00:17,550
+terms in the US House of Representatives
+
+6
+00:00:14,780 --> 00:00:20,400
+he sits on the Senate comment Committee
+
+7
+00:00:17,550 --> 00:00:22,949
+on Commerce science and transportation
+
+8
+00:00:20,400 --> 00:00:27,390
+which has jurisdiction over automotive
+
+9
+00:00:22,949 --> 00:00:29,910
+safety standards in 2017 senator Peters
+
+10
+00:00:27,390 --> 00:00:33,059
+Co introduced a bill called the AV start
+
+11
+00:00:29,910 --> 00:00:35,760
+act this is Congress's first legislative
+
+12
+00:00:33,059 --> 00:00:38,160
+effort to address the public policy
+
+13
+00:00:35,760 --> 00:00:41,460
+issues facing self-driving vehicles
+
+14
+00:00:38,160 --> 00:00:44,309
+including for today prioritizing
+
+15
+00:00:41,460 --> 00:00:48,059
+cybersecurity and the potential threat
+
+16
+00:00:44,309 --> 00:00:50,640
+cyber vulnerabilities pose his
+
+17
+00:00:48,059 --> 00:00:52,440
+bipartisan bill requiring small business
+
+18
+00:00:50,640 --> 00:00:55,140
+development centers to work to provide
+
+19
+00:00:52,440 --> 00:00:57,809
+small businesses with resources to
+
+20
+00:00:55,140 --> 00:01:01,559
+protect against cyber attacks was signed
+
+21
+00:00:57,809 --> 00:01:03,539
+into law last year and having launched
+
+22
+00:01:01,559 --> 00:01:07,860
+my business in cybersecurity education
+
+23
+00:01:03,539 --> 00:01:10,350
+in 2010 I can certainly testify to the
+
+24
+00:01:07,860 --> 00:01:13,860
+importance of serving the small business
+
+25
+00:01:10,350 --> 00:01:16,500
+community throughout the US which often
+
+26
+00:01:13,860 --> 00:01:18,119
+don't have the IT budgets the larger
+
+27
+00:01:16,500 --> 00:01:21,720
+companies have so thank you for
+
+28
+00:01:18,119 --> 00:01:23,520
+providing that very important service so
+
+29
+00:01:21,720 --> 00:01:26,400
+thank you very much senator Peters it's
+
+30
+00:01:23,520 --> 00:01:33,400
+my delight to welcome you to the stage
+
+31
+00:01:26,400 --> 00:01:36,200
+honored to have you sir thank you
+
+32
+00:01:33,400 --> 00:01:38,420
+well thank you thank you Tom good
+
+33
+00:01:36,200 --> 00:01:39,830
+afternoon everybody I do I have some
+
+34
+00:01:38,420 --> 00:01:41,990
+prepared remarks but I'm not gonna do
+
+35
+00:01:39,830 --> 00:01:44,690
+those I figured I walked in here and I
+
+36
+00:01:41,990 --> 00:01:46,640
+said this is a beautiful Friday it's I
+
+37
+00:01:44,690 --> 00:01:48,290
+think I'm the last speaker before you're
+
+38
+00:01:46,640 --> 00:01:49,790
+out of here or I don't think you want to
+
+39
+00:01:48,290 --> 00:01:51,620
+hear another prepared remark so I'm
+
+40
+00:01:49,790 --> 00:01:52,550
+gonna do some opening comments so but
+
+41
+00:01:51,620 --> 00:01:54,380
+then I'd love to have kind of an
+
+42
+00:01:52,550 --> 00:01:55,910
+interactive session get you out of your
+
+43
+00:01:54,380 --> 00:01:57,860
+seats come up to the microphone and ask
+
+44
+00:01:55,910 --> 00:01:59,420
+me any questions about kind of where we
+
+45
+00:01:57,860 --> 00:02:01,760
+are what's happening at the federal
+
+46
+00:01:59,420 --> 00:02:03,470
+level as Tom mentioned you know I'm been
+
+47
+00:02:01,760 --> 00:02:05,509
+working a great deal on self-driving
+
+48
+00:02:03,470 --> 00:02:07,250
+cars and primarily with the legislation
+
+49
+00:02:05,509 --> 00:02:09,979
+the AV start Act which puts the first
+
+50
+00:02:07,250 --> 00:02:12,140
+kind of regulatory framework in Congress
+
+51
+00:02:09,979 --> 00:02:15,380
+as to how we deal with this technology
+
+52
+00:02:12,140 --> 00:02:17,570
+that is moving so rapidly and and so in
+
+53
+00:02:15,380 --> 00:02:19,640
+such a transformative way and I'm
+
+54
+00:02:17,570 --> 00:02:21,980
+excited primarily about this technology
+
+55
+00:02:19,640 --> 00:02:23,180
+because of what it means for safety all
+
+56
+00:02:21,980 --> 00:02:24,080
+of you know that I mean the fact that
+
+57
+00:02:23,180 --> 00:02:27,050
+we're going to be able to eliminate
+
+58
+00:02:24,080 --> 00:02:29,390
+hopefully eliminate most of the human
+
+59
+00:02:27,050 --> 00:02:31,459
+error that it causes accidents 94
+
+60
+00:02:29,390 --> 00:02:33,440
+percent of all accidents as a result of
+
+61
+00:02:31,459 --> 00:02:34,760
+human error to get that out means that
+
+62
+00:02:33,440 --> 00:02:36,680
+all of you who are involved in working
+
+63
+00:02:34,760 --> 00:02:38,570
+in this space are literally are
+
+64
+00:02:36,680 --> 00:02:40,430
+literally going to be saving tens of
+
+65
+00:02:38,570 --> 00:02:42,290
+thousands of lives it doesn't get any
+
+66
+00:02:40,430 --> 00:02:43,640
+bigger than that this isn't a major
+
+67
+00:02:42,290 --> 00:02:46,459
+undertaking that's going to have a
+
+68
+00:02:43,640 --> 00:02:47,930
+dramatic impact on people's lives in
+
+69
+00:02:46,459 --> 00:02:49,760
+terms of saving them in terms of
+
+70
+00:02:47,930 --> 00:02:51,830
+transformation is going to change things
+
+71
+00:02:49,760 --> 00:02:54,320
+this is everything bit as big in my mind
+
+72
+00:02:51,830 --> 00:02:55,610
+as when the first car came off of the
+
+73
+00:02:54,320 --> 00:02:57,140
+assembly line and just think what
+
+74
+00:02:55,610 --> 00:02:58,340
+happened when that first car came off
+
+75
+00:02:57,140 --> 00:02:59,930
+the assembly line it wasn't just about
+
+76
+00:02:58,340 --> 00:03:02,209
+transforming an industry is about
+
+77
+00:02:59,930 --> 00:03:04,489
+transforming an entire country about
+
+78
+00:03:02,209 --> 00:03:06,650
+transforming the entire planet about
+
+79
+00:03:04,489 --> 00:03:08,480
+creating the American middle class about
+
+80
+00:03:06,650 --> 00:03:10,340
+how we organize ourselves and how we
+
+81
+00:03:08,480 --> 00:03:13,880
+have mass production techniques that
+
+82
+00:03:10,340 --> 00:03:15,260
+were able to change the mass culture in
+
+83
+00:03:13,880 --> 00:03:17,120
+this country all of that's happening
+
+84
+00:03:15,260 --> 00:03:19,310
+right now and you're all in the
+
+85
+00:03:17,120 --> 00:03:21,110
+forefront of that and as I watch this
+
+86
+00:03:19,310 --> 00:03:23,209
+technology go and I listened I had the
+
+87
+00:03:21,110 --> 00:03:25,070
+privilege listening to the earlier panel
+
+88
+00:03:23,209 --> 00:03:26,959
+about the technology and how fast it's
+
+89
+00:03:25,070 --> 00:03:28,610
+moving it's a sign and exponential of
+
+90
+00:03:26,959 --> 00:03:29,540
+course I know you had folks from GM and
+
+91
+00:03:28,610 --> 00:03:31,670
+others here you know they're going to be
+
+92
+00:03:29,540 --> 00:03:33,620
+putting out these level four cars in San
+
+93
+00:03:31,670 --> 00:03:36,140
+Francisco next year in a commercial
+
+94
+00:03:33,620 --> 00:03:38,630
+market I mean this technology is truly
+
+95
+00:03:36,140 --> 00:03:40,820
+on an exponential path and yet in my
+
+96
+00:03:38,630 --> 00:03:42,860
+world it works a little different than
+
+97
+00:03:40,820 --> 00:03:45,980
+the engineering world and the scientific
+
+98
+00:03:42,860 --> 00:03:46,870
+world as you know and public policy is a
+
+99
+00:03:45,980 --> 00:03:49,000
+fairly
+
+100
+00:03:46,870 --> 00:03:51,430
+double path it's called the snail rape
+
+101
+00:03:49,000 --> 00:03:53,890
+so you know it moves along at this rate
+
+102
+00:03:51,430 --> 00:03:55,750
+here and technology is moving at that
+
+103
+00:03:53,890 --> 00:03:57,280
+rate I've got a lot of engineers I know
+
+104
+00:03:55,750 --> 00:03:59,170
+in here that's not a really good curve
+
+105
+00:03:57,280 --> 00:04:00,909
+is that that doesn't really they don't
+
+106
+00:03:59,170 --> 00:04:02,260
+come together so we got to figure out
+
+107
+00:04:00,909 --> 00:04:03,610
+how to get ahead of it we got to figure
+
+108
+00:04:02,260 --> 00:04:04,840
+out well if not getting ahead of at
+
+109
+00:04:03,610 --> 00:04:08,110
+least try to keep up with some of that
+
+110
+00:04:04,840 --> 00:04:09,519
+and that's why we have been working on
+
+111
+00:04:08,110 --> 00:04:11,860
+the AV start act I've been working with
+
+112
+00:04:09,519 --> 00:04:13,599
+my Republican colleague senator thune
+
+113
+00:04:11,860 --> 00:04:15,099
+from South Dakota this is a bipartisan
+
+114
+00:04:13,599 --> 00:04:17,350
+effort trying to bring Congress together
+
+115
+00:04:15,099 --> 00:04:20,139
+to think about these issues think about
+
+116
+00:04:17,350 --> 00:04:22,479
+it in a comprehensive way to deal with
+
+117
+00:04:20,139 --> 00:04:24,370
+that and we know that when I talk about
+
+118
+00:04:22,479 --> 00:04:26,350
+the snail rate of Congress it's an even
+
+119
+00:04:24,370 --> 00:04:28,570
+slower snail right if you're looking at
+
+120
+00:04:26,350 --> 00:04:30,250
+regulatory reform and looking at nitsa
+
+121
+00:04:28,570 --> 00:04:31,990
+and changing some of the regulations so
+
+122
+00:04:30,250 --> 00:04:34,300
+we know that the current regulatory
+
+123
+00:04:31,990 --> 00:04:37,330
+framework doesn't work for this
+
+124
+00:04:34,300 --> 00:04:38,710
+technology because current rules state
+
+125
+00:04:37,330 --> 00:04:41,350
+you must have a steering wheel in your
+
+126
+00:04:38,710 --> 00:04:44,199
+car and a through Z you must have a
+
+127
+00:04:41,350 --> 00:04:45,280
+brake pedal in your car a through Z well
+
+128
+00:04:44,199 --> 00:04:46,300
+one of these cars don't have brake
+
+129
+00:04:45,280 --> 00:04:47,169
+pedals and they don't have steering
+
+130
+00:04:46,300 --> 00:04:49,000
+wheels which they won't
+
+131
+00:04:47,169 --> 00:04:51,220
+we've got to rewrite all of those rules
+
+132
+00:04:49,000 --> 00:04:52,930
+then that can take years and we want to
+
+133
+00:04:51,220 --> 00:04:55,360
+make sure that we're able to keep that
+
+134
+00:04:52,930 --> 00:04:57,490
+that curve of innovation continuing to
+
+135
+00:04:55,360 --> 00:04:59,380
+move up so we're trying to create that
+
+136
+00:04:57,490 --> 00:05:01,900
+space while understanding that there's
+
+137
+00:04:59,380 --> 00:05:03,370
+still significant significant public
+
+138
+00:05:01,900 --> 00:05:04,510
+policy issues that have to be worked out
+
+139
+00:05:03,370 --> 00:05:07,060
+particularly when you start putting
+
+140
+00:05:04,510 --> 00:05:08,950
+these automobiles on public highways and
+
+141
+00:05:07,060 --> 00:05:10,479
+and people are going to be interacting
+
+142
+00:05:08,950 --> 00:05:11,650
+with these vehicles that we've got to
+
+143
+00:05:10,479 --> 00:05:13,270
+make sure that there's some kind of
+
+144
+00:05:11,650 --> 00:05:14,710
+framework in our and our manufacturers
+
+145
+00:05:13,270 --> 00:05:16,120
+they what they're deploying these very
+
+146
+00:05:14,710 --> 00:05:17,050
+quickly they want to have some kind of
+
+147
+00:05:16,120 --> 00:05:19,750
+regulatory certainty
+
+148
+00:05:17,050 --> 00:05:21,310
+so Tommy alluded to the AV start act in
+
+149
+00:05:19,750 --> 00:05:23,139
+the opening you know just in a thumbnail
+
+150
+00:05:21,310 --> 00:05:25,120
+and I'll be happy to have their answer
+
+151
+00:05:23,139 --> 00:05:27,490
+questions and talk about that the bill
+
+152
+00:05:25,120 --> 00:05:30,910
+right now is out of the Senate committee
+
+153
+00:05:27,490 --> 00:05:32,949
+it goes to the full Senate we're trying
+
+154
+00:05:30,910 --> 00:05:35,320
+to figure out a path for it right now
+
+155
+00:05:32,949 --> 00:05:37,210
+there's still some issues that we have
+
+156
+00:05:35,320 --> 00:05:38,560
+to work out in order to get some of my
+
+157
+00:05:37,210 --> 00:05:40,570
+colleagues on board but hopefully it'll
+
+158
+00:05:38,560 --> 00:05:41,889
+get passed and it'll go over and
+
+159
+00:05:40,570 --> 00:05:43,360
+hopefully we'll work with the House
+
+160
+00:05:41,889 --> 00:05:45,970
+version of it and come with the
+
+161
+00:05:43,360 --> 00:05:48,400
+legislation soon but basically it allows
+
+162
+00:05:45,970 --> 00:05:50,020
+these vehicles to get out on the road
+
+163
+00:05:48,400 --> 00:05:52,180
+but they just can't get out on the road
+
+164
+00:05:50,020 --> 00:05:54,550
+there's criteria there's safety criteria
+
+165
+00:05:52,180 --> 00:05:56,050
+that the manufacturers are going to have
+
+166
+00:05:54,550 --> 00:05:57,760
+to sign off on and it's going to be
+
+167
+00:05:56,050 --> 00:05:58,930
+mandatory right now you're probably
+
+168
+00:05:57,760 --> 00:06:00,280
+familiar with the Department of
+
+169
+00:05:58,930 --> 00:06:01,930
+Transportation regs that are violin
+
+170
+00:06:00,280 --> 00:06:03,910
+pterri these aren't voluntary these are
+
+171
+00:06:01,930 --> 00:06:07,270
+mandatory manufacturers will have to
+
+172
+00:06:03,910 --> 00:06:08,770
+have those those documents submitted and
+
+173
+00:06:07,270 --> 00:06:10,750
+they're gonna have to be validated and
+
+174
+00:06:08,770 --> 00:06:13,360
+full assessments have to be made where
+
+175
+00:06:10,750 --> 00:06:15,430
+the manufacturers stand behind that we
+
+176
+00:06:13,360 --> 00:06:18,580
+will and then it so will we review those
+
+177
+00:06:15,430 --> 00:06:20,440
+you'll also have to do a number of other
+
+178
+00:06:18,580 --> 00:06:23,260
+things related to consumer education for
+
+179
+00:06:20,440 --> 00:06:25,510
+example one of my concerns a big concern
+
+180
+00:06:23,260 --> 00:06:28,210
+now as we move from these level level
+
+181
+00:06:25,510 --> 00:06:29,830
+two to three to four cars where people
+
+182
+00:06:28,210 --> 00:06:32,410
+are thinking that they have more and
+
+183
+00:06:29,830 --> 00:06:33,970
+more autonomy in a vehicle and yet the
+
+184
+00:06:32,410 --> 00:06:35,590
+vehicle isn't really completely a
+
+185
+00:06:33,970 --> 00:06:38,050
+hundred percent autonomous but people
+
+186
+00:06:35,590 --> 00:06:39,910
+believe they are and as a result you'll
+
+187
+00:06:38,050 --> 00:06:41,500
+see accidents which we already see where
+
+188
+00:06:39,910 --> 00:06:43,090
+people are not engaged and they aren't
+
+189
+00:06:41,500 --> 00:06:45,070
+able to have the kind of situational
+
+190
+00:06:43,090 --> 00:06:46,480
+awareness to take over the car so I
+
+191
+00:06:45,070 --> 00:06:48,130
+think it's a critically important that
+
+192
+00:06:46,480 --> 00:06:49,930
+we have consumer education consumers
+
+193
+00:06:48,130 --> 00:06:51,580
+have to know have to know what they're
+
+194
+00:06:49,930 --> 00:06:55,120
+getting into what the limitations are of
+
+195
+00:06:51,580 --> 00:06:56,800
+those cars and and be able to be able to
+
+196
+00:06:55,120 --> 00:06:59,169
+anticipate where they may need to take
+
+197
+00:06:56,800 --> 00:07:00,639
+over we all sold data is involved and
+
+198
+00:06:59,169 --> 00:07:02,680
+we've got to have a committee to look at
+
+199
+00:07:00,639 --> 00:07:04,660
+how we deal with data how data is stored
+
+200
+00:07:02,680 --> 00:07:07,210
+how it's how it's used how its
+
+201
+00:07:04,660 --> 00:07:09,580
+transmitted privacy concerns will all be
+
+202
+00:07:07,210 --> 00:07:12,190
+worked out through this legislation as
+
+203
+00:07:09,580 --> 00:07:13,900
+well but certainly first and foremost is
+
+204
+00:07:12,190 --> 00:07:16,210
+cybersecurity which is why we're here
+
+205
+00:07:13,900 --> 00:07:18,370
+cybersecurity is going to be paramount
+
+206
+00:07:16,210 --> 00:07:20,470
+as the previous panel talked about I
+
+207
+00:07:18,370 --> 00:07:22,690
+know the question was raised well what
+
+208
+00:07:20,470 --> 00:07:23,919
+happens if there's a cyber attack on one
+
+209
+00:07:22,690 --> 00:07:27,310
+of these cars what's that's going to
+
+210
+00:07:23,919 --> 00:07:29,890
+mean I would not understate how how
+
+211
+00:07:27,310 --> 00:07:31,960
+dramatic that would be for the public in
+
+212
+00:07:29,890 --> 00:07:34,479
+terms of what would happen if you have a
+
+213
+00:07:31,960 --> 00:07:37,150
+major cyber attack you know and I equate
+
+214
+00:07:34,479 --> 00:07:38,890
+this and I think about cyber cyber now
+
+215
+00:07:37,150 --> 00:07:40,510
+in the financial world where we're
+
+216
+00:07:38,890 --> 00:07:43,120
+always concerned about cyber attacks
+
+217
+00:07:40,510 --> 00:07:45,910
+there and if someone breaks into my bank
+
+218
+00:07:43,120 --> 00:07:48,610
+account and steals my money I'm really
+
+219
+00:07:45,910 --> 00:07:50,830
+angry I'm not happy about that but if
+
+220
+00:07:48,610 --> 00:07:54,070
+someone breaks into my car and drives me
+
+221
+00:07:50,830 --> 00:07:56,560
+into a wall that's existential that's
+
+222
+00:07:54,070 --> 00:07:58,180
+good that's a big big deal and the kind
+
+223
+00:07:56,560 --> 00:07:59,830
+of consumer blowback just look at the
+
+224
+00:07:58,180 --> 00:08:00,970
+consumer blowback we had with the uber
+
+225
+00:07:59,830 --> 00:08:02,620
+accident and others that have happened
+
+226
+00:08:00,970 --> 00:08:04,300
+if you have that kind of cyber attack
+
+227
+00:08:02,620 --> 00:08:05,500
+guess-who where all that blowback is
+
+228
+00:08:04,300 --> 00:08:06,789
+going to come it's going to come to us
+
+229
+00:08:05,500 --> 00:08:08,169
+in Congress and people are gonna say
+
+230
+00:08:06,789 --> 00:08:09,970
+what the heck is happening why are we
+
+231
+00:08:08,169 --> 00:08:12,760
+going these cars are being hacked by the
+
+232
+00:08:09,970 --> 00:08:13,139
+Russians or whoever it may be and we're
+
+233
+00:08:12,760 --> 00:08:15,479
+not going
+
+234
+00:08:13,139 --> 00:08:17,039
+never get in that car again and we
+
+235
+00:08:15,479 --> 00:08:18,240
+already know just from public opinion
+
+236
+00:08:17,039 --> 00:08:20,310
+polls that people are not real
+
+237
+00:08:18,240 --> 00:08:21,719
+comfortable with this technology at this
+
+238
+00:08:20,310 --> 00:08:25,129
+point it's going to take some time for
+
+239
+00:08:21,719 --> 00:08:28,050
+that to happen we know from from our
+
+240
+00:08:25,129 --> 00:08:29,219
+focus groups that I've heard from from
+
+241
+00:08:28,050 --> 00:08:30,900
+the industry that you shouldn't call
+
+242
+00:08:29,219 --> 00:08:32,659
+these vehicles autonomous vehicles
+
+243
+00:08:30,900 --> 00:08:34,469
+because people really don't like that
+
+244
+00:08:32,659 --> 00:08:35,700
+I'm trying to think about you know I
+
+245
+00:08:34,469 --> 00:08:37,709
+think the average person thinks
+
+246
+00:08:35,700 --> 00:08:39,360
+autonomous vehicle you just kind of you
+
+247
+00:08:37,709 --> 00:08:41,070
+kind of get in the car and it just takes
+
+248
+00:08:39,360 --> 00:08:42,810
+you wherever wants to go you know it's
+
+249
+00:08:41,070 --> 00:08:44,070
+completely autonomous and you have no
+
+250
+00:08:42,810 --> 00:08:45,959
+control over it it makes people feel
+
+251
+00:08:44,070 --> 00:08:48,000
+uneasy now folks will rather have a
+
+252
+00:08:45,959 --> 00:08:50,160
+self-driving car that sounds a whole lot
+
+253
+00:08:48,000 --> 00:08:51,930
+nicer but I thought just shows you where
+
+254
+00:08:50,160 --> 00:08:53,339
+we are in terms of public perception of
+
+255
+00:08:51,930 --> 00:08:55,140
+these that already people are used to
+
+256
+00:08:53,339 --> 00:08:57,209
+driving a car turning that over is not
+
+257
+00:08:55,140 --> 00:09:00,060
+going to be easy thing so we got to get
+
+258
+00:08:57,209 --> 00:09:01,440
+this right there is no margin of error
+
+259
+00:09:00,060 --> 00:09:03,329
+all of you who are involved in
+
+260
+00:09:01,440 --> 00:09:04,769
+cybersecurity there is no margin of
+
+261
+00:09:03,329 --> 00:09:06,810
+error you got to get it right right out
+
+262
+00:09:04,769 --> 00:09:08,430
+of the box or the blowback will be
+
+263
+00:09:06,810 --> 00:09:10,740
+significant and we will actually
+
+264
+00:09:08,430 --> 00:09:12,810
+endanger billions of dollars of
+
+265
+00:09:10,740 --> 00:09:15,300
+investment that has been made into this
+
+266
+00:09:12,810 --> 00:09:16,949
+technology so part of our act there has
+
+267
+00:09:15,300 --> 00:09:19,860
+to be those kinds of certifications it
+
+268
+00:09:16,949 --> 00:09:22,019
+has to be all part of all aspects of the
+
+269
+00:09:19,860 --> 00:09:23,730
+design and development of these cars the
+
+270
+00:09:22,019 --> 00:09:24,870
+companies have to certify that all
+
+271
+00:09:23,730 --> 00:09:27,390
+that's happening they're gonna have to
+
+272
+00:09:24,870 --> 00:09:28,740
+provide documents to that and cyber is
+
+273
+00:09:27,390 --> 00:09:31,079
+going to be integral to the first
+
+274
+00:09:28,740 --> 00:09:33,360
+manufacturer of these cars before they
+
+275
+00:09:31,079 --> 00:09:35,160
+they get out on the road but then a lot
+
+276
+00:09:33,360 --> 00:09:37,050
+of the build is also advisory committees
+
+277
+00:09:35,160 --> 00:09:39,240
+to give us more information collect more
+
+278
+00:09:37,050 --> 00:09:41,100
+data get them out on the road and in
+
+279
+00:09:39,240 --> 00:09:42,839
+fact when theythey start act after it's
+
+280
+00:09:41,100 --> 00:09:44,339
+signed into law and if a company has
+
+281
+00:09:42,839 --> 00:09:46,410
+jumped through all of the various hoops
+
+282
+00:09:44,339 --> 00:09:48,930
+that they need to which are a lot less
+
+283
+00:09:46,410 --> 00:09:50,940
+onerous than then right now regulations
+
+284
+00:09:48,930 --> 00:09:52,920
+that simply don't apply then they can
+
+285
+00:09:50,940 --> 00:09:54,930
+put up and the third year up to 80,000
+
+286
+00:09:52,920 --> 00:09:56,430
+vehicles out on the road and it can goes
+
+287
+00:09:54,930 --> 00:09:57,959
+up from there and every year they can
+
+288
+00:09:56,430 --> 00:09:59,339
+put more out that's the kind of
+
+289
+00:09:57,959 --> 00:10:00,899
+certainty that our manufacturers are
+
+290
+00:09:59,339 --> 00:10:04,140
+going to need and from a regulatory
+
+291
+00:10:00,899 --> 00:10:05,760
+front to get it out going forward so so
+
+292
+00:10:04,140 --> 00:10:07,140
+that's I want to throw that out the
+
+293
+00:10:05,760 --> 00:10:08,670
+other couple other issues that I'm
+
+294
+00:10:07,140 --> 00:10:10,769
+working on Tom mentioned the small
+
+295
+00:10:08,670 --> 00:10:12,930
+business and the previous panel talked
+
+296
+00:10:10,769 --> 00:10:15,089
+about hackers always looking at the path
+
+297
+00:10:12,930 --> 00:10:16,230
+of least resistance as a member of
+
+298
+00:10:15,089 --> 00:10:18,000
+Homeland Security in the Armed Services
+
+299
+00:10:16,230 --> 00:10:19,740
+Committee I can tell you I know the path
+
+300
+00:10:18,000 --> 00:10:21,839
+of least resistance usually is small
+
+301
+00:10:19,740 --> 00:10:23,850
+businesses small businesses that are the
+
+302
+00:10:21,839 --> 00:10:25,620
+pathway to get into the larger networks
+
+303
+00:10:23,850 --> 00:10:26,339
+we saw that recently with a breach of
+
+304
+00:10:25,620 --> 00:10:27,870
+some of the
+
+305
+00:10:26,339 --> 00:10:29,790
+auto companies and some of their plans
+
+306
+00:10:27,870 --> 00:10:31,290
+and and other things that happened as a
+
+307
+00:10:29,790 --> 00:10:33,269
+result of going through a small business
+
+308
+00:10:31,290 --> 00:10:35,550
+contractor we know the target breach we
+
+309
+00:10:33,269 --> 00:10:37,410
+all of that with small business so I'm
+
+310
+00:10:35,550 --> 00:10:39,449
+working on ways to make sure small
+
+311
+00:10:37,410 --> 00:10:41,339
+businesses can be heartened part of that
+
+312
+00:10:39,449 --> 00:10:43,559
+is education part of the bill that I
+
+313
+00:10:41,339 --> 00:10:45,089
+wrote they got passed deals with the
+
+314
+00:10:43,559 --> 00:10:46,470
+Small Business Administration and
+
+315
+00:10:45,089 --> 00:10:48,600
+Department of Homeland Security to
+
+316
+00:10:46,470 --> 00:10:50,279
+coordinate to work with small businesses
+
+317
+00:10:48,600 --> 00:10:52,110
+to make sure they have the training that
+
+318
+00:10:50,279 --> 00:10:53,639
+they need to make sure they have some of
+
+319
+00:10:52,110 --> 00:10:56,189
+the resources that they need to harden
+
+320
+00:10:53,639 --> 00:10:59,519
+their systems going forward that's going
+
+321
+00:10:56,189 --> 00:11:01,079
+to be critical for us in the future the
+
+322
+00:10:59,519 --> 00:11:02,579
+other aspect of the alternatives over to
+
+323
+00:11:01,079 --> 00:11:04,259
+ask your questions that I'm really
+
+324
+00:11:02,579 --> 00:11:06,180
+focused on I'm worried about and that's
+
+325
+00:11:04,259 --> 00:11:07,920
+simply the fact and it came up in the
+
+326
+00:11:06,180 --> 00:11:10,019
+previous panel that I heard that we're
+
+327
+00:11:07,920 --> 00:11:12,509
+not training enough people to do what
+
+328
+00:11:10,019 --> 00:11:15,300
+has to be done in cyber the tremendous
+
+329
+00:11:12,509 --> 00:11:17,220
+shortages as you know with folks who who
+
+330
+00:11:15,300 --> 00:11:18,749
+are able to do this incredibly important
+
+331
+00:11:17,220 --> 00:11:20,309
+work that is also growing on an
+
+332
+00:11:18,749 --> 00:11:21,660
+exponential rate and with the Internet
+
+333
+00:11:20,309 --> 00:11:23,220
+of Things we're going to need so many
+
+334
+00:11:21,660 --> 00:11:24,480
+folks and we're gonna need a lot of
+
+335
+00:11:23,220 --> 00:11:26,430
+those people in the federal government
+
+336
+00:11:24,480 --> 00:11:28,470
+and we're having a hard time recruiting
+
+337
+00:11:26,430 --> 00:11:30,029
+just like I know private industry is
+
+338
+00:11:28,470 --> 00:11:32,009
+having a hard time recruiting folks that
+
+339
+00:11:30,029 --> 00:11:34,110
+have the kind of background so we've got
+
+340
+00:11:32,009 --> 00:11:36,209
+to be in every aspect of the training I
+
+341
+00:11:34,110 --> 00:11:37,709
+worked with another one of my Republican
+
+342
+00:11:36,209 --> 00:11:39,809
+colleagues last year to pass the
+
+343
+00:11:37,709 --> 00:11:41,480
+American innovation Act and in that act
+
+344
+00:11:39,809 --> 00:11:43,910
+we are working on STEM education
+
+345
+00:11:41,480 --> 00:11:46,639
+providing additional resources into our
+
+346
+00:11:43,910 --> 00:11:48,629
+k-12 schools to train teachers and
+
+347
+00:11:46,639 --> 00:11:51,329
+particularly make an outreach to
+
+348
+00:11:48,629 --> 00:11:53,459
+minority folks and women to get into
+
+349
+00:11:51,329 --> 00:11:55,290
+these STEM fields and to get into IT and
+
+350
+00:11:53,459 --> 00:11:57,480
+into STEM education we're gonna have to
+
+351
+00:11:55,290 --> 00:11:59,399
+put a whole lot more resources into that
+
+352
+00:11:57,480 --> 00:12:00,569
+the other aspect when it comes to the
+
+353
+00:11:59,399 --> 00:12:02,370
+federal government that I think is
+
+354
+00:12:00,569 --> 00:12:05,279
+critical is that we have more
+
+355
+00:12:02,370 --> 00:12:07,439
+flexibility of bringing people in from
+
+356
+00:12:05,279 --> 00:12:09,029
+the IT world all right now you know if
+
+357
+00:12:07,439 --> 00:12:10,679
+you go into the federal service it's a
+
+358
+00:12:09,029 --> 00:12:13,319
+bureaucracy and you have various GS
+
+359
+00:12:10,679 --> 00:12:14,999
+levels we got to change all that we've
+
+360
+00:12:13,319 --> 00:12:16,769
+got to modify that so it works like
+
+361
+00:12:14,999 --> 00:12:19,259
+private industry where someone who has a
+
+362
+00:12:16,769 --> 00:12:20,569
+lot of experience can come into the
+
+363
+00:12:19,259 --> 00:12:23,399
+federal government at a higher level
+
+364
+00:12:20,569 --> 00:12:25,350
+provide that experience and then if they
+
+365
+00:12:23,399 --> 00:12:26,939
+want to go back out to the private
+
+366
+00:12:25,350 --> 00:12:28,589
+sector then that gives them a wealth of
+
+367
+00:12:26,939 --> 00:12:30,329
+even more experience about working in
+
+368
+00:12:28,589 --> 00:12:32,639
+the federal government perhaps in some
+
+369
+00:12:30,329 --> 00:12:34,470
+agencies like the NSA and others that'll
+
+370
+00:12:32,639 --> 00:12:35,879
+be incredible background credible
+
+371
+00:12:34,470 --> 00:12:37,649
+knowledge that the private industry can
+
+372
+00:12:35,879 --> 00:12:39,230
+use and the government can also use
+
+373
+00:12:37,649 --> 00:12:42,950
+incredible
+
+374
+00:12:39,230 --> 00:12:44,840
+expertise that comes from from private
+
+375
+00:12:42,950 --> 00:12:46,760
+sector as well and part of that is
+
+376
+00:12:44,840 --> 00:12:48,410
+another bill that I'm working on
+
+377
+00:12:46,760 --> 00:12:50,090
+that is really modeled after what we see
+
+378
+00:12:48,410 --> 00:12:53,060
+in the US military and the fact that we
+
+379
+00:12:50,090 --> 00:12:55,330
+know that right now federal government
+
+380
+00:12:53,060 --> 00:12:57,620
+is very siloed into various agencies
+
+381
+00:12:55,330 --> 00:12:59,060
+tremendous resources there then we need
+
+382
+00:12:57,620 --> 00:13:00,560
+to share those with the private industry
+
+383
+00:12:59,060 --> 00:13:02,450
+from the Department of Transportation to
+
+384
+00:13:00,560 --> 00:13:05,240
+some of the military folks but we have
+
+385
+00:13:02,450 --> 00:13:07,280
+we have these silos but how do we get
+
+386
+00:13:05,240 --> 00:13:09,470
+people to really learn and swim through
+
+387
+00:13:07,280 --> 00:13:11,330
+those silos and learn different agencies
+
+388
+00:13:09,470 --> 00:13:13,310
+the challenges and learn from how they
+
+389
+00:13:11,330 --> 00:13:15,440
+are overcoming some problems the United
+
+390
+00:13:13,310 --> 00:13:17,420
+States military faced this problem and
+
+391
+00:13:15,440 --> 00:13:19,820
+face this problem before when we weren't
+
+392
+00:13:17,420 --> 00:13:21,590
+communicating between the branches we
+
+393
+00:13:19,820 --> 00:13:23,240
+had to reform the military you know used
+
+394
+00:13:21,590 --> 00:13:25,010
+to you know we can't fight we go to war
+
+395
+00:13:23,240 --> 00:13:27,290
+we can't go to reward just with the Navy
+
+396
+00:13:25,010 --> 00:13:28,580
+or just with the airforce or just with
+
+397
+00:13:27,290 --> 00:13:30,500
+the army you need them all working
+
+398
+00:13:28,580 --> 00:13:32,210
+together and now there's a joint
+
+399
+00:13:30,500 --> 00:13:34,340
+specialty within the Armed Forces where
+
+400
+00:13:32,210 --> 00:13:36,830
+our officers are trained and understand
+
+401
+00:13:34,340 --> 00:13:39,320
+all of the different branches so that we
+
+402
+00:13:36,830 --> 00:13:41,360
+can fight an effective coordinated war
+
+403
+00:13:39,320 --> 00:13:43,310
+well the cyber threat is just that
+
+404
+00:13:41,360 --> 00:13:46,130
+thread we have to fight a coordinated
+
+405
+00:13:43,310 --> 00:13:48,530
+war effort against the cyber threat and
+
+406
+00:13:46,130 --> 00:13:50,390
+so my legislation will create that kind
+
+407
+00:13:48,530 --> 00:13:53,630
+of joint force within the civilian
+
+408
+00:13:50,390 --> 00:13:55,670
+government sector so that folks will be
+
+409
+00:13:53,630 --> 00:13:57,170
+able to learn from the NSA and from the
+
+410
+00:13:55,670 --> 00:13:59,000
+Department of Transportation and the
+
+411
+00:13:57,170 --> 00:14:01,250
+Health and Human Services work across
+
+412
+00:13:59,000 --> 00:14:03,410
+all of those areas and have a true
+
+413
+00:14:01,250 --> 00:14:05,300
+whole-of-government approach and if we
+
+414
+00:14:03,410 --> 00:14:07,280
+can do that very effectively and work
+
+415
+00:14:05,300 --> 00:14:08,690
+with the private sector as well in ways
+
+416
+00:14:07,280 --> 00:14:09,830
+and that's gonna change some authorities
+
+417
+00:14:08,690 --> 00:14:11,540
+will be able to have a
+
+418
+00:14:09,830 --> 00:14:13,850
+whole-of-government hold of society way
+
+419
+00:14:11,540 --> 00:14:15,050
+to fight this this threat and those are
+
+420
+00:14:13,850 --> 00:14:17,390
+some of the things that we're working on
+
+421
+00:14:15,050 --> 00:14:19,190
+now and would want to really hopefully
+
+422
+00:14:17,390 --> 00:14:20,570
+hear from you as to ideas of how we can
+
+423
+00:14:19,190 --> 00:14:21,860
+do this better so with that I'd like to
+
+424
+00:14:20,570 --> 00:14:23,900
+open it up I talked a little longer and
+
+425
+00:14:21,860 --> 00:14:26,510
+I'd wanted to sorry about that
+
+426
+00:14:23,900 --> 00:14:27,860
+but if you have any questions either do
+
+427
+00:14:26,510 --> 00:14:29,900
+the cards or come to the microphone
+
+428
+00:14:27,860 --> 00:14:33,890
+whatever whatever works for with you
+
+429
+00:14:29,900 --> 00:14:35,240
+whatever whatever works whew just a few
+
+430
+00:14:33,890 --> 00:14:37,430
+minutes away from coming to an end
+
+431
+00:14:35,240 --> 00:14:40,010
+let's send strong senator Peters if I
+
+432
+00:14:37,430 --> 00:14:41,930
+could just start the question raised in
+
+433
+00:14:40,010 --> 00:14:44,150
+the earlier panel about liability and
+
+434
+00:14:41,930 --> 00:14:47,390
+who owns the problem secretary Chertoff
+
+435
+00:14:44,150 --> 00:14:50,180
+mentioned a very interesting idea too in
+
+436
+00:14:47,390 --> 00:14:52,760
+his kickoff keynote about instituting
+
+437
+00:14:50,180 --> 00:14:53,050
+some type of safety act for the auto
+
+438
+00:14:52,760 --> 00:14:55,089
+mode
+
+439
+00:14:53,050 --> 00:14:58,330
+sector but could you address the
+
+440
+00:14:55,089 --> 00:15:00,130
+liability issue particularly yes and now
+
+441
+00:14:58,330 --> 00:15:01,570
+our legislation doesn't deal
+
+442
+00:15:00,130 --> 00:15:03,399
+specifically with the liability issue
+
+443
+00:15:01,570 --> 00:15:05,320
+but it's a critical issue going forward
+
+444
+00:15:03,399 --> 00:15:06,760
+but as we kind of envision this and I
+
+445
+00:15:05,320 --> 00:15:07,959
+spent quite a bit of time talking some
+
+446
+00:15:06,760 --> 00:15:09,519
+of the insurance companies and how
+
+447
+00:15:07,959 --> 00:15:11,980
+they're thinking through this how the
+
+448
+00:15:09,519 --> 00:15:14,140
+OEMs are gonna deal with it and it looks
+
+449
+00:15:11,980 --> 00:15:15,790
+as if we're gonna be in a situation
+
+450
+00:15:14,140 --> 00:15:18,100
+where the liability will be with the
+
+451
+00:15:15,790 --> 00:15:20,470
+companies know right now auto insurance
+
+452
+00:15:18,100 --> 00:15:22,060
+is is premise on whoever's at fault in
+
+453
+00:15:20,470 --> 00:15:23,709
+some ways even no faults about who's at
+
+454
+00:15:22,060 --> 00:15:25,720
+fault and you have a human driver that's
+
+455
+00:15:23,709 --> 00:15:27,550
+driving it so you insure that automobile
+
+456
+00:15:25,720 --> 00:15:29,740
+through the human and when the human is
+
+457
+00:15:27,550 --> 00:15:31,390
+no longer a part of it the the accidents
+
+458
+00:15:29,740 --> 00:15:33,880
+will likely be the result of some sort
+
+459
+00:15:31,390 --> 00:15:36,910
+of failure of some respect of the
+
+460
+00:15:33,880 --> 00:15:39,970
+systems in place so liability will go to
+
+461
+00:15:36,910 --> 00:15:42,730
+those manufacturers and those suppliers
+
+462
+00:15:39,970 --> 00:15:44,320
+as well some of the questions as to how
+
+463
+00:15:42,730 --> 00:15:45,820
+the liability is going to work if we're
+
+464
+00:15:44,320 --> 00:15:47,709
+in a rideshare environment you know the
+
+465
+00:15:45,820 --> 00:15:49,360
+question is to what extent does an
+
+466
+00:15:47,709 --> 00:15:50,890
+entity like an uber or a lyft
+
+467
+00:15:49,360 --> 00:15:52,510
+we'll have some of those kinds of
+
+468
+00:15:50,890 --> 00:15:54,760
+liabilities with their operating
+
+469
+00:15:52,510 --> 00:15:57,610
+self-driving cars I think still that has
+
+470
+00:15:54,760 --> 00:15:59,770
+to be worked out but as far as as we're
+
+471
+00:15:57,610 --> 00:16:01,750
+looking at this you're likely to see our
+
+472
+00:15:59,770 --> 00:16:03,610
+OEMs really assuming most of the
+
+473
+00:16:01,750 --> 00:16:05,529
+liability associated which is another
+
+474
+00:16:03,610 --> 00:16:07,540
+reason why we got to get this right
+
+475
+00:16:05,529 --> 00:16:09,520
+Abe and it's another reason why I also
+
+476
+00:16:07,540 --> 00:16:11,140
+think when folks are a little leery
+
+477
+00:16:09,520 --> 00:16:12,970
+about how we're moving forward you know
+
+478
+00:16:11,140 --> 00:16:13,899
+the auto companies get this they don't
+
+479
+00:16:12,970 --> 00:16:15,700
+they know that there'll be some
+
+480
+00:16:13,899 --> 00:16:16,959
+accidents you can't avoid it like I do
+
+481
+00:16:15,700 --> 00:16:18,910
+everything they can to make sure they
+
+482
+00:16:16,959 --> 00:16:20,709
+avoid those accidents because of the
+
+483
+00:16:18,910 --> 00:16:22,839
+tremendous liability not just for that
+
+484
+00:16:20,709 --> 00:16:24,610
+individual accident but we always have
+
+485
+00:16:22,839 --> 00:16:26,079
+to be in mind that it's also law what
+
+486
+00:16:24,610 --> 00:16:27,730
+would happen to the consumer blow back
+
+487
+00:16:26,079 --> 00:16:29,620
+on this whole technology to begin with
+
+488
+00:16:27,730 --> 00:16:31,120
+until people can really see the
+
+489
+00:16:29,620 --> 00:16:31,600
+incredible benefits that lie at the
+
+490
+00:16:31,120 --> 00:16:34,240
+other end
+
+491
+00:16:31,600 --> 00:16:36,730
+thank you very much the two questions by
+
+492
+00:16:34,240 --> 00:16:40,300
+no card that I wanted to read the first
+
+493
+00:16:36,730 --> 00:16:44,589
+regards what role by the government to
+
+494
+00:16:40,300 --> 00:16:48,310
+protect OMS IP with these emerging
+
+495
+00:16:44,589 --> 00:16:51,339
+technologies what role is there for the
+
+496
+00:16:48,310 --> 00:16:53,529
+government to protect OMS IP with these
+
+497
+00:16:51,339 --> 00:16:55,269
+emerging technologies and again if if
+
+498
+00:16:53,529 --> 00:16:57,040
+everyone those who'd like to ask
+
+499
+00:16:55,269 --> 00:16:59,440
+questions please come to the microphones
+
+500
+00:16:57,040 --> 00:17:00,910
+and we'd love to entertain those
+
+501
+00:16:59,440 --> 00:17:02,890
+questions I know senator Peters would
+
+502
+00:17:00,910 --> 00:17:04,809
+well the government has a big role
+
+503
+00:17:02,890 --> 00:17:05,709
+protecting IP generally to try to make
+
+504
+00:17:04,809 --> 00:17:06,319
+sure that we can protect that
+
+505
+00:17:05,709 --> 00:17:09,019
+intellectual
+
+506
+00:17:06,319 --> 00:17:10,939
+property and it's no different in my
+
+507
+00:17:09,019 --> 00:17:13,039
+mind with autonomy particularly given
+
+508
+00:17:10,939 --> 00:17:16,549
+the fact that and I know this for the US
+
+509
+00:17:13,039 --> 00:17:17,809
+companies is that with this technology
+
+510
+00:17:16,549 --> 00:17:19,699
+and with the fact that we're changing
+
+511
+00:17:17,809 --> 00:17:22,009
+the business model for for these
+
+512
+00:17:19,699 --> 00:17:24,019
+companies where most people will
+
+513
+00:17:22,009 --> 00:17:25,069
+probably not buy a self-driving car
+
+514
+00:17:24,019 --> 00:17:27,350
+they're gonna be in a rideshare
+
+515
+00:17:25,069 --> 00:17:29,450
+environment and ordering up their ride
+
+516
+00:17:27,350 --> 00:17:32,059
+and not buying the vehicle but paying
+
+517
+00:17:29,450 --> 00:17:34,909
+for the vehicle one ride at a time from
+
+518
+00:17:32,059 --> 00:17:36,529
+point A to point B that may mean that
+
+519
+00:17:34,909 --> 00:17:38,629
+we're gonna have a lot fewer car
+
+520
+00:17:36,529 --> 00:17:41,509
+companies in the future it's going to be
+
+521
+00:17:38,629 --> 00:17:44,000
+a consolidation so that means getting to
+
+522
+00:17:41,509 --> 00:17:45,889
+that technology early is credibly
+
+523
+00:17:44,000 --> 00:17:47,600
+important you know I'm I'm taken by one
+
+524
+00:17:45,889 --> 00:17:50,509
+of the one of the companies that I met
+
+525
+00:17:47,600 --> 00:17:52,519
+with and and I won't say what I said it
+
+526
+00:17:50,509 --> 00:17:54,889
+sounds like getting first to market is
+
+527
+00:17:52,519 --> 00:17:56,120
+is everything and they said well I don't
+
+528
+00:17:54,889 --> 00:17:59,179
+know about getting first but you better
+
+529
+00:17:56,120 --> 00:18:00,769
+not be fourth or fifth so we have to
+
+530
+00:17:59,179 --> 00:18:02,809
+make sure that we're protecting the
+
+531
+00:18:00,769 --> 00:18:04,850
+American companies international
+
+532
+00:18:02,809 --> 00:18:06,429
+property we got to guard that that's why
+
+533
+00:18:04,850 --> 00:18:08,509
+cybersecurity is absolutely incredible
+
+534
+00:18:06,429 --> 00:18:10,009
+important we can't have the kind of
+
+535
+00:18:08,509 --> 00:18:11,899
+breaches we saw recently with a lot of
+
+536
+00:18:10,009 --> 00:18:13,399
+that information taken forward and
+
+537
+00:18:11,899 --> 00:18:15,019
+that's why I want to make sure that
+
+538
+00:18:13,399 --> 00:18:16,340
+we're working in a closer conjunction
+
+539
+00:18:15,019 --> 00:18:18,289
+understanding this is a this is really
+
+540
+00:18:16,340 --> 00:18:20,330
+an element of economic national security
+
+541
+00:18:18,289 --> 00:18:22,700
+that we've got to find ways to merge
+
+542
+00:18:20,330 --> 00:18:24,080
+some of the expertise and skills that we
+
+543
+00:18:22,700 --> 00:18:25,610
+have with the federal government and the
+
+544
+00:18:24,080 --> 00:18:27,620
+Department of Defense and our
+
+545
+00:18:25,610 --> 00:18:29,899
+intelligence folks with private industry
+
+546
+00:18:27,620 --> 00:18:32,179
+and figure out how we can work closer
+
+547
+00:18:29,899 --> 00:18:33,620
+together I've been working in thinking
+
+548
+00:18:32,179 --> 00:18:35,649
+through some of these issues as to how
+
+549
+00:18:33,620 --> 00:18:37,580
+do we do that you know there are some
+
+550
+00:18:35,649 --> 00:18:40,279
+protocols that don't allow that to
+
+551
+00:18:37,580 --> 00:18:42,110
+happen although we do have models in
+
+552
+00:18:40,279 --> 00:18:43,820
+this country where we have Department of
+
+553
+00:18:42,110 --> 00:18:46,039
+Defense folks working with private
+
+554
+00:18:43,820 --> 00:18:48,799
+industry the examples are the National
+
+555
+00:18:46,039 --> 00:18:50,230
+Guard fact we have a major standing up a
+
+556
+00:18:48,799 --> 00:18:52,340
+cyber unit here in Battle Creek Michigan
+
+557
+00:18:50,230 --> 00:18:55,970
+the Coast Guard is another great example
+
+558
+00:18:52,340 --> 00:18:57,710
+the Coast Guard has cyber resources and
+
+559
+00:18:55,970 --> 00:18:59,899
+they work with shipping and companies
+
+560
+00:18:57,710 --> 00:19:01,610
+and ports and work to share those kinds
+
+561
+00:18:59,899 --> 00:19:04,940
+of information and part of that has to
+
+562
+00:19:01,610 --> 00:19:08,509
+be protecting the IP certainly thank you
+
+563
+00:19:04,940 --> 00:19:10,279
+very much the next question regards the
+
+564
+00:19:08,509 --> 00:19:12,769
+National Grid system and how it relates
+
+565
+00:19:10,279 --> 00:19:14,510
+to the automotive we hear that foreign
+
+566
+00:19:12,769 --> 00:19:16,760
+governments have hacked our National
+
+567
+00:19:14,510 --> 00:19:18,649
+Grid system how do we prevent these same
+
+568
+00:19:16,760 --> 00:19:19,490
+governments from breaching the new
+
+569
+00:19:18,649 --> 00:19:23,929
+infrastructure
+
+570
+00:19:19,490 --> 00:19:26,480
+acquired for automotive yes in fact you
+
+571
+00:19:23,929 --> 00:19:29,570
+brought just before I came here I was at
+
+572
+00:19:26,480 --> 00:19:31,970
+ITC which is the transmission lines it
+
+573
+00:19:29,570 --> 00:19:34,280
+was with their cyber folks in Novi and
+
+574
+00:19:31,970 --> 00:19:36,710
+which is incredibly impressive what they
+
+575
+00:19:34,280 --> 00:19:38,270
+do to protect the grid and I looked at
+
+576
+00:19:36,710 --> 00:19:39,800
+their screens where they let over 7
+
+577
+00:19:38,270 --> 00:19:43,250
+million attacks just today or yesterday
+
+578
+00:19:39,800 --> 00:19:45,890
+I think to the grid and so we've got to
+
+579
+00:19:43,250 --> 00:19:47,300
+safeguard it my view though is and I'm
+
+580
+00:19:45,890 --> 00:19:49,190
+going to step back here as to how do we
+
+581
+00:19:47,300 --> 00:19:50,960
+prevent particularly sophisticated state
+
+582
+00:19:49,190 --> 00:19:52,700
+actors and we've got a situation now
+
+583
+00:19:50,960 --> 00:19:55,970
+with the state actor very active
+
+584
+00:19:52,700 --> 00:19:57,800
+obviously in so many areas is that we
+
+585
+00:19:55,970 --> 00:19:59,660
+have to have a better sense of actually
+
+586
+00:19:57,800 --> 00:20:01,820
+punishing folks who are engaged in cyber
+
+587
+00:19:59,660 --> 00:20:03,830
+activity not just defending against it
+
+588
+00:20:01,820 --> 00:20:05,150
+you know you can build stronger and
+
+589
+00:20:03,830 --> 00:20:07,429
+stronger walls which all of you are
+
+590
+00:20:05,150 --> 00:20:09,470
+doing and we need to do that but just
+
+591
+00:20:07,429 --> 00:20:11,179
+think of the situation of your house you
+
+592
+00:20:09,470 --> 00:20:13,580
+know you try you put burglar alarms in
+
+593
+00:20:11,179 --> 00:20:15,590
+and you try to protect your house to
+
+594
+00:20:13,580 --> 00:20:17,480
+keep the burglars out but if a burglar
+
+595
+00:20:15,590 --> 00:20:19,610
+gets in and burglarized is your house
+
+596
+00:20:17,480 --> 00:20:22,130
+and you catch them you punish the
+
+597
+00:20:19,610 --> 00:20:24,230
+burglar you punish them and you punish
+
+598
+00:20:22,130 --> 00:20:25,880
+them severely and use that as a
+
+599
+00:20:24,230 --> 00:20:27,620
+deterrence for it we've got to do the
+
+600
+00:20:25,880 --> 00:20:30,500
+same thing now attribution is always a
+
+601
+00:20:27,620 --> 00:20:32,240
+tricky thing with cyber but when we know
+
+602
+00:20:30,500 --> 00:20:34,700
+there's an actor involved we need to
+
+603
+00:20:32,240 --> 00:20:36,410
+have be very strong very firm that means
+
+604
+00:20:34,700 --> 00:20:38,120
+very strong sanctions against the state
+
+605
+00:20:36,410 --> 00:20:39,650
+actor that's engaged in it a lot tougher
+
+606
+00:20:38,120 --> 00:20:41,270
+than we've put forward we know the
+
+607
+00:20:39,650 --> 00:20:43,040
+Russians for example involvement in the
+
+608
+00:20:41,270 --> 00:20:45,170
+in the elections but they're involved in
+
+609
+00:20:43,040 --> 00:20:47,150
+commercial activities regularly other
+
+610
+00:20:45,170 --> 00:20:49,250
+entities are doing the same thing we
+
+611
+00:20:47,150 --> 00:20:51,050
+need to be able to punish those and have
+
+612
+00:20:49,250 --> 00:20:52,790
+those in fact and the other thing that
+
+613
+00:20:51,050 --> 00:20:54,110
+we're grappling with right now and a lot
+
+614
+00:20:52,790 --> 00:20:55,970
+of questions in the Department of
+
+615
+00:20:54,110 --> 00:20:57,980
+Defense and in my Armed Services
+
+616
+00:20:55,970 --> 00:21:00,050
+Committee is is really how do you how do
+
+617
+00:20:57,980 --> 00:21:02,600
+we define an act of war in the cyber
+
+618
+00:21:00,050 --> 00:21:04,429
+world we know what an act of war is in
+
+619
+00:21:02,600 --> 00:21:06,800
+the physical world if a bomber comes
+
+620
+00:21:04,429 --> 00:21:08,420
+over and drops a bomb and blows up a
+
+621
+00:21:06,800 --> 00:21:09,830
+building in New York City that's clearly
+
+622
+00:21:08,420 --> 00:21:12,290
+an act of war if a foreign government
+
+623
+00:21:09,830 --> 00:21:15,650
+does that if they attack us on the cyber
+
+624
+00:21:12,290 --> 00:21:18,140
+put out grid and hurt people or take out
+
+625
+00:21:15,650 --> 00:21:20,690
+a grid system or self-driving cars drive
+
+626
+00:21:18,140 --> 00:21:22,610
+people into the walls is that an act of
+
+627
+00:21:20,690 --> 00:21:25,130
+war and if so what sort of what is the
+
+628
+00:21:22,610 --> 00:21:26,900
+appropriate response it has to be a firm
+
+629
+00:21:25,130 --> 00:21:28,340
+and aggressive response back for any
+
+630
+00:21:26,900 --> 00:21:30,169
+kind of actor that's doing that so
+
+631
+00:21:28,340 --> 00:21:31,720
+that's a big part of what we're talking
+
+632
+00:21:30,169 --> 00:21:34,299
+about right now in my
+
+633
+00:21:31,720 --> 00:21:36,039
+committee work thank you but one more
+
+634
+00:21:34,299 --> 00:21:39,280
+written question and I'll just end with
+
+635
+00:21:36,039 --> 00:21:41,169
+a final one will you consider an idea of
+
+636
+00:21:39,280 --> 00:21:43,960
+collecting a huge penalty from companies
+
+637
+00:21:41,169 --> 00:21:45,820
+like Facebook who amassed huge wealth at
+
+638
+00:21:43,960 --> 00:21:49,120
+the expense of citizens privacy and
+
+639
+00:21:45,820 --> 00:21:50,909
+perhaps redistributed that what was the
+
+640
+00:21:49,120 --> 00:21:53,620
+first part of the question I got it's
+
+641
+00:21:50,909 --> 00:21:56,440
+whether you consider an idea of this
+
+642
+00:21:53,620 --> 00:21:58,270
+relates to Facebook and would you
+
+643
+00:21:56,440 --> 00:22:00,429
+consider an idea of collecting a huge
+
+644
+00:21:58,270 --> 00:22:02,950
+penalty from companies like Facebook who
+
+645
+00:22:00,429 --> 00:22:05,799
+amassed huge wealth at the expense of
+
+646
+00:22:02,950 --> 00:22:08,140
+citizens privacy andrey distributing the
+
+647
+00:22:05,799 --> 00:22:10,650
+money as grants to support cybersecurity
+
+648
+00:22:08,140 --> 00:22:13,299
+technologies well that's yeah
+
+649
+00:22:10,650 --> 00:22:15,429
+interesting idea the there's no question
+
+650
+00:22:13,299 --> 00:22:17,980
+we have to take a really hard look at
+
+651
+00:22:15,429 --> 00:22:19,840
+these social platforms that we had mr.
+
+652
+00:22:17,980 --> 00:22:23,470
+Zuckerberg before my committee a couple
+
+653
+00:22:19,840 --> 00:22:27,840
+months ago to talk about the problems of
+
+654
+00:22:23,470 --> 00:22:30,450
+the Facebook related to the election the
+
+655
+00:22:27,840 --> 00:22:33,490
+these companies have gotten so large
+
+656
+00:22:30,450 --> 00:22:35,260
+they are basically like public utilities
+
+657
+00:22:33,490 --> 00:22:37,570
+now is a platform and need to be
+
+658
+00:22:35,260 --> 00:22:38,919
+thinking through how do they actually be
+
+659
+00:22:37,570 --> 00:22:42,640
+regulated particularly when it comes
+
+660
+00:22:38,919 --> 00:22:43,780
+from a privacy standpoint and quite
+
+661
+00:22:42,640 --> 00:22:45,520
+frankly I'll be honest though they
+
+662
+00:22:43,780 --> 00:22:48,070
+haven't been very forthcoming in trying
+
+663
+00:22:45,520 --> 00:22:49,690
+to figure out how we actually regulate
+
+664
+00:22:48,070 --> 00:22:50,770
+that and and how do we deal with some of
+
+665
+00:22:49,690 --> 00:22:52,990
+these privacy issues
+
+666
+00:22:50,770 --> 00:22:55,330
+they only there's only now started to
+
+667
+00:22:52,990 --> 00:22:57,880
+become more interested in it when the
+
+668
+00:22:55,330 --> 00:22:59,169
+specter of antitrust is coming up and do
+
+669
+00:22:57,880 --> 00:23:00,460
+we use some of the tools that the
+
+670
+00:22:59,169 --> 00:23:02,470
+federal government has of antitrust
+
+671
+00:23:00,460 --> 00:23:05,350
+which you because you basically have
+
+672
+00:23:02,470 --> 00:23:07,450
+monopolies in this critically important
+
+673
+00:23:05,350 --> 00:23:09,280
+technology and when you have monopolies
+
+674
+00:23:07,450 --> 00:23:10,690
+normally we have to have some sort of
+
+675
+00:23:09,280 --> 00:23:12,429
+public oversight of that kind of
+
+676
+00:23:10,690 --> 00:23:14,140
+monopoly because the competitive forces
+
+677
+00:23:12,429 --> 00:23:17,950
+of the market simply aren't working in
+
+678
+00:23:14,140 --> 00:23:19,539
+that kind of situation so certainly I'm
+
+679
+00:23:17,950 --> 00:23:21,700
+all yours too all sorts of ideas the
+
+680
+00:23:19,539 --> 00:23:23,919
+person who wrote that is an interesting
+
+681
+00:23:21,700 --> 00:23:26,559
+idea but we need to have more input on
+
+682
+00:23:23,919 --> 00:23:28,030
+how we deal with this because it's only
+
+683
+00:23:26,559 --> 00:23:30,250
+gonna get bigger they're only going to
+
+684
+00:23:28,030 --> 00:23:33,280
+get more powerful and we're already
+
+685
+00:23:30,250 --> 00:23:36,640
+seeing the the impact of that to our
+
+686
+00:23:33,280 --> 00:23:38,409
+society at large which is could be
+
+687
+00:23:36,640 --> 00:23:41,320
+potentially a significant threat great
+
+688
+00:23:38,409 --> 00:23:43,380
+senator Peters thank you and just the
+
+689
+00:23:41,320 --> 00:23:46,110
+final concluding
+
+690
+00:23:43,380 --> 00:23:48,870
+point and question is cybersecurity
+
+691
+00:23:46,110 --> 00:23:51,060
+often obviously entails risk management
+
+692
+00:23:48,870 --> 00:23:54,720
+which we've been addressing throughout
+
+693
+00:23:51,060 --> 00:23:57,930
+the day I think extremely well in terms
+
+694
+00:23:54,720 --> 00:24:01,440
+of your vision for the future in the
+
+695
+00:23:57,930 --> 00:24:05,880
+best case scenario three to five years
+
+696
+00:24:01,440 --> 00:24:08,970
+from now where could we be with the
+
+697
+00:24:05,880 --> 00:24:10,560
+emerging opportunity that's coming about
+
+698
+00:24:08,970 --> 00:24:13,590
+through autonomous and through
+
+699
+00:24:10,560 --> 00:24:15,750
+increasing connected vehicles and I
+
+700
+00:24:13,590 --> 00:24:18,840
+asked that question also with the idea
+
+701
+00:24:15,750 --> 00:24:21,320
+of I bet the Wright brothers by David
+
+702
+00:24:18,840 --> 00:24:23,340
+McCullough and read about the early
+
+703
+00:24:21,320 --> 00:24:25,890
+innovation that they had and the
+
+704
+00:24:23,340 --> 00:24:28,170
+calculated risks but the ultimate
+
+705
+00:24:25,890 --> 00:24:31,260
+opportunity that emerged was quite
+
+706
+00:24:28,170 --> 00:24:35,010
+stunning so where where do you think we
+
+707
+00:24:31,260 --> 00:24:39,120
+could be in the best-case scenario yeah
+
+708
+00:24:35,010 --> 00:24:40,800
+I I I'm very optimistic about that very
+
+709
+00:24:39,120 --> 00:24:43,470
+excited about that because I you know
+
+710
+00:24:40,800 --> 00:24:44,880
+when I see the what's happening with
+
+711
+00:24:43,470 --> 00:24:46,260
+self-driving cars and I alluded to a
+
+712
+00:24:44,880 --> 00:24:47,610
+little bit my opening comments is every
+
+713
+00:24:46,260 --> 00:24:48,930
+bit as big as when the first car came
+
+714
+00:24:47,610 --> 00:24:51,870
+off the assembly line and just think
+
+715
+00:24:48,930 --> 00:24:53,730
+what that happened in the case of
+
+716
+00:24:51,870 --> 00:24:55,470
+self-driving cars to me what is really
+
+717
+00:24:53,730 --> 00:24:57,780
+significant and why I hope we do it all
+
+718
+00:24:55,470 --> 00:24:59,610
+here in Michigan is that this is really
+
+719
+00:24:57,780 --> 00:25:01,980
+the moonshot for for artificial
+
+720
+00:24:59,610 --> 00:25:05,400
+intelligence and machine learning that
+
+721
+00:25:01,980 --> 00:25:07,530
+when when an automobile is able to pilot
+
+722
+00:25:05,400 --> 00:25:10,050
+through a complex city environment like
+
+723
+00:25:07,530 --> 00:25:12,060
+Washington DC or New York City or San
+
+724
+00:25:10,050 --> 00:25:14,040
+Francisco wherever it may be and do that
+
+725
+00:25:12,060 --> 00:25:16,380
+safely and do it flawlessly time and
+
+726
+00:25:14,040 --> 00:25:18,510
+time again that means artificial
+
+727
+00:25:16,380 --> 00:25:21,060
+intelligence has reached the level where
+
+728
+00:25:18,510 --> 00:25:23,280
+it's going to transform every single
+
+729
+00:25:21,060 --> 00:25:25,140
+industry that you can possibly imagine
+
+730
+00:25:23,280 --> 00:25:27,840
+and from the manufacturing process to
+
+731
+00:25:25,140 --> 00:25:29,250
+the delivery of healthcare the
+
+732
+00:25:27,840 --> 00:25:31,050
+development you'll see in synthetic
+
+733
+00:25:29,250 --> 00:25:33,510
+biology and we just go down the list
+
+734
+00:25:31,050 --> 00:25:35,340
+this will be transformative in every
+
+735
+00:25:33,510 --> 00:25:36,600
+single industry I think it's somewhat
+
+736
+00:25:35,340 --> 00:25:37,800
+and when you talk about back to the auto
+
+737
+00:25:36,600 --> 00:25:39,420
+industry I think it's somewhat elegant
+
+738
+00:25:37,800 --> 00:25:42,030
+because when you think about it in the
+
+739
+00:25:39,420 --> 00:25:43,920
+last century it was the auto industry
+
+740
+00:25:42,030 --> 00:25:46,260
+with that development of mass production
+
+741
+00:25:43,920 --> 00:25:47,640
+and the first car coming off the
+
+742
+00:25:46,260 --> 00:25:49,350
+assembly line that changed the whole
+
+743
+00:25:47,640 --> 00:25:51,600
+world and now here we are at the
+
+744
+00:25:49,350 --> 00:25:53,850
+beginning of the 21st century and with
+
+745
+00:25:51,600 --> 00:25:55,950
+the dawn of self-driving vehicles
+
+746
+00:25:53,850 --> 00:25:56,820
+integrating incredible mechanical
+
+747
+00:25:55,950 --> 00:25:59,790
+engineering
+
+748
+00:25:56,820 --> 00:26:01,380
+IT and machine learning once again it's
+
+749
+00:25:59,790 --> 00:26:03,390
+the auto industry that's going to change
+
+750
+00:26:01,380 --> 00:26:05,340
+the world just like you did in the last
+
+751
+00:26:03,390 --> 00:26:07,110
+century so that's my vision of the
+
+752
+00:26:05,340 --> 00:26:09,000
+future this is where it's happening this
+
+753
+00:26:07,110 --> 00:26:10,140
+is an incredibly sexy place to work if
+
+754
+00:26:09,000 --> 00:26:12,360
+you're an engineer and you want to be
+
+755
+00:26:10,140 --> 00:26:14,340
+working with the latest technology and
+
+756
+00:26:12,360 --> 00:26:17,370
+what's going to change the world this is
+
+757
+00:26:14,340 --> 00:26:20,190
+the place to be and I see major positive
+
+758
+00:26:17,370 --> 00:26:21,450
+transformations now having said that my
+
+759
+00:26:20,190 --> 00:26:22,650
+caveat is that we're gonna have to
+
+760
+00:26:21,450 --> 00:26:24,780
+manage those changes
+
+761
+00:26:22,650 --> 00:26:26,310
+those are pretty rapid changes and when
+
+762
+00:26:24,780 --> 00:26:28,440
+you think about all of what happened in
+
+763
+00:26:26,310 --> 00:26:30,900
+the industrial revolution and it wasn't
+
+764
+00:26:28,440 --> 00:26:33,420
+always pretty we also had some you know
+
+765
+00:26:30,900 --> 00:26:35,880
+issues like the rise of fascism and
+
+766
+00:26:33,420 --> 00:26:36,900
+communism and world wars and other kinds
+
+767
+00:26:35,880 --> 00:26:39,270
+of things that happen with this
+
+768
+00:26:36,900 --> 00:26:42,300
+technological change and that happened
+
+769
+00:26:39,270 --> 00:26:43,860
+over 150 years now we may see these
+
+770
+00:26:42,300 --> 00:26:46,230
+kinds of change cans pressed into
+
+771
+00:26:43,860 --> 00:26:48,510
+decades so that means we have to be
+
+772
+00:26:46,230 --> 00:26:49,830
+thinking about it ahead of time and in
+
+773
+00:26:48,510 --> 00:26:51,570
+addition to having great engineers
+
+774
+00:26:49,830 --> 00:26:53,010
+thinking about making the next big thing
+
+775
+00:26:51,570 --> 00:26:54,720
+we also have to think what are the
+
+776
+00:26:53,010 --> 00:26:56,610
+implications of that and we make sure
+
+777
+00:26:54,720 --> 00:26:58,710
+that we steer it towards a positive end
+
+778
+00:26:56,610 --> 00:27:00,720
+as opposed to the negative end but I'm
+
+779
+00:26:58,710 --> 00:27:02,190
+confident we understand that all of us
+
+780
+00:27:00,720 --> 00:27:04,020
+all of you in this room understand that
+
+781
+00:27:02,190 --> 00:27:06,030
+and together we're going to be able to
+
+782
+00:27:04,020 --> 00:27:08,630
+achieve some really remarkable things in
+
+783
+00:27:06,030 --> 00:27:08,630
+the decades ahead
+
+784
+00:27:15,010 --> 00:27:29,830
+I appreciate you thank you very much
+
+785
+00:27:27,640 --> 00:27:31,870
+and thank you for that wonderful
+
+786
+00:27:29,830 --> 00:27:35,770
+optimistic vision to conclude our
+
+787
+00:27:31,870 --> 00:27:37,750
+conference for the past several years at
+
+788
+00:27:35,770 --> 00:27:39,820
+the event that we are best known for in
+
+789
+00:27:37,750 --> 00:27:42,790
+Washington DC which is now entering its
+
+790
+00:27:39,820 --> 00:27:44,290
+ninth year as mentioned earlier we were
+
+791
+00:27:42,790 --> 00:27:46,690
+presented an annual cybersecurity
+
+792
+00:27:44,290 --> 00:27:49,030
+leadership award to a public policy
+
+793
+00:27:46,690 --> 00:27:51,600
+leader in the past our Award winners
+
+794
+00:27:49,030 --> 00:27:55,000
+have included General Michael Hayden
+
+795
+00:27:51,600 --> 00:27:57,250
+general Keith Alexander both now retired
+
+796
+00:27:55,000 --> 00:28:00,130
+and even the president of Estonia who
+
+797
+00:27:57,250 --> 00:28:02,140
+spoke for us several years ago this year
+
+798
+00:28:00,130 --> 00:28:04,030
+we decided to launch a new award to
+
+799
+00:28:02,140 --> 00:28:05,140
+recognize a leader in public policy
+
+800
+00:28:04,030 --> 00:28:07,380
+whose advanced the cause of
+
+801
+00:28:05,140 --> 00:28:09,700
+cybersecurity in the automotive sector
+
+802
+00:28:07,380 --> 00:28:11,970
+senator Peters through the introduction
+
+803
+00:28:09,700 --> 00:28:13,630
+of the AV start act and his tireless
+
+804
+00:28:11,970 --> 00:28:16,450
+representation of the great state of
+
+805
+00:28:13,630 --> 00:28:18,100
+Michigan and the automotive sector for
+
+806
+00:28:16,450 --> 00:28:20,350
+his leadership in putting cybersecurity
+
+807
+00:28:18,100 --> 00:28:23,410
+at the very forefront of the discussion
+
+808
+00:28:20,350 --> 00:28:25,870
+for a support of our theme today that
+
+809
+00:28:23,410 --> 00:28:27,970
+cybersecurity must be the cornerstone of
+
+810
+00:28:25,870 --> 00:28:30,580
+autonomous and connected vehicle safety
+
+811
+00:28:27,970 --> 00:28:32,080
+we award you senator Peters the first
+
+812
+00:28:30,580 --> 00:28:34,600
+Billington automotive cybersecurity
+
+813
+00:28:32,080 --> 00:28:38,280
+leadership award and are honored to do
+
+814
+00:28:34,600 --> 00:28:38,280
+so it's the senator Peters
+
+815
+00:28:48,450 --> 00:28:52,320
+thank you very much
+

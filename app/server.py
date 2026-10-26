@@ -11,14 +11,14 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic_ai.exceptions import ModelHTTPError
+from pydantic_ai.exceptions import ModelHTTPError, UsageLimitExceeded
 from .corpus import CorpusStore
 from .agents import ResearchDeps, chat_assistant
 from .config import MODEL_SETTINGS, ModelConfigurationError, configured_model, model_credentials_configured
 from .models import ChatRequest, ChatResponse, ResearchRequest
 from .public_sources import CACHE_HOURS, discover_public_speeches, import_public_speech as import_transcript
 from .topics import TOPIC_TERMS, normalize_topic
-from .workflow import run_research
+from .workflow import CHAT_USAGE_LIMITS, run_research
 
 app = FastAPI(title="Civic Lens", version="0.1.0")
 logger = logging.getLogger(__name__)
@@ -105,24 +105,26 @@ def health() -> dict[str, str | bool]:
 
 
 def model_error_detail(error: Exception) -> str:
+    if isinstance(error, UsageLimitExceeded):
+        return "Civic Lens stopped this request at its safety limit. Try a shorter speech or a simpler comparison."
     if isinstance(error, ModelHTTPError):
         if error.status_code in {401, 403}:
-            return "The AI provider rejected the credential. Check that PORTKEY_API_KEY in Render is valid and has access to this model."
+            return "The AI provider rejected the credential. Check that OPENAI_API_KEY (or PORTKEY_API_KEY) is valid and has access to this model."
         if error.status_code == 404:
-            return "The AI provider could not find this model. Check AI_MODEL in Render and use a model available to this key."
+            return "The AI provider could not find this model. Check AI_MODEL in .env and use a model available to this key."
         if error.status_code == 429:
             return "The AI provider is rate-limiting this service or its quota is exhausted. Check the provider account and try again later."
         if error.status_code in {408, 504}:
             return "The AI provider took too long to respond. Please wait a moment and try again."
         if error.status_code == 400:
-            return "The AI provider rejected the model request. Check AI_MODEL and the provider settings in Render."
-        return f"The AI provider returned an error (HTTP {error.status_code}). Check the Render service logs for details."
+            return "The AI provider rejected the model request. Check AI_MODEL and the API key in .env."
+        return f"The AI provider returned an error (HTTP {error.status_code}). Check the server logs for details."
     cause = error
     while cause is not None:
         if "timeout" in type(cause).__name__.casefold():
             return "The AI provider took too long to respond. Please wait a moment and try again."
         cause = cause.__cause__
-    return "The AI provider could not complete this request. Check PORTKEY_API_KEY and AI_MODEL in Render, then review the service logs if it continues."
+    return "The AI provider could not complete this request. Check OPENAI_API_KEY (or PORTKEY_API_KEY) and AI_MODEL, then review the service logs if it continues."
 
 @app.get("/api/politicians")
 def politicians() -> dict[str, object]:
@@ -353,7 +355,7 @@ async def analyze(request: ResearchRequest) -> dict[str, object]:
         logger.warning("Civic Lens analysis requested without a model credential")
         raise HTTPException(
             status_code=503,
-            detail="AI analysis is not configured on this service. Add PORTKEY_API_KEY or OPENAI_API_KEY in Render Environment settings.",
+            detail="AI analysis is not configured on this service. Add OPENAI_API_KEY (or PORTKEY_API_KEY) to the .env file.",
         ) from error
     except ValueError as error:
         raise HTTPException(status_code=400, detail=str(error)) from error
@@ -395,12 +397,14 @@ async def chat(request: ChatRequest) -> ChatResponse:
             deps=ResearchDeps(corpus=corpus),
             model=configured_model(),
             model_settings=MODEL_SETTINGS,
+            usage_limits=CHAT_USAGE_LIMITS,
+            timeout=20,
         )
     except ModelConfigurationError as error:
         logger.warning("Civic Lens guide request made without a model credential")
         raise HTTPException(
             status_code=503,
-            detail="The guide needs PORTKEY_API_KEY or OPENAI_API_KEY in Render Environment settings.",
+            detail="The guide needs OPENAI_API_KEY (or PORTKEY_API_KEY) in the .env file.",
         ) from error
     except Exception as error:
         logger.exception("Civic Lens guide request failed")

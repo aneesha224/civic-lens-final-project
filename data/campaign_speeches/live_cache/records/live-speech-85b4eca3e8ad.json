@@ -11,6 +11,6 @@
   "source_page_end": null,
   "page_count": null,
   "transcript_path": "live_cache/records/live-speech-85b4eca3e8ad.txt",
-  "transcript_status": "on-demand v5 transcript; retrieval date used because speech date is unknown; review transcript boundaries",
-  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+  "transcript_status": "duplicate event; use curated transcript live-speech-3f2ca3132ff6",
+  "boundary_status": "Duplicate source copy of the same January 3, 2025 Opening-Day remarks."
 }

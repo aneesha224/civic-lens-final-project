@@ -1,0 +1,17 @@
+# Group H more: Tammy Duckworth prepared public remarks
+
+Five complete, unique prepared-remarks transcripts from official U.S. Senate press releases. The pages identify the settings and Duckworth as the speaker; their prepared-remarks labels mark each complete transcript block. All five records in this batch have been merged into the central manifest.
+
+- Tammy Duckworth — Unite for Veterans rally, National Mall, Washington, D.C. (2025-06-06, 1,578 words). The official page is dated June 6, 2025, and describes a rally held “today”; Duckworth’s speech also identifies the date as the 81st anniversary of D-Day.
+  Transcript boundaries: “Hello everyone!” through “Thank you.”. The archived source page is preserved at captures/duckworth-2025-unite-for-veterans-rally.html; its snapshot timestamp is 20260412052437.
+- Tammy Duckworth — American Association of People with Disabilities ADA Celebration, Washington, D.C. (2023-07-26, 1,036 words). The official release is dated July 27, 2023, and says the event was held “last night,” establishing the July 26 delivery date.
+  Transcript boundaries: “Hello everyone!” through “Here’s to 33 years of the ADA. And here’s to accomplishing even more over the next 33!”. The archived source page is preserved at captures/duckworth-2023-ada-celebration.html; its snapshot timestamp is 20260307095331.
+- Tammy Duckworth — Department of Labor Hall of Honor ceremony for the El Monte garment workers, Washington, D.C. (2023-09-18, 650 words). The official release is dated September 18, 2023, names the Hall of Honor ceremony, and states Duckworth joined it “today.”
+  Transcript boundaries: “Hello everyone!” through “By striving to ensure that no other American… no other human being… is forced to endure this kind of inhumanity ever again.”. The archived source page is preserved at captures/duckworth-2023-el-monte-hall-of-honor.html; its snapshot timestamp is 20260210231148.
+- Tammy Duckworth — Harper College Class of 2022 commencement, Palatine, Illinois (2022-05-21, 1,319 words). The official release is dated May 21, 2022, and states Duckworth delivered the commencement address “today.”
+  Transcript boundaries: “Hello everyone! Good afternoon! I’m honored to be here today—and so happy to be here in person—to celebrate the accomplishments of the Harper College Class of 2022.” through “I’m so proud to call you Illinoisans—and now, to call you graduates of the Harper College Class of 2022!”. The archived source page is preserved at captures/duckworth-2022-harper-college-commencement.html; its snapshot timestamp is 20260219071813.
+
+The events are distinct from each other and from Duckworth records in the manifest when staged. No exact normalized transcript duplicate or existing same-date Duckworth record was found. CSV transcript paths are relative to this batch folder; remap them under data/campaign_speeches/captures/ when merging.
+
+- Tammy Duckworth — National VoteVets Town Hall, virtual (2025-02-27, 1,373 words). The official Senate release is dated February 27, 2025, identifies the National VoteVets town hall, and states it took place “today.”
+  Transcript boundaries: “Hello everyone, thank you for being here today.” through “It’s an absolute honor to call myself part of this team… and to have you all as my partners on the front lines of this fight.”. The archived source page is preserved at captures/duckworth-2025-votevets-town-hall.html; its snapshot timestamp is 20260417151333.

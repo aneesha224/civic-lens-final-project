@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-d1b81f5f0465",
+  "politician": "Bernie Sanders",
+  "state": "Vermont",
+  "date": "2016-07-26",
+  "venue": "Bernie Sanders' 2016 DNC Speech: Full Remarks - Mic",
+  "source_type": "On-demand public transcript from mic.com",
+  "source_category": "campaign",
+  "source_url": "https://www.mic.com/articles/149753/bernie-sanders-2016-dnc-speech-full-remarks",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-d1b81f5f0465.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}

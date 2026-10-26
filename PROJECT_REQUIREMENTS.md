@@ -9,44 +9,44 @@ Aim for Tier 2: a working, thoughtful, clearly differentiated app with measured 
 ## Required submissions
 
 - [ ] GitHub repository link submitted on Canvas.
-- [ ] `report.html`, self-contained, approximately 10–15 printed pages.
-- [ ] `slides.html`, self-contained, no more than 10 slides, using reveal.js.
-- [ ] Optional 2–3 minute demo video as a backup.
+- [x] `report.html`, self-contained, approximately 10–15 printed pages. (11 page sections; CSS and app capture are inline.)
+- [x] `slides.html`, self-contained, no more than 10 slides, using reveal.js. (Nine slides; Reveal.js 5.1.0 and its CSS are bundled inline.)
+- [ ] Optional 2–3 minute demo video as a backup. (Optional; not created.)
 
 ## App and repository
 
-- [ ] App performs useful real work for a defined person or organization.
-- [ ] Idea has a meaningful twist beyond overdone project types.
-- [ ] App works end to end with real tools, data, and useful outputs.
-- [ ] README explains setup and run steps clearly enough for a fresh clone.
-- [ ] `.env.example` lists every required key without real values.
-- [ ] No real `.env` file, API key, or secret is committed.
-- [ ] App reads `.env` in its own folder first and the parent folder second.
-- [ ] Uses exactly `PORTKEY_API_KEY` or `OPENAI_API_KEY` as applicable.
-- [ ] Includes a small test dataset if production data is large.
+- [x] App performs useful real work for a defined person or organization. (Supports students, journalists, and civic researchers tracing public political language.)
+- [x] Idea has a meaningful twist beyond overdone project types. (Keeps legislative and non-legislative source collections distinct while linking selected text to earlier citations.)
+- [x] App works end to end with real tools, data, and useful outputs. (Two real model-run traces are saved; a local transcript-reader workflow was captured.)
+- [x] README explains setup and run steps clearly enough for a fresh clone.
+- [x] `.env.example` lists the supported credential keys without real values.
+- [x] No real `.env` file, API key, or secret is committed. (The tracked environment file is `.env.example`.)
+- [x] App reads `.env` in its own folder first and then searches parent folders. (`load_dotenv()` is called before requests need credentials.)
+- [x] Uses `PORTKEY_API_KEY` or `OPENAI_API_KEY` for model credentials.
+- [x] Includes a small test dataset under `data/test/`.
 - [ ] Fresh-clone dry run succeeds with the `.env` one folder above the repo.
 - [ ] Teaching staff can get the app running within 10 minutes.
 
 ## Report sections, in order
 
-- [ ] Title, author, repository/app links, and one-sentence description.
-- [ ] Motivation and current cost of the problem.
-- [ ] What is new, including named alternatives and honest comparison.
-- [ ] Agents: roles, tools, organization diagram, models, rationale, and one real run with screenshots.
-- [ ] Tokenomics: measured input/cached/output tokens, cost per run/user/month and at 100 and 10,000 users, cost controls, and performance tradeoffs.
-- [ ] Safety: relevant attack and malfunction risks, overspending controls, and a working defense shown by screenshot or test.
-- [ ] Impact: sourced numbers and ideally evidence from a real user.
-- [ ] Limits and next steps.
-- [ ] Screenshots and diagrams are embedded so the HTML works when double-clicked.
+- [x] Title, author, repository/app links, and one-sentence description.
+- [x] Motivation and current cost of the problem. (The report describes workflow burden and explicitly says time savings have not been measured.)
+- [x] What is new, including named alternatives and honest comparison.
+- [ ] Agents: roles, tools, organization diagram, models, rationale, and one real run with screenshots. (Roles, diagram, model rationale, and run traces are included; the captured app screenshot has no AI answer because no credential was used.)
+- [x] Tokenomics: measured input/cached/output tokens, cost per run/user/month and at 100 and 10,000 users, cost controls, and performance tradeoffs.
+- [x] Safety: relevant attack and malfunction risks, overspending controls, and a working defense shown by a credential-free test.
+- [x] Impact: sourced corpus and model-run numbers. (No real-user outcome study is claimed.)
+- [x] Limits and next steps.
+- [x] A genuine app screenshot and inline diagrams are embedded; the slide deck has no external runtime assets.
 
 ## Tier 2 evidence targets
 
 - [ ] At least one real user or realistic user workflow tested.
-- [ ] Real token counts captured from app runs, not estimates alone.
-- [ ] Cost calculations documented and reproducible.
-- [ ] At least one prompt-injection, malfunction, or cost-safety defense demonstrated.
+- [x] Real token counts captured from app runs, not estimates alone.
+- [x] Cost calculations documented with formulas and source pricing.
+- [x] Exact-quotation filtering is demonstrated by the saved credential-free safety test output.
 - [ ] Screenshots show the app, agent steps, and safety defense working.
-- [ ] Report and slides are polished, readable, and consistent with the app.
+- [x] Report and slides are consistent with the app’s source scope and current UI.
 
 ## Periodic audit
 

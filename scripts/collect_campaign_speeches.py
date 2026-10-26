@@ -1,6 +1,6 @@
 """Fetch explicitly seeded campaign-speech sources without generating text."""
 from __future__ import annotations
-import argparse, csv, hashlib, html, re, ssl, certifi
+import argparse, concurrent.futures, csv, hashlib, html, re, ssl, certifi
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path("data/campaign_speeches")
 FIELDS = ["record_id", "politician", "state", "date", "venue", "source_type", "source_url", "transcript_path", "transcript_status", "notes"]
+USER_AGENT = "MGT409-campaign-speech-collector/1.0"
 
 def slug(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
@@ -17,6 +18,45 @@ def visible_text(raw: bytes) -> str:
     text = re.sub(r"(?is)<(script|style|noscript).*?</\1>", " ", text)
     text = re.sub(r"(?s)<[^>]+>", " ", text)
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+def collect_seed(seed: dict[str, str], context: ssl.SSLContext, timeout: float) -> dict[str, str]:
+    url = seed["source_url"].strip()
+    record_id = seed["record_id"]
+    if urlparse(url).scheme not in {"http", "https"}:
+        return {**seed, "transcript_path": "", "transcript_status": "rejected", "notes": "invalid URL"}
+    try:
+        request = Request(url, headers={"User-Agent": USER_AGENT})
+        with urlopen(request, timeout=timeout, context=context) as response:
+            body = response.read()
+            final_url = response.geturl()
+        capture_dir = ROOT / "captures"
+        path = capture_dir / f"{slug(record_id)}.html"
+        path.write_bytes(body)
+        transcript, method = SpeechBlockParser().transcript(body)
+        headings = list(re.finditer(r"(?m)^([A-Z][A-Za-z .'-]+)\s+\(\d{2}:\d{2}\):\s*", transcript))
+        matching_heading = next((i for i, match in enumerate(headings) if seed["politician"].casefold() in match.group(1).casefold()), None)
+        if matching_heading is not None and len(headings) > 1:
+            start = headings[matching_heading].start()
+            end = headings[matching_heading + 1].start() if matching_heading + 1 < len(headings) else len(transcript)
+            transcript = transcript[start:end].strip()
+            method += "; selected the named speaker from a joint transcript"
+        surname = seed["politician"].split()[-1].upper()
+        label = re.search(rf"(?m)^{re.escape(surname)}:\s*", transcript)
+        if label and re.match(r"(?m)^[A-Z][A-Z ]+:\s*", transcript[:label.start()]):
+            transcript = transcript[label.end():].strip()
+            method += "; selected the named speaker from a joint transcript"
+        text_path = capture_dir / f"{slug(record_id)}.txt"
+        text_path.write_text(transcript + "\n", encoding="utf-8")
+        return {
+            **seed,
+            "source_url": final_url,
+            "transcript_path": str(text_path.relative_to(ROOT)),
+            "transcript_status": "needs human verification",
+            "notes": f"{method}; {len(transcript)} characters; not imported",
+        }
+    except Exception as exc:
+        return {**seed, "transcript_path": "", "transcript_status": "fetch failed", "notes": str(exc)}
 
 class SpeechBlockParser(HTMLParser):
     """Read transcript paragraphs from known archive article containers."""
@@ -105,39 +145,41 @@ class SpeechBlockParser(HTMLParser):
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed-file", type=Path, required=True)
+    parser.add_argument("--workers", type=int, default=8, help="Concurrent source fetches (1–16; default: 8).")
+    parser.add_argument("--timeout-seconds", type=float, default=15, help="Per-source timeout (default: 15 seconds).")
     args = parser.parse_args()
     if not args.seed_file.is_file():
         raise SystemExit(f"Missing seed file: {args.seed_file}")
+    if not 1 <= args.workers <= 16:
+        raise SystemExit("--workers must be between 1 and 16")
+    if args.timeout_seconds <= 0:
+        raise SystemExit("--timeout-seconds must be greater than zero")
     capture_dir = ROOT / "captures"; capture_dir.mkdir(parents=True, exist_ok=True)
-    report = ROOT / "review_queue.csv"; rows = []
+    report = ROOT / "review_queue.csv"
     with args.seed_file.open(encoding="utf-8", newline="") as handle:
-        for seed in csv.DictReader(handle):
+        seeds = list(csv.DictReader(handle))
+    seen_ids: set[str] = set()
+    jobs: list[tuple[dict[str, str], concurrent.futures.Future[dict[str, str]] | None]] = []
+    context = ssl.create_default_context(cafile=certifi.where())
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+        for seed in seeds:
             url = seed["source_url"].strip()
             record_id = seed.get("record_id") or f"campaign-{slug(seed['politician'])}-{seed['date']}-{hashlib.sha1(url.encode()).hexdigest()[:8]}"
-            if urlparse(url).scheme not in {"http", "https"}:
-                rows.append({**seed, "record_id": record_id, "transcript_path": "", "transcript_status": "rejected", "notes": "invalid URL"}); continue
-            try:
-                request = Request(url, headers={"User-Agent": "MGT409-campaign-speech-collector/1.0"})
-                with urlopen(request, timeout=30, context=ssl.create_default_context(cafile=certifi.where())) as response:
-                    body = response.read(); final_url = response.geturl()
-                path = capture_dir / f"{slug(record_id)}.html"; path.write_bytes(body)
-                transcript, method = SpeechBlockParser().transcript(body)
-                headings = list(re.finditer(r"(?m)^([A-Z][A-Za-z .'-]+)\s+\(\d{2}:\d{2}\):\s*", transcript))
-                matching_heading = next((i for i, match in enumerate(headings) if seed["politician"].casefold() in match.group(1).casefold()), None)
-                if matching_heading is not None and len(headings) > 1:
-                    start = headings[matching_heading].start()
-                    end = headings[matching_heading + 1].start() if matching_heading + 1 < len(headings) else len(transcript)
-                    transcript = transcript[start:end].strip()
-                    method += "; selected the named speaker from a joint transcript"
-                surname = seed["politician"].split()[-1].upper()
-                label = re.search(rf"(?m)^{re.escape(surname)}:\s*", transcript)
-                if label and re.match(r"(?m)^[A-Z][A-Z ]+:\s*", transcript[:label.start()]):
-                    transcript = transcript[label.end():].strip()
-                    method += "; selected the named speaker from a joint transcript"
-                text_path = capture_dir / f"{slug(record_id)}.txt"; text_path.write_text(transcript + "\n", encoding="utf-8")
-                rows.append({**seed, "record_id": record_id, "source_url": final_url, "transcript_path": str(text_path.relative_to(ROOT)), "transcript_status": "needs human verification", "notes": f"{method}; {len(transcript)} characters; not imported"})
-            except Exception as exc:
-                rows.append({**seed, "record_id": record_id, "transcript_path": "", "transcript_status": "fetch failed", "notes": str(exc)})
+            seed["record_id"] = record_id
+            if record_id in seen_ids:
+                jobs.append((seed, None))
+                continue
+            seen_ids.add(record_id)
+            jobs.append((seed, pool.submit(collect_seed, seed, context, args.timeout_seconds)))
+        rows = [
+            future.result() if future is not None else {
+                **seed,
+                "transcript_path": "",
+                "transcript_status": "rejected",
+                "notes": "duplicate record_id in seed file",
+            }
+            for seed, future in jobs
+        ]
     with report.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS, extrasaction="ignore"); writer.writeheader(); writer.writerows(rows)
     print(f"Fetched {sum(r['transcript_status'] == 'needs human verification' for r in rows)} source captures; review queue: {report}")

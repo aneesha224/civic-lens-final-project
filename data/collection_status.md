@@ -1,6 +1,6 @@
 # Speech collection status
 
-Last checked: October 25, 2026.
+Last checked: October 26, 2026.
 
 The original page-level pass contains source-preserved captures from the
 downloaded Congressional Record issues. It remains available as an audit
@@ -17,9 +17,10 @@ stores the inclusive source page range. These are complete Congressional Record
 speaker turns, not claims about every speech given by a politician outside the
 Congressional Record.
 
-Current output: 1,061 complete source-preserved speaker remarks from 119
-valid downloaded issues. Of these, 280 span multiple PDF pages. Sixteen
-politicians are represented, each with at least five reconstructed remarks.
+Current output: 1,292 complete source-preserved speaker remarks from 119
+valid downloaded issues. Of these, 367 span multiple PDF pages. Twenty-one
+speaker names are represented, including all 16 roster members. Five roster
+members previously missing from the extractor now have official source turns.
 One cached source file (CREC-2019-01-07.pdf) is an HTML error page rather
 than a PDF and is skipped by the rebuild script.
 
@@ -33,20 +34,27 @@ can be manually reviewed before analysis.
 
 ## Campaign speech collection
 
-Campaign support is built into the corpus layer. Campaign records use a separate
-source category and are imported through `scripts/import_campaign_speeches.py`.
-The manifest now contains seven source-preserved full transcripts from four
-politicians: Ted Cruz (3), Marco Rubio (2), Hakeem Jeffries (1), and John Cornyn
-(1). Sources are TIME transcript pages recovered from Internet Archive captures
-and Rev's transcript archive. The collector extracts the speech block and keeps
-the original page capture; joint transcripts are limited to the named politician's
-speaker section.
+The curated public-source corpus is separate from the Congressional Record. Its
+manifest contains 281 transcript records across all 16 roster members: 279
+complete and two partial. Elizabeth Warren (33 complete), Marco Rubio (30), and
+Nancy Pelosi (30) meet or exceed the goal of 30 complete records per person.
+Another 206 complete records are needed to fill the individual gaps for the
+other 12 politicians. Gary Peters has seven complete records. The two partial records are
+for Bernie Sanders and Hakeem Jeffries.
 
-For the next pass, `scripts/discover_campaign_speeches.py` searches Rev's public
-sitemap against all 16 roster names and writes `data/campaign_speeches/archive_candidates.csv`.
-Candidate pages still require date, campaign-context, and transcript-boundary
-review before they are added. TIME's dated sitemap and Internet Archive captures
-also surfaced older transcripts that are missing from current page versions.
+The collection includes public addresses, prepared remarks, broadcast
+interviews, press events, and speaker-isolated segments from multi-person
+events. Congressional Record turns do not count toward the 30-record target.
+See `collection_live_tally.md` for the complete roster-by-roster counts and
+`campaign_speeches/README.md` for the source and boundary rules.
+
+The app also keeps a separate on-demand cache of source leads and extracted
+text. Cached items that still say boundary review is needed do not count as
+curated records. The discovery pass currently has 118 news leads and 21 Rev
+archive candidates; these remain leads, not transcript records. Reject
+summaries, excerpts, video-only pages, duplicate copies of the same event, and
+any text that does not preserve source speaker boundaries. Keep incomplete
+source transcripts marked partial.
 
 ## Historical text corpus
 

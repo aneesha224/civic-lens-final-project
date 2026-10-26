@@ -1,0 +1,11 @@
+Credential-free safety test
+
+Command:
+.venv/bin/python -m unittest discover -s tests -p 'test_safety.py'
+
+Output:
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK

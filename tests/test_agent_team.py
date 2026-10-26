@@ -23,10 +23,10 @@ class AgentTeamTests(unittest.TestCase):
         self.assertIn(record.politician.split()[-1].upper(), text.upper())
         congressional = [r for r in self.corpus.records if r.source_category == "congressional_record"]
         campaign = [r for r in self.corpus.records if r.source_category == "campaign"]
-        self.assertEqual(len(congressional), 1061)
+        self.assertEqual(len(congressional), 1292)
         curated_campaign = [r for r in campaign if not r.transcript_status.startswith("on-demand v5 transcript;")]
         live_campaign = [r for r in campaign if r.transcript_status.startswith("on-demand v5 transcript;")]
-        self.assertEqual(len(curated_campaign), 10)
+        self.assertGreaterEqual(len(curated_campaign), 114)
         for live_record in live_campaign:
             self.assertTrue(self.corpus.read_text(live_record).strip())
         campaign_record = self.corpus.get("duckworth-2012-dnc")

@@ -1,0 +1,16 @@
+{
+  "record_id": "live-speech-2128a782ca83",
+  "politician": "Ted Cruz",
+  "state": "Texas",
+  "date": "2015-05-26",
+  "venue": "TRANSCRIPT: Cruz announces presidential campaign - Fox News",
+  "source_type": "On-demand public transcript from foxnews.com",
+  "source_category": "campaign",
+  "source_url": "https://www.foxnews.com/politics/transcript-cruz-announces-presidential-campaign?msockid=01fdb89af7296b86255daf64f6016ae2",
+  "source_page_start": null,
+  "source_page_end": null,
+  "page_count": null,
+  "transcript_path": "live_cache/records/live-speech-2128a782ca83.txt",
+  "transcript_status": "on-demand v5 transcript; publisher publication date may differ from speech date; review transcript boundaries",
+  "boundary_status": "extracted from publisher transcript paragraphs; boundaries not independently checked"
+}
