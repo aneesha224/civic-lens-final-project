@@ -32,11 +32,11 @@ The `render.yaml` Blueprint runs Civic Lens as a public web service. Start with
 [Deploy to Render](https://render.com/deploy?repo=https://github.com/aneesha224/civic-lens-final-project),
 or open Render and choose **New → Blueprint**. To deploy:
 
-1. Put the contents of this `Final Project` folder at the root of a GitHub
-   repository and push it to your account. Keep `.env` out of Git; `.gitignore`
-   already excludes it.
-2. Connect the private repository to Render and apply the `render.yaml`
-   settings. Render creates the service and provides its public URL.
+1. Use the [Civic Lens GitHub repository](https://github.com/aneesha224/civic-lens-final-project).
+   The project files are already at its root. Keep `.env` out of Git;
+   `.gitignore` already excludes it.
+2. Connect the repository to Render and apply the `render.yaml` settings.
+   Render creates the service and provides its public URL.
 3. Enter `PORTKEY_API_KEY` as a secret in the Render setup prompt or the
    service's Environment settings. Do not put the key in `render.yaml` or Git.
    Without it, visitors can browse speeches, but AI analysis and chat are
