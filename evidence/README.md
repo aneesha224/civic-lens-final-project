@@ -8,7 +8,7 @@ Store screenshots, real-run traces, token counts, cost calculations, safety test
 
 ## Tokenomics runs
 
-`tokenomics_runs.json` records two completed real Civic Lens runs (speech-only and topic comparison), with token totals by agent and elapsed time. A preliminary setup request is disclosed in the log but excluded because its usage could not be recovered. Reproduce the measurements from the project folder with:
+`tokenomics_runs.json` records two measurement batches (Oct 25, compact output; Oct 26, current briefing via OpenAI), each with (speech-only and topic comparison), with token totals by agent and elapsed time. A preliminary setup request is disclosed in the log but excluded because its usage could not be recovered. Reproduce the measurements from the project folder with:
 
 ```sh
 PYDANTIC_AI_NO_BANNER=1 .venv/bin/python scripts/measure_tokenomics.py

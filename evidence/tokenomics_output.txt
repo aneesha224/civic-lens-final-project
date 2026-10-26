@@ -1,0 +1,99 @@
+{
+  "measured_at_utc": "2026-10-26T21:59:00+00:00",
+  "model": "gpt-6-luna",
+  "pricing_basis": {
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "usd_per_million_tokens": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "cost_note": "OpenAI list-price estimate; excludes any separate gateway markup or tax."
+  },
+  "runs": [
+    {
+      "scenario": "speech-only",
+      "record_id": "live-speech-ec6efe2bfe39",
+      "date": "2016-03-02",
+      "topic_requested": false,
+      "elapsed_seconds": 10.434,
+      "agents": [
+        {
+          "agent": "speech-analyst",
+          "model_requests": 2,
+          "tool_calls": 1,
+          "input_tokens": 2309,
+          "cache_read_tokens": 1122,
+          "output_tokens": 490,
+          "unmeasured_responses": 0
+        },
+        {
+          "agent": "safety-auditor",
+          "model_requests": 1,
+          "tool_calls": 0,
+          "input_tokens": 849,
+          "cache_read_tokens": 0,
+          "output_tokens": 391,
+          "unmeasured_responses": 0
+        }
+      ],
+      "totals": {
+        "model_requests": 3,
+        "input_tokens": 3158,
+        "uncached_input_tokens": 2036,
+        "cache_read_tokens": 1122,
+        "output_tokens": 881,
+        "total_tokens": 4039,
+        "unmeasured_responses": 0,
+        "estimated_openai_list_cost_usd": 0.00065532
+      }
+    },
+    {
+      "scenario": "topic-comparison",
+      "record_id": "live-speech-ec6efe2bfe39",
+      "date": "2016-03-02",
+      "topic_requested": true,
+      "elapsed_seconds": 20.699,
+      "agents": [
+        {
+          "agent": "speech-analyst",
+          "model_requests": 2,
+          "tool_calls": 1,
+          "input_tokens": 2311,
+          "cache_read_tokens": 0,
+          "output_tokens": 600,
+          "unmeasured_responses": 0
+        },
+        {
+          "agent": "longitudinal-analyst",
+          "model_requests": 2,
+          "tool_calls": 1,
+          "input_tokens": 3610,
+          "cache_read_tokens": 1283,
+          "output_tokens": 973,
+          "unmeasured_responses": 0
+        },
+        {
+          "agent": "safety-auditor",
+          "model_requests": 1,
+          "tool_calls": 0,
+          "input_tokens": 2043,
+          "cache_read_tokens": 0,
+          "output_tokens": 408,
+          "unmeasured_responses": 0
+        }
+      ],
+      "totals": {
+        "model_requests": 5,
+        "input_tokens": 7964,
+        "uncached_input_tokens": 6681,
+        "cache_read_tokens": 1283,
+        "output_tokens": 1981,
+        "total_tokens": 9945,
+        "unmeasured_responses": 0,
+        "estimated_openai_list_cost_usd": 0.00167143
+      }
+    }
+  ]
+}
+Evidence saved to evidence/tokenomics_runs.json
